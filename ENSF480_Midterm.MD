@@ -56,6 +56,7 @@ Template class specializations are similar to template function specialization, 
         }
     };
 
+    template <class T>
     T Array<T>::ArrayIterator::operator++() {
         index++;
         if(index >= ptr->size)
@@ -73,3 +74,80 @@ Template class specializations are similar to template function specialization, 
     }
 
 ```
+
+## Inheritance
+
+* Inheritance is a relationship among classes where a subclass inherits the structure and behaviour of the superclass
+* Defines the "is a" or generalization/specialization hierarchy
+* structure: instance variables / Behaviour: instance methods
+
+### Base Class Design
+
+* Protected members are inherited but not public members
+* Member functions whose implementations depends on details of derivations should be virtual functions.
+
+```c
+    class Person {
+        public: 
+            Person();
+            virtual ~Person();
+            virtual display();
+
+        protected:
+            int age;
+            char *name;
+    };
+```
+
+#### Scope Resolution Operator
+The scope resolution operator is basically Base Class::method
+
+* Usually the scope resolution operator is unnecessary. The only cases when this may be necessary when the inherited member's name is reused in the derived class
+* when two or more classes define an inherited member with the same name
+
+* When initializing the constructors of a derived class, you call the base class as well as all inherited classes
+
+### Virtual functions
+* A virtual function is a special function invoked through a public base class reference/pointer, and is bound dynamically
+* THe instance invoked is determined by the class type of the actual object
+* Resolution of a virtual function is transparent
+* There is either virtual or pure virtual
+
+### Virtual destructors
+* A destructor should be usually declared virtual if it is responsible for removing allocated memory
+* Reminds the inheriting classes to redefine this function and do their own cleanup
+
+### Order of construction
+The base class constructors are called in the order in which they appear in the class derivation list.
+
+### Derived class copy constructor
+
+If a dervied class explicitly defines its own copy contructor, the definition completely overrides the default definition and is responsible for copying its base class component. 
+
+```c
+    class Base {...};
+
+    class Derived: public Base {
+        public:
+            Derived(const Derived& x): Base(x) {}
+    }
+```
+
+### Derived class Assignment Operator
+
+If a derived class explicitly defines its own assignment operator, the definition completely overrides the default definition and is responsible for copying its base class component
+
+```c
+    Derived& Derived::operator = (const Derived* rhs) {
+        Base::operator = (rhs);
+        return *this;
+    }
+```
+
+### Derived class destructor
+
+Derived class destructor is never responsible for destroying the members of the base object. The compiler will always implicitly invoke the destructor of the base part.
+
+### Realization
+
+The realization relationship is the relationship between two model elements. Where one model element realizes the behaviour of the other element specifies.
