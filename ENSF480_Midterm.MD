@@ -63,4 +63,13 @@ Template class specializations are similar to template function specialization, 
         return ptr->storage[index];
     }
 
+    T Array<T>::ArrayIterator:operator++(int) {
+        T temp = ptr->storage[index];
+        index++;
+        if(index > ptr->size) {
+            index = 0;
+        }
+        return temp;
+    }
+
 ```
