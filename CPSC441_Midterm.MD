@@ -314,3 +314,30 @@ Users can download the header or just one part of the MIME message.
 2. If not resolved, it contacts the root DNS server
 3. The TLD DNS server is called, which contacts the authoritative DNS server
 4. The result is relayed back to host
+
+The difference betweenr recursive queries and iterated queries is that recursive queries make DNS calls on each server on behalf of the client. In iterated, the client makes the calls itself.
+
+### DNS Caching
+TLD servers typically cached in locao name servers, thus root name servers often not visited.
+
+RR format: (name, value, type, TTL) <- TTL means time to removal from cache>
+
+DNS protocol is based on UDP
+
+### Peer-to-Peer architecture
+* A peer can be both the server and client
+* Peers are invited to share their bandwidth
+
+
+### File distribution in Client Server
+The time it takes to upload a file in peer-to-peer is filesize/upload speed.
+
+The time it takes to download a file is filesize/download speed.
+
+
+### BitTorrent
+
+The file is divided into chunks, and peers exchange chunks with each other.
+The tracker tracks peers participating in torrent.
+The seed: The peer/server has complete file.
+Torrent: A collection for all peers participating in a file.
