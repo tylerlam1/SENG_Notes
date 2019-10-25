@@ -341,3 +341,65 @@ The file is divided into chunks, and peers exchange chunks with each other.
 The tracker tracks peers participating in torrent.
 The seed: The peer/server has complete file.
 Torrent: A collection for all peers participating in a file.
+
+## Chapter 3
+
+### Protocol LAyers
+1. Application Layer - Support Framework applications (SMTP, HTTP)
+2. Transport Layer - TCP, UDP
+3. Network Layer - IP, routing protocol
+4. Link Layer - data transfer between neighbouring network elements
+5. Physical Layer - bits on the wire
+
+### Transport Layer
+
+* Process to process logical communication between processes
+* Relies on the network to guarantee delay or bandwidth
+* Provides reliable transfer and encryption services
+* Sender breaks messages into segments, and the receiver reassembles the segments
+
+### Multiplexing
+* In multiplexing, information is gathered from multiple sockets and the data is enveloped with header
+* Then the network layer is provided with the source and destination ports
+
+### Demultiplexing
+* Examines the destination port number 
+* Deliver the segment to the application via the corresponding circuit
+
+### Demultiplex: connection-oriented
+
+* A host may support many simultaneous TCP sockets
+* Each TCP socket is identified by 4-Tuples (Source IP, port, Destination Port, IP)
+* In contrast with UDP, a two arriving TCP segments with different source address/port will be directly to different sockets
+* UDP - Each UDP socket is identified by a 2-tuple
+
+### Link Utilization
+
+THe link utilization is equal to the time it takes to send the first to last packets, divided by the RTT + the time it took.
+
+### Go-Back-N and Selective Repeat
+
+Check out the assignment.
+
+### Connection Oriented Transport: TCP
+
+TCP stands for Transfer Control Protocol. It is connection oriented, reliable and has in-order delivery. It has congestion control to avoid overwhelming the network, and flow control to not overwhelm the receiver.
+
+#### Steps
+1. Client sends TCP SYN segment, specifying the initial seq#, to the server
+2. THe server receives the SYN, allocates buffers, and replies with SYNACK segment, & specifies server initial sequence #
+3. Client receives SYNACK and replies with ACK, which contains data
+
+#### Tearing down the TCP Connection
+
+1. Client sends FIN control segment to server
+2. Server receives FIN and replies with ACK
+3. Server closes connection and sends FIN control segment to client
+4. Client receives FIN and replies with ACK
+5. Client formally closes the connection after timeout
+
+#### TCP Segment Format
+
+* The Seq # is the byte-stream number of the first byte of the segment
+* Cumulative acknowledgements: The ACk # that receiver puts in its segment is the sequence # of next byte expected from the sender
+* The sequence number is randomly initialized to minimize the possiblity that a segment is still present in the network from an earlier connection
