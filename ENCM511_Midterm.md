@@ -62,3 +62,24 @@ Basically, in a 16 bit number, Bits 15-11 is the OPCODE, bits 10-8 is the destin
 In a pipeline, the Von Neumann will often Stall as it cannot fetch data and instructions at the same time since there is only one data and address bus.
 
 The harvard processor doesn't stall as it can fetch data and instructions at the same time with two data busses and two address buses.
+
+## Interrupts
+
+In digital computers, an interrupt is an input signal to the processor indicating an event needs immediate attention. An interrupt signal alerts the processor and serves as a request for the processor to interrupt the currently executing code so that the event can be processed in a timely manner. If the request is accepted, the processor responds by suspending its current activities, saving its state, and executing a function called an interrupt handler to deal with the event. This interruption is temporary, and unless the interrupt a fatal error, the processor resumes normal activities after the interrupt handler finishes.
+
+Interrupts introduce a extra "phase" in the instruction cycle. Basically, after the writeback stage, the program will check if a interrupt request has occurred. If so, it will deal with the interrupt before returning to the fetch stage.
+
+A hardware interrupt can happen any time it wants.
+1. It is not under your control - therefore a ASYNCHRONOUS event
+2. How does your interrupt know what to do?
+3. How do you get back to your instruction that got interrupted?
+4. How does the processor recover after an interrupt.
+5. Inside a C++ or ASM ISR, how can you use registers when all registers are used by the code?
+6. How can you test a ISR?
+
+ISR - Interrupt Service Routine
+IRQ - INterrupt ReQuest signal
+NMI - Non-maskable Interrupt
+Ready signal or Done signal - an IRQ signal that has not been programmed
+#pragma interrupt - a command that adds features to a subroutine that turn sit into a ISR. 
+VBT - vector branch table - special hardware array that lists the start of every ISR programmed.
