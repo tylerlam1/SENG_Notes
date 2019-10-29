@@ -157,7 +157,7 @@ A router is a networking device used to forward data packets to other routers. T
 Circuit switching is good in that fact that there is less chance of lost packets. In addition, the data packets process faster.
 However, packet switching is less expensive, and does not require a set bandwidth/connection.
 
-Packet switching is being relied on nowadays because its less expensive, and much more efficient use of bandwidth. With some many people connected to the internet, it is much more efficient to use packet switching. 
+Packet switching is being relied on nowadays because its less expensive, and much more efficient use of bandwidth. With some many people connected to the internet, it is much more efficient to use packet switchincircuitg. 
 
 DSL is fixed transmission rate because there is dedicated access.
 
@@ -403,3 +403,9 @@ TCP stands for Transfer Control Protocol. It is connection oriented, reliable an
 * The Seq # is the byte-stream number of the first byte of the segment
 * Cumulative acknowledgements: The ACk # that receiver puts in its segment is the sequence # of next byte expected from the sender
 * The sequence number is randomly initialized to minimize the possiblity that a segment is still present in the network from an earlier connection
+
+### Other things to know
+
+* Segments are data in the Transport Layer (TCP/UDP)
+* Packets are units of data in the Network Layer
+* Frames are units of data in the Link Layer (Wifi, Bluetooth)

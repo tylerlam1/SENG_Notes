@@ -151,3 +151,68 @@ Derived class destructor is never responsible for destroying the members of the 
 ### Realization
 
 The realization relationship is the relationship between two model elements. Where one model element realizes the behaviour of the other element specifies.
+
+### Friend Functions
+
+The following components of a program can be friends to a class:
+
+* A global function
+* A member function of other classes
+* Another class
+
+An example of a friend class
+
+```c
+    class List;
+    class Node {
+        private:
+            int data;
+            Node* next;
+            friend class List;
+        public:
+            Node(int a) {data=a};
+            int get_dat() {return data;}
+    };
+
+    class List {
+        ...
+    };
+```
+
+Friend Member functions
+
+```c
+    class C {
+        friend void B::f();
+        int c;
+        public:
+            C();
+            void print();
+    }
+```
+
+### Operator Overloading
+
+* A class designer can provide a set of operators to work with objects of the class
+* This can be achieved by defining an operator function
+* It need not be a member function, but must take at least one class argument. This prevents the programmer from overloading the behaviour of operators for built-in data types.
+
+#### Member or non-member?
+* If the first parameter of an overloaded function must be an object of another class, the function must be a nonmember
+* The assignment "=", "[]", and "()" "->" must be a class member
+
+#### Type conversion
+* Constructors with only one argument act as a implicit type conversion operator to convert the given argument to the type of class
+
+##### Explicit Type Conversion
+
+Explicit type casting can occur:
+
+```c
+    String::operator char* () {
+        return storageM;
+    }
+
+    String s("ABCD");
+    char* st = (char*)s;
+```
