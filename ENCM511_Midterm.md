@@ -338,3 +338,22 @@ Blackbox Testing
 
 Whitebox Testing
 * Check what's going on inside the code
+
+### Logical Operators
+
+* AND &
+* OR | 
+* LOGICAL AND &&
+* LOGICAL OR ||
+
+### Toolchain
+
+* LDF - Where you put your code
+* LDR - Loader file - Loader
+* dxe - executable
+* Make file (Linker)- has information about dxe, and if you want to make the dxe, you need the .doj files. If you have the .doj, you can link all the ..doj files to make a .dxe
+* dlb vs doj => inside doj, every function is on its own. The library only picks out things it wants to use
+* to build the doj, you need the .cpp and .h
+* Compiler turns .cpp and .h into .s files
+* Promptly put into assembler, which generates the .doj
+* The make file has dates associated with it, which can determine if anything has changed (if it needs to rebuild anything) 
