@@ -311,3 +311,30 @@ A EUNIT is a GUI used to show when you have errors nd warnings. It is an extensi
 * conditional statements in assembly
 * More about EUNIT testing
 * CoreTimer interrupts
+
+### EUNIT 
+
+* CHECK
+* XF_CHECK
+
+```c
+    float x = 1.0;
+    y = (1.0 * 3) / 3;
+    z = (1.0 / 3) * 3;
+    CHECK(y==z);
+```
+
+* There are rounding errors in the float
+
+No different than 
+
+```c
+    if(x==y) printf("same");
+    else printf("different");
+```
+
+Blackbox Testing
+* Run function to check results against requirements
+
+Whitebox Testing
+* Check what's going on inside the code
