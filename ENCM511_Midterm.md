@@ -205,3 +205,57 @@ VBT - vector branch table - special hardware array that lists the start of every
     _My_Write_REB_Outputs_ASM.END:
     RTS;
 ```
+
+
+### How to initialize the REB inputs
+
+```assembly
+    .section program
+    .global _Init_GPIO_REB_ASM;
+
+    _Init_GPIO_REB_ASM:
+
+    R1.L = ERASE_8_TO_15_BITS_MASK;
+    R2.L = SET_12_TO_15_ON;
+    R3.L = SET_8_TO_11_ON;
+
+    P0.L = lo(REG_PORTF_DATA);
+    P0.H = hi(REG_PORTF_DATA);
+    R0 = W[P0](Z);
+    R0 = R0 & R1;
+    [P0] = R0;
+
+    P1.L = lo(REG_PORTF_DIR);
+    P1.H = hi(REG_PORTF_DIR);
+    R0 = W[P0](Z);
+    R0 = R0 & R1;
+    R0 = R0 | R2;
+    [P0] = R0;
+
+    P2.L = lo(REG_PORTF_INEN);
+    P2.H = hi(REG_PORTF_INEN);
+    R0 = W[P0](Z);
+    R0 = R0 & R1;
+    R0 = R0 | R3;
+    [P0] = R0;
+
+    P3.L = lo(REG_PORTF_POL);
+    P3.H = hi(REG_PORTF_POL);
+    R0 = R0 & R1;
+    [P0] = R0;
+
+    _Init_GPIO_REB_ASM.END;
+    RTS;
+```
+
+
+### Reading the FP inputs
+
+```assembly
+    FRONTPANEL_SWITCH_5BIT_VALUE ReadFrontPanelInputs() {
+        FRONTPANEL_SWITCH_5BIT_VALUE activeLowValues = Read_GPIO_FrontPanelSwitches();
+        FRONTPANEL_SWITCH_5BIT_VALUE activeHighValues = ~activeLowValues;
+        FRONTPANEL_SWTICH_5BIT_VALUE wantedSwitchValueHigh = activeHighValues & MASK_KEEP_LOWER_5_BITS;
+        return wantedSwitchValueHigh;
+    }   
+```
