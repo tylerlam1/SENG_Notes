@@ -155,7 +155,7 @@ VBT - vector branch table - special hardware array that lists the start of every
 
 3. ASM file to read the port
 
-```c
+```assembly
     .section program
     .global _My_Read_REBInputs_ASM
     LINK 20;
@@ -165,5 +165,43 @@ VBT - vector branch table - special hardware array that lists the start of every
     UNLINK;
     _My_Read_REBInputs_ASM:
     _My_Read_REBInputs_ASM.END:
+    RTS;
+```
+
+### Writing to the REB outputs
+
+1. Call a CPP to call the ASM
+
+```c
+    void WriteREBOutputs(REB_BITS16 neededLEDValue) {
+        My_Write_REBOutputs_CPP(neededLEDValue);
+    }
+```
+
+2. Call the ASM
+
+```c
+    extern "C" void My_Write_REB_Outputs_ASM(REB_BITS16 neededLEDValue);
+
+    void My_Write_REB_Outputs_CPP(REB_BITS16 neededLEDValue) {
+        My_Write_REB_Outputs_ASM(neededLEDValue);
+        asm("ssync;");
+    }
+```
+
+3. Assembly writes to PORTF_DATA
+
+```assembly
+    .section program
+    .global _My_Write_REB_Outputs_ASM
+    _My_Write_REB_Outputs_ASM:
+        P0.L = lo(REG_PORTF_DATA);
+        P0.H = hi(REG_PORTF_DATA);
+        R1 = W[P0](Z);
+
+        R1 = R1 & ERASE_BITS_12_TO_15;
+        R1 = R1 | R0;
+        [P0] = R1
+    _My_Write_REB_Outputs_ASM.END:
     RTS;
 ```
