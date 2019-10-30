@@ -259,3 +259,55 @@ VBT - vector branch table - special hardware array that lists the start of every
         return wantedSwitchValueHigh;
     }   
 ```
+
+### Differences between the Microprocessor and the Microcontroller
+
+1. Microprocessor
+* The microprocessor itself is a completely useless component. It must have external peripherals to interact with the outside world.
+* A transducer converts variations in a physical quantity into an electric signal.
+* The issue with adding many external devices is that there is a lot of pins. The mechanical failure rates increase, the design time increase, the cost increased, and board size increased. 
+2. Microcontroller
+* In a micrcontroller, you put a limited amount of commonly used resources inside the "chip".
+
+Here are some advantages of the microcontroller over the microprocessor:
+* The pin count is down.
+* The reliability is up
+* Design time is down
+* Upgrade is easier - matching between peripherals for speed
+* Cost down
+* Common software/hardware design environment available from manufacturer
+
+Issues with using a microcontroller:
+* Event driven - can't WAIT for a device to become ready, can't POLL to see if device is ready, interrupt handling is key
+* There is ON-CHIP and OFF-CHIP memory. 
+* SPI and SPORT interfaces need to use DMA capability so that the controller can get on with processing and let something else worry about moving data in and out of chip.
+
+A watchdog timer is a hardware timer that automatically generates a system reset of the main program neglects to periodically service it. It is often used to automatically reset an embedded device that hangs.
+
+### EUNIT testing
+
+* Write test stubs to initially and the build and run to test
+* Tests should be conducted forwards and backwards to check if order matters
+* *Schedule Time*: you have to find the TIME SLOTS in your schedule when you're not doing anything else
+* *Interruption Time*: Every time you restart a project being interrupted, it takes 15 minutes to recenter
+* *Project Time*: The amount of time you estimate the project will take
+* *Elapsed Time*: The time you started designing the plot to the time you actually found time to do it
+* *Acceptance Test*: This test is to evaluate the systems compliance with business requirements and determine whether it is acceptable for production.
+* *Whitebox Testing*: Testing within the code. Go into function and add test
+* *Blackbox Testing*: Testing the program as if it was a blackbox. Call a function and test the result
+* *Echo Test*: Writing and reading to ensure we can get what we want.
+
+
+A EUNIT is a GUI used to show when you have errors nd warnings. It is an extension that creates and runs various tests for your code.
+
+#### How to turn on EUNIT
+
+1. Build a new EUNIT project. Select whatever project you want to test and enter a valid test file and test names.
+2. EUNIT tets need memory to go to system configration taba and select StartUp code/PDF and use external memory (SDAM).
+3. Open the cpp file that has the test file name you have. Activate it.
+
+# What else I need to review
+* C.L.L.R process
+* conditional statements in assembly
+* More about EUNIT testing
+* CoreTimer interrupts
