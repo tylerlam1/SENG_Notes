@@ -83,3 +83,87 @@ NMI - Non-maskable Interrupt
 Ready signal or Done signal - an IRQ signal that has not been programmed
 #pragma interrupt - a command that adds features to a subroutine that turn sit into a ISR. 
 VBT - vector branch table - special hardware array that lists the start of every ISR programmed.
+
+## Threads in uTTCOS
+
+```c
+    uTTCOSg_Start_CoreTimer_Scheduler(maxNumberThreads);
+    while(1) {
+        Idle_WaitForInterrupts_ASM();
+        uTTCOSg_DispatchThreads();
+    }
+```
+
+### More threads in uTTCOS
+
+```c
+    #warning "Once you have demonstrated uTTCOS -- Comment out the following lines"
+    extern volatile char ID_Task_RemoveMeSoon_Print1;
+    extern volatile char ID_Task_RemoveMeSoon_Print2;
+    extern volatile char ID_Task_KillerOfPrintStatements_Hunting;
+
+    void Set_Up_NOT_START_RemoveMeSoonTasks(void) {
+        ID_Task_RemoveMeSoon_Print1 = uTTCOSg_AddThread(Task_RemoveMeSoon_Print1, NO_DELAY, 0.75*ONE_SECOND); //The Time is a delay
+        ID_Task_RemoveMeSoon_Print2 = uTTCOSg_AddThread(Task_RemoveMeSoon_Print2, NO_DELAY, 2.5*ONE_SECOND);
+        ID_Task_KillerOfPrintStatements_Hunting = uTTCOSg_AddThread(KillerOfPrintStatements_Hunting, 0.5* ONE_SECOND, RUN_ONCE);
+        uTTCOSg_AddThread(TheEnd, 60*ONE_SECOND, RUN_ONCE);
+    }
+
+    extern volatile char ID_Task_KillerOfPrintStatements;
+    volatile char ID_Task_KillerOfPrintStatements_Hunting;
+    void KillerOfPrintStatements_Hunting(void) {
+        ID_Task_KillerOfPrintStatements = uTTCOSg_AddThread(KillerOFPrintStatements, 5.0*ONE_SECOND, RUN_ONCE);
+    }
+
+    extern volatile char ID_Task_RemoveMeSoon_Print1;
+    volatile char ID_Task_KillerOfPrintStatements;
+    void KillerOfPrintStatements(void) {
+        uTTCOSg_DeleteTHread(ID_Task_RemoveMeSoon_Print1);
+    }
+```
+
+### Extern Volatile
+
+* Extern tells the compiler that the actual definition of variable is in another module (done somewhere else in c).
+* Voltaile tells the compiler that the memory location of the variable may be altered and modified by an external event.
+
+### Important Lab 0 and Lab 1 concepts
+
+#### ASM Reading from the REBS
+
+1. First, Call a CPP from main to call the ASM
+
+```c
+    REB_BITS16 ReadREBInputs() {
+        REB_BITS16 activeLowValues = My_Read_REBInputs_CPP();
+        REB_BITS16 wantedSwitchValue = activeLowValues & MASK_KEEP_8_TO_11; \\Makes sure to keep the bits 8 to 11, since PORTF inputs are 8-11
+        return wantedSwitchValue >> 8; //make sure its the right most switched
+    }
+```
+
+2. Make a CPP to call the ASM
+
+```c
+    extern "C" REB_BITS16 My_Read_REBInputs_ASM();
+    REB_BITS16 My_Read_REBInputs_CPP() {
+        REB_BITS16 portPattern = My_Read_REBInputs_ASM();
+        asm("ssync;");
+        return portPattern
+    }
+
+```
+
+3. ASM file to read the port
+
+```c
+    .section program
+    .global _My_Read_REBInputs_ASM
+    LINK 20;
+        P0.L = lo(REG_PORTF_DATA);
+        P0.H = hi(REG_PORTF_DATA);
+        R0 = W[P0](Z);
+    UNLINK;
+    _My_Read_REBInputs_ASM:
+    _My_Read_REBInputs_ASM.END:
+    RTS;
+```
