@@ -307,10 +307,10 @@ A EUNIT is a GUI used to show when you have errors nd warnings. It is an extensi
 3. Open the cpp file that has the test file name you have. Activate it.
 
 # What else I need to review
-* C.L.L.R process
-* conditional statements in assembly
-* More about EUNIT testing
-* CoreTimer interrupts
+* C.L.L.R process - Done
+* conditional statements in assembly - Done
+* More about EUNIT testing - Done
+* CoreTimer interrupts - Done
 
 ### EUNIT 
 
@@ -357,3 +357,132 @@ Whitebox Testing
 * Compiler turns .cpp and .h into .s files
 * Promptly put into assembler, which generates the .doj
 * The make file has dates associated with it, which can determine if anything has changed (if it needs to rebuild anything) 
+
+* First step to executable is to compile the C++ source files (.cpp, .c, .asm) into object files (.doj)
+* The linker combines the (.obj) and library files (.dlb) files into an executable
+
+
+The difference between a .ldr and a .ldf file is that a .ldr file is used by the linker to help link files together (find memory locations) and the ldr file is the file used by the processor at runtime.
+
+### Core timer
+
+* The core time on all processors is a dedicated timer. The core timer is clocked by the internal processor clock and is typically used as a system tick clock for generating periodic operating system interrupts. 
+* The coretimer works on both BF533 and BF609 but simulator period needs to be adjusted
+
+### More on EUNIT testing
+
+On the EUNIT GUI, yellow means code may be working, but proceed with caution
+
+#### Making use of EUNIT CHECK, XF_CHECK, CHECK_EQUAL, XF_CHECK_EQUAL
+
+```c
+    TEST(LearnEunitSyntax) {
+        bool expectedTestResult = true;
+        bool actualTestResult = false;
+
+        CHECK(expectedTestResult == actualTestResult); 
+        CHECK_EQUAL(expectedTestResult, actualTestResult);  \\more like a compare
+
+        XF_CHECK(expectedTestResult == actualTestResult);   \\sometimes you expect it to fail - but if it passes, something is wrong
+        XF_CHECK_EQUAL(expectedTestResult, actualTestResult);
+    }
+```
+
+
+In essence, CHECK() and CHECK_EQUAL() are the same. Use XF_CHECK if you expect a check to fail.
+
+### More about Assembly
+
+* Use preprocessor directives like #include and #define in your assembly code to make them more understandable. In addition, you probably want #include <blackfin.h> at the top of each assembly file.
+* All the R registers in Blackfin are 32bits. In addition, all the P registers in blackfin are also 32 bits.
+* A special register CC is used to store boolean expressions
+* There is also a stack pointer that points to the top of the stack. You manually change this if you want to save your own variables to memory. The register for this is SP.
+* The FP, Frame Pointer, touches the bottom of the stack
+
+#### Register Operations
+
+* Setting one register equal to another: R1 = R2
+* Add/subtract two registers together: R0 = R1 + R2; OR R0 = R1 - R2;
+* You cannot add pointer and data registers together
+
+For bitwise operations, they are shown below:
+R0 = R1 & R2; OR CC = R1 <= R2; OR CC = R1 < R2
+
+How to load a 32-bit immediate into a register:
+R3.L = lo(40000), R3.H = hi(40000)
+
+
+#### Memory Loads/Stores
+
+```assembly
+    R0 = [P0] // load a 32-bit value from memory location at P0 to R0
+    R0 = W[P0] // store a 16-bit value from memory location at P0 to R0
+    R0 = W[P0](Z) // store a zero-extended unsigned 16-bit value from memory location at P0 into R0
+    R0 = W[P0](X) // store a sign extended 16 bit value from memory to R0
+    R0 = [P0+4] //offsets
+    [P0] = R0 //stores a 32-bit value at R0 into memory location at P0
+    W[P0] = R0 
+```
+
+##### Loops and If Statements
+
+```assembly
+    CC = R1 <= R2;
+
+    IF CC JUMP CODE_PLACE
+    IF !CC JUMP ANOTHER_PLACE
+
+    ANOTHER_PLACE:
+```
+
+##### Return Values
+
+You can return a value in a asm by setting R0 equal to the desired return value. If more than 32 bits are needed, R1 can store the upper values.
+
+##### Private Arrays
+
+You can define private arrays in L1_data:
+
+```assembly
+    .section L1_data;
+    .byte _fooCharArray[4] = {1,2,3,4};
+
+    P0.L = lo(_foCharArray); P0.H = hi(_fooCharArray);
+    R0 = [P0+1];
+```
+
+##### Calling .asm subroutines from .asm files
+
+You have to do this to jump to a subroutine
+
+```assembly
+    .extern _SubRoutine_Name;
+    CALL _Subroutine_Name;
+    RTS;
+```
+
+### Doing stuff for LINK and UNLINK
+
+In MIPS, we allocate stack space using the stack pointer. The concept is the same in Blackfin.
+
+```assembly
+    [--SP] = FP //saves the old frame pointer
+    FP = SP;
+    SP += 16;
+
+    [--SP] = R4;
+    [--SP] = R5;
+
+
+    .... do stuff with registers
+
+    R4 = [SP++];
+    R5 = [SP++];
+
+    SP = FP
+    FP = [SP++];
+```
+
+LINK and UNLINK is used when subroutines require local, private, and temporary variables beyond the capabilities of the core registers. They basically allocate the extra space. They can also save/load the RETS register, which holds the routine address of the subroutine. You should always use LINK 12 and UNLINK when calling a subroutine from an assembly function.
+
+By usinf SSYNC, you guarantee that the loads and stores take place in the order you coded them in.
