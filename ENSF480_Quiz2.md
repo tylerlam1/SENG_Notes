@@ -122,3 +122,144 @@ Here are the steps:
 * Need to have a public class method to have access to private class data field
 
 Steps to develop a Singleton Class:
+
+1. Create a Singleton class
+
+```Java
+    public class Singleton {
+        private static Singleton onlyInstance;
+        private ArrayList<String> usernameList;
+        private ArrayList<String> passwordList;
+        private ArrayList<String> nameList;
+
+        private Singleton() {
+            usernameList = new ArrayList<String>();
+            passwordList = new ArrayList<String>();
+            nameList = new ArrayList<String>();
+        }
+
+        public static Singleton getOnlyInstance() {
+            if(onlyInstance == null)
+                onlyInstance = new Singleton();
+            return onlyInstance;
+        }
+
+        public static void setOnlyInstance(Singleton onlyInstance) {
+            SingletonLogin.onlyInstance = onlyInstance;
+        }
+
+        public void addUsername(String username) {
+            usernameList.add(username);
+        }
+
+        public void setUsername(int index, String newUsername) {
+            usernameList.set(index, newUsername);
+        }
+    }
+```
+
+* Singleton is a famous pattern as its known to be the simplest to learn.
+* It is useful for using a single copy of a shared resource.
+* However, Singleton classes cannot be subclassed.
+
+## Observer Pattern
+
+Observer pattern uses the MVC idea.
+
+* Model = Classes in your system that are related to the internal representation of the state of the system
+* View = Classes in your system that display the state of the model to the user
+* Controller = classes that connect the model and view
+
+* Observer = an object that "watches" the state of anither object and takes action when the state changes in some way
+* Observable object = An object that allows observers to examine it
+
+Steps:
+1. Create an observer interface with a n update method
+2. Create either an interface or abstract class for subject that contains methods to add or remove an observer object
+3. Create a class that implements subject
+4. Create one or more class that implements observer:
+
+1. Create an Observer Interface:
+
+```Java
+    public interface Observer {
+        public void update(double data);
+    }
+```
+
+2. Create an interface of Subject
+
+```Java
+    interface Subject {
+        public void register(Observer o);
+        public void remove(Observer o);
+        public void notifyObserver();
+    }
+```
+
+3. Implementation of class implementing  Subject
+
+```Java
+    class Weather implements Subject {
+        private double temp;
+        private ArrayList<Observer> observers;
+
+        public Weather(double t) {
+            observers = new ArrayList<Observer>();
+            temp = t;
+        }
+
+        public void register(Observer o) {
+            observers.add(o);
+            o.update(temp);
+        }
+
+        public void remove(Observer o) {
+            ...
+        }
+
+        public void notifyObserver() {
+            for(int i = 0; i < observers.size(); i++) {
+                Observer o = observers.get(i);
+                o.update(temp);
+            }
+        }
+
+        public double getTemp() {
+            return temp;
+        }
+
+        public void setTemp(double t) {
+            temp = t;
+            notifyObserver();
+        }
+    }
+```
+
+4. Implement classes that use Observer
+
+```Java
+    class HorizontalDisplay implements Observer {
+        double temp;
+        Subject weather;
+
+        public HorizontalDisplay(Subject w) {
+            weather = w;
+            weather.register(this);
+        }
+
+        @Override
+        public void update(double temp) {
+            this.temp =  temp;
+            display();
+        }
+
+        public void display() {
+            // code to display horizontally
+        }
+    }
+```
+
+* Supports loose coupling between objects that interact with each other
+* Allows sending data to other objects without any change to the Subject or Observer classes
+* Dynamic relationship between subject and observer: Relationship can be established at runtime
