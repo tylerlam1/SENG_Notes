@@ -130,4 +130,39 @@ Each router contains a flow table that is computed and distributed by a logicall
 * Generalized forwarding: simple packet-handling rules
 * Match: match values in packet header fields
 * Actions: drop, forward, modify, matched packet or send matched packet to controller
-* Priority: disambiguate overlapping aptterns
+* Priority: disambiguate overlapping patterns
+
+# Chapter 5
+
+## Modelling a Network
+
+* Graph: G = (N,E)
+* Nodes: Set of routers/hosts
+* Edges E = set of links
+
+Link Cost: C(i,j) = bandwidth, delay, congestion, etc
+
+* Use data structure algorithms to find least cost paths
+
+## Routing Algorithms
+
+* "Link state" algorithms
+* Global information
+* All routers have complete topology and link cost information of the network
+
+* "Distance vector" algorithms
+* Decentralized information
+* Routers know physically connected neighbours and cost of links to direct neighbours
+* Interactive process of computation, exchanged of information with neighbours
+
+## Link State
+
+* Based on Dijkstra's algorithm
+* A greedy algorithm that will calculate the shortest distance from source S to all nodes in the graph.
+* assume undirectional edges: c(i,j) = c(j,i)
+* Two sets of vertices: 
+* N: all vertices in the graph
+* V: the set of vertices visited
+* R = N - V, unvisited vertices
+
+For each vertex i, d = estimated ost of the shortest path from S. p = The predecessors of vertex i in the shortest path from S.
