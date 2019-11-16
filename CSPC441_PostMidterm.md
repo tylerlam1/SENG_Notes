@@ -85,3 +85,49 @@ The IPv4 address is a 32-bit identifier for each host/router interface.
 
 ### Subnets
 
+* Device interfaces with the same subnet part of IP address can physically reach out to each other without intervening router
+* A isolated network is called a subnet
+
+## IP Addresses
+
+* IP addresses are configured from the system admin. The Dynamic Host Configuration Protocol (DHCP) allows a host to dynamically obtain its IP address from the DHCP server when it joins the network
+* DHCP can renew its lease on address in use, allows reuse of addresses, allows host to learn additional information such as subnet mask, the address, and DNS server
+
+### Hierarchical address
+
+* The network can get the subnet part of the IP address by getting the allocated portion of its provider ISP's address space
+* The ISP can get a block of address via ICANN: Internet Corporation for Assigned Names and Numbers
+
+## NAT
+
+* Network Address Translation - All the devices in the same network IP address
+* Advantage: flexibility - The IP addresses can change on either side of the network without impacting the other side
+* Advantage: Protection - The devices are not explicitly addressable from outside
+
+## IPv6
+
+IPv4 has a 32-bit address space. This means that there is 2^32 addresses, which is a lot.
+
+We need a better header format for speed processing and QoS support.
+
+## IPv4 and IPv6
+
+* Not all routers can be upgraded simultaneously
+* Loss of header information due to conversion between IPv4 and IPv6.
+* Takes time to convert
+
+### Tunnelling
+
+IPv6 carried as payload in IPv4 datagram among IPv4 routers
+
+## Generalized Forwarding and SDN
+
+Each router contains a flow table that is computed and distributed by a logically centralized routing controller
+
+## OpenFlow data plane abstraction
+
+* Flow: defined by header fields
+* Generalized forwarding: simple packet-handling rules
+* Match: match values in packet header fields
+* Actions: drop, forward, modify, matched packet or send matched packet to controller
+* Priority: disambiguate overlapping aptterns
