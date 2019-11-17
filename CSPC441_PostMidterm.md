@@ -166,3 +166,74 @@ Link Cost: C(i,j) = bandwidth, delay, congestion, etc
 * R = N - V, unvisited vertices
 
 For each vertex i, d = estimated ost of the shortest path from S. p = The predecessors of vertex i in the shortest path from S.
+
+## Distance Vector
+
+* Bellman-Ford Equation
+* Assume undirectional edges: c(i,j) = c(j,i)
+* Data Structures: N = All vertices on the graph. E = All edges
+* For each vertex i, d(i) = cost of shortest path from source S to i. p = the predecessors of vertex i in the shortest path from S. 
+* c(u,v) = cost of an edge (u,v)
+
+## Routing on the internet
+
+In reality, routers are actually flat, and the network is not "flat". 
+There are millions of routers, with huge tables and tremendous amount of routing messages.
+
+In the routes through the hierarchical structure:
+* Autonomous Systems (AS): routers in the same region
+* Different Ases can have different routing protocol (inter0AS routing)
+* Routers within an AS run the same routing protocol (intra-AS routing)
+
+* Intra-AS routing algorithm sets entries for internal hosts
+* Inter-AS routing algorithm sets entries for external hosts
+* Gateway routers learn which hosts are reachable through which AS and propogate this info to other intra-AS routers
+
+Examples of Intra-AS routing:
+* RIP: Routing Information Protocol (distance vector) - used in lower-tier ISPs and enterprise networks
+* OSPF: Open Shortest Path First (link state): used in upper-tier ISPs
+* IGRP: Interior Gateway Routing Protocol (distance vector, Cisco proprietary): designed to overcome limitations in RIP
+Example of Inter-AS routing:
+* BGP: Border Gateway Protocol
+
+### OSPF
+* Open Shortest Path First protocol
+* A router constructs a complete topological map (a graph) of the entire AS
+* Individual link costs are configured by the network administrator
+
+Terms:
+* Boundary routers: connect to other AS's
+* Backbone routers: run OSPF routing limited to backbone
+* Area border routers: distances to nets in its own area, advertise to other ABRs
+
+Features:
+* all OSPF messages are authenticated. Only trusted router can participate in the OSPF protocol within an AS.
+* Multiple same-cost paths allowed
+* For each link, multiple cost metrics for different types of services (TOS)
+* integrated uni- and multicast support
+
+### BGP (Inter-AS routing)
+* BGP makes sure that all the ASes in the internet know about each subnet and how to reach there
+* Destinations are not hosts but are CIDRized prefixes with each prefix representing a subnet or collection of subnets
+* BGP provides each AS a means to obtain subnet reachability information from neighbouring ASes
+* propogate reachability information to all AS-internal routers
+* Determine good routes to subnets based on reachability information
+
+Basically, BGP allows each AS to learn which destination are reachable via its neighbor.
+
+## SDN Control Plane
+
+A logically centralized control plane allows for easier network management. Avoid router misconfigurations, and greater flexibility of traffic flows. Table-based forwarding allows "programming" routers. Centralized "programming" easier, as tables are centrally computed and distributed.
+
+## Data Plane Switches
+
+Network Control Apps
+* "Brains" of control: implement control functions using lower level services, API provided by SND controller.
+* Unbundled: can be provided by 3rd party: distinct from routing vendor, or SDN controller
+
+SDN Controller:
+* Maintain network state information
+* Interacts with network control applications above northbound API
+* Interacts with network switches "below" via southbound API
+* Implemented as distributed system for performance, scability, fault-tolerance and robustness
+
