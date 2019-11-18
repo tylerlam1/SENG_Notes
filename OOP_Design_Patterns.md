@@ -285,7 +285,7 @@ Let's review the Bridge Pattern now.
 
 The goal of the Bridge Pattern is to separate the abstraction from the implementation. The important idea is that we make the functionality of the concrete classes independent from the interface implementers.
 
-<img src="Bridge1.png" width = 550px>
+<img src="Images/Bridge1.png" width = 550px>
 
 Basically, Bridge Pattern uses the idea of "prefer Composition over Inheritance".
 
