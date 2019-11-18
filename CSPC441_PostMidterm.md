@@ -237,3 +237,10 @@ SDN Controller:
 * Interacts with network switches "below" via southbound API
 * Implemented as distributed system for performance, scability, fault-tolerance and robustness
 
+Data Plane Switches:
+* Fast, simple, commodity switches implementing generalized data-plane forwarding
+* Switch flow table computed, installed by controller
+
+## OpenFlow protocol
+* Governing control between controller and switches
+* TCP used to exchange messages

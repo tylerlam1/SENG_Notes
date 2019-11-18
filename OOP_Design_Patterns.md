@@ -558,3 +558,54 @@ public static void main(Strings[] args) {
 The benefit with Observer is that it supports loose coupling between objects that interact with each other. You can easily send data to other objects without changing the Subject and Observer classes.
 
 The relationship is created at runtime, which means a particular observer can be added or remove at the users will.
+
+### Singleton Pattern
+
+The Singleton patterns allows the control of a shared resource. It's particularly useful for a shared resource, like logins, or debugging the shared resource.
+
+Here are the important features of the Singleton pattern:
+* The Singleton pattern prevents the creation of instances of a Singleton object
+* There is a private Singleton data member in the object
+* A public data member allows access to the private Singleton data members
+
+<img src= "Images\Singleton1.png" width = 550px>
+
+The following is an example of a Singleton class:
+
+```Java
+public class Singleton {
+    private static Singleton onlyInstance;
+    private ArrayList<String> usernameList;
+    private ArrayList<String> passwordList;
+}
+```
+As mentioned before, we need to create a public method that allows access to the private Singleton member.
+
+```Java
+public class Singleton {
+    private static Singleton onlyInstance;
+    private ArrayList<String> usernameList;
+    private ArrayList<String> passwordList;
+
+    public static Singleton getOnlyInstance() {
+        if(onlyInstance == null) {
+            onlyInstance = new Singleton();
+        }
+        return onlyInstance;
+    }
+}
+```
+
+It can be used in a pretty straightforward manner:
+
+```Java
+public static void main(String[] args) {
+    Singleton s1 = Singleton.getOnlyInstance();
+    // CALL s1 methods here
+}
+```
+
+There are a couple important things to note:
+
+* A singleton class cannot be subclassed.
+* Reduces testing flexibility
