@@ -392,7 +392,7 @@ The purpose of the Strategy pattern is to allow users to easily change the behav
 
 For example, if you had a particular Animal class that allows an animal to move - the strategy pattern will enable the animal to move in a variety of ways.
 
-<img src = "Strategy1.png" width = 550px>
+<img src = "Images/Strategy1.png" width = 550px>
 
 When developing an application that utilizes the Strategy pattern, we must approach this as show below:
 1. Identify each changeable behaviour (like how an animal moves, etc.)
