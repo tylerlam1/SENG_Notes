@@ -126,4 +126,18 @@ Test-Driven development, as the name suggests, mean you design a small piece of 
 
 This approach aims to:
 * produce high quality systems quickly, primarily via incremental and iterative evolutionary prototyping.
-* Using development tools like: GUI builders, CASE tools, 
+* Using development tools like: GUI builders, CASE tools, and Database Management System (DBMS).
+* Intensively involves the user
+* Controls the project control using "timeboxes". If the project starts to slip, emphasis is to reduce requirements to fit the timebox, not increase the deadline
+* Use Joint Application Design (JAD) approach
+
+## Rational Unified Development Process (RUDP)
+
+The rational unified process is structured along two dimensions:
+* Process components: Production of a specific set of artifacts with well-defined activities
+* Time: Division of the life cycle into phases in iterations
+
+Both dimensions must be taken into account for a project to succeed.
+
+The Process Component Dimension includes the following activities: Requirement, Analysis, Design, Implementation, and Testing
+
