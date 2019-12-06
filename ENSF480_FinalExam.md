@@ -152,3 +152,24 @@ Finally, Rapid Application Development is basically a form of Agile Software Dev
 2. Build prototypes, like crazy!! Build and improve on these prototypes.
 3. Get user feedback!
 4. Do it again! Continuing prototyping, testing until the clients requirements are met.
+
+
+## Review
+
+* Drawing AR Diagrams
+
+```cpp
+int main() {
+    int a, b;
+    int& ref = b;
+    int *ptr = &al
+    int * &refptr = ptr;
+    *ptr = 4;
+    ref = 8;
+    *refptr = 23;
+}
+```
+
+The resulting memory diagram is below:
+
+<img src="Images/ARDiagram1.png" width=550px>
