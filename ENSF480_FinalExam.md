@@ -131,7 +131,7 @@ This approach aims to:
 * Controls the project control using "timeboxes". If the project starts to slip, emphasis is to reduce requirements to fit the timebox, not increase the deadline
 * Use Joint Application Design (JAD) approach
 
-## Rational Unified Development Process (RUDP)
+## Rational Unified Development Process (RUP)
 
 The rational unified process is structured along two dimensions:
 * Process components: Production of a specific set of artifacts with well-defined activities
@@ -139,5 +139,10 @@ The rational unified process is structured along two dimensions:
 
 Both dimensions must be taken into account for a project to succeed.
 
-The Process Component Dimension includes the following activities: Requirement, Analysis, Design, Implementation, and Testing
+The Process Component Dimension includes the following activities: Requirement, Analysis, Design, Implementation, and Testing.
 
+
+Basically, the difference between Agile & Unified Process Development is that Unified Process Development more or less stays somewhat true to the Waterfall method. It still goes in a somewhat linear fashion - A Inception -> Elaboration -> Construction -> Transition phase. These phases follow the Design -> Implement -> Test pattern, which is what the Waterfall method basically is. However, it tries to have small elements of previous phases in each step (so in construction, you still be doing a bit of planning), which is unlike Waterfall, where everything is more rigid and each process should only involve itself.
+
+Agile, on the other-hand, has iterations that involves all steps of the (design->implement->test) cycle. Its goal is to produce working software over documentation. In each iteration, you'll be creating software (small parts of the entire picture) and following all the steps of the development cycle. You'll present your work to your co-workers and clients, and once that iteration is complete, you'll rapidly move to the next iteration. The goal of the Agile Development Cycle is to produce working software as quickly as possible, to fit changing user requirements and minimize risk as much as possible.
+  
