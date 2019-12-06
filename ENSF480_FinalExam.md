@@ -146,3 +146,9 @@ Basically, the difference between Agile & Unified Process Development is that Un
 
 Agile, on the other-hand, has iterations that involves all steps of the (design->implement->test) cycle. Its goal is to produce working software over documentation. In each iteration, you'll be creating software (small parts of the entire picture) and following all the steps of the development cycle. You'll present your work to your co-workers and clients, and once that iteration is complete, you'll rapidly move to the next iteration. The goal of the Agile Development Cycle is to produce working software as quickly as possible, to fit changing user requirements and minimize risk as much as possible.
   
+Finally, Rapid Application Development is basically a form of Agile Software Development methodology. It emphasizes working software and user feedback over strict planning and requirements recording. It essentially emphasizes a lot more testing. Below are the steps:
+
+1. Figure out the requirements - Get to know all the requirements, constraints and what you need to build.
+2. Build prototypes, like crazy!! Build and improve on these prototypes.
+3. Get user feedback!
+4. Do it again! Continuing prototyping, testing until the clients requirements are met.
