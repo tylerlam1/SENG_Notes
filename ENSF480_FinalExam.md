@@ -349,3 +349,98 @@ char String::operator++() {
 }
 ```
 
+## Virtual Functions
+
+Virtual functions are member functions whose implementation depends on special details of subsequent derivations that are unknown at the time of the base class design. How are they declared?
+
+```cpp
+class Person {
+    public:
+        Person();
+        virtual ~Person();
+        virtual display();
+    protected:
+        int age;
+        char *name;
+}
+```
+A virtual function is a special function invoked through a base class reference or pointer and is bound dynamically at runtime. The resolution of a virtual function is transparent to the user.
+
+There are two types of virtual functions:
+
+* Pure Virtual: Where there is no definition of the virtual function defined in the base class. Therefore, the class will be considered a abstract class. This means instances of that class cannot be created. The derived class can define this pure virtual function, or also be considered a abstract class.
+* If a definition is provided, this serves as a default instance of subsequent derived classes.
+
+Please be advised that when redefining a virtual function, the use of the keyword *virtual* is optional.
+
+### Virtual Destructors
+
+Typically, a destructor should be declared virtual if it is responsible for removing allocated memory. This is to avoid undefined behaviour or memory leak.
+
+Take a look at the example below.
+
+```cpp
+class A {
+    char *s1;
+    public:
+        A(int n) {s1 = new char[n];}
+        virtual ~A() {delete[] s1;}
+};
+
+class B: public A {
+    char *s2;
+    public:
+        B(int n, int m): A(n) {s2 = new char[m];}
+        ~B() {delete[] s2;}
+};
+```
+## Multiple Inheritance
+
+A class can be derived from more than one parent as shown below.
+
+```cpp
+class C: public A, public B {
+    ...
+}
+```
+When we have a derived class that inherits from a base class multiple times, we need to declare the *base class* as virtual to avoid ambiguity. The virtual base class must be initialized by its most derived class.
+
+## Public, Protected, and Private Base Classes
+
+* Public Base classes: The inherited members of the public base class maintain their access level within the derived class.
+* Protected Base classes: The access level of public members of a protected base class will change to protected.
+* Private Base classes: The access level of public/protected members of a private base class will change to private in the derived class.
+
+## Inheriting Operators and Functions
+
+A derived class inherits all the member functions of each base class except the following:
+* Constructors
+* Copy Constructor
+* Assignment Operator
+* Destructor
+
+If a derived class explicitly defines its own copy constructor, its responsible for copying its base class component as well.
+
+```cpp
+class Base {...};
+
+class Derived: public Base {
+    public:
+        Derived(const Derived& x): Base(x) {...}
+}
+```
+
+Same goes for the assignment operator:
+
+```cpp
+
+Derived& Derived::operator=(const Derived& rhs) {
+    Base::operator=(rhs);
+    // typical assignment operator functions
+    return *this;
+}
+
+```
+
+In a destructor, the class destructor is never responsible for destroying members of the base object. The compiler will always implicitly invoke the destructor of the base part.
+
