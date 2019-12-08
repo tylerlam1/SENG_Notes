@@ -444,3 +444,150 @@ Derived& Derived::operator=(const Derived& rhs) {
 
 In a destructor, the class destructor is never responsible for destroying members of the base object. The compiler will always implicitly invoke the destructor of the base part.
 
+## Templates and Generics in C++
+
+Generic programming allows us to write classes and functions that are polymorphic across unrelated types at compile time.
+
+A Template Function is basically a generic function that can instantiated for different signatures. 
+
+### Definition
+
+Each formal parameter must be preceded by the "class" or "typename" keyword.
+
+```cpp
+template<class T, class V, typename K> fun(T,V,K);
+```
+
+Each parameter must appear at least once in the signature. The name of the formal parameter doesn't need to be the same in the forward declaration and the function definition.
+
+An example below:
+
+```cpp
+template<class T>
+void swap(T* a, T* b);
+
+template<class T>
+void swap(T* a, T* b) {
+    T temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+```
+
+You can overload a template function provided that the signature of each instance can be distinguished by argument type or number. 
+
+## Template Classes
+
+Templates can be used to create generic classes and use to make containers like queues, stacks, linked lists, and vectors.
+
+Below is an example of a class definition.
+
+```cpp
+template<class T>
+class Vector {
+    public:
+        Vector(int s);
+        ~Vector();
+        T getValue(int elem);
+        void display();
+    private:
+        T *array;
+        int size;
+};
+
+template <class T>
+Vector<T>::Vector(int s) {
+    array = new T[s];
+    assert(array != 0);
+    size = s;
+}
+
+template<class T>
+T Vector<T>::getValue(int elem) {
+    return array[elem];
+}
+
+```
+
+### Template Class Specialization
+
+Sometimes, there are special cases where a default member function is not good enough to handle a particular behaviour. Below is an example of how you can do specialization to create *special case* functions to handle particular scenarios.
+
+```cpp
+template<>
+class Vector<char*> {
+    int size;
+    char ** ar;
+    public:
+    Vector(int s);
+    void display();
+}
+```
+
+Friends are declared in the following format:
+```cpp
+template <class K, class D>
+class LookupTable {
+    friend ostream& operator << <K,D> (ostream& os, LookupTable<K,D> & It);
+}
+```
+
+## Iterators
+
+An iterator is an object that provides a way to successively access each element in a container type.
+
+What an iterator basically does:
+* Displays the value of the first element in the container type, and then advances to the next  object. It would be prudent to overload the ++ operator in this scenario.
+
+```cpp
+template<class T> class Array;
+
+template<class T>
+class Array {
+    T* storage;
+    int size;
+
+    public:
+    class ArrayIterator {
+        friend class Array<T>;
+        Array<T>* ptr;
+        int index;
+        public:
+            ArrayIterator(Array<T>& ar): ptr(&ar), index(0) {}
+            T operator++();
+            T operator--();
+    };
+
+    Array(int s): size(s) {
+        storage = new T[size];
+    }
+
+    T& operator[] (int i) {
+        return storage[i];
+    }
+}
+
+template<class T>
+T Array<T>::ArrayIterator::operator++() {
+    index++;
+    if(index >= ptr->size)
+        index = 0;
+    return ptr->storage[index];
+}
+```
+
+## Quick UML notation
+
+* Use the (-) sign for private visibility
+* Use the (+) sign for public visibility
+* Use the (#) sign for protected visibility
+* Use the (~) sign for package visibility
+
+Use *itialic* to indicate abstract classes.
+
+Final classes (cannot be subclassed) can be denoted using a {leaf} notation
+
+Static is represented with an underline.
+
+Navigability is the use of terms to navigate between association between classes.
