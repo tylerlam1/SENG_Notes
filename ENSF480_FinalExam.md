@@ -173,3 +173,179 @@ int main() {
 The resulting memory diagram is below:
 
 <img src="Images/ARDiagram1.png" width=550px>
+
+I don't think that there will be a large focus on C++ concepts and ideas on the final, but here is the broad strokes of all the pre-midterm material.
+
+### Copying Objects
+
+You can initialize a different instance of a class with a particular instance as follows:
+
+```cpp
+Aclass a1;
+Aclass a2 = a1; // Initialization
+Aclass a3;
+a1 = a3; // Assignment
+```
+
+Every data member of the instance a1 will be copied into instance a2.
+
+You need a Copy Constructor to allow for Initialization by 'copying' as follows:
+
+```cpp
+String::String(const String& s) {
+    len = s.len;
+    str = new char[len+1];
+    assert(str!=0);
+    strcpy(str,s.str);
+}
+```
+
+An assignment operator is needed for assigning a instance of an object to another that has already been initialized.
+
+```cpp
+
+String& String::operator=(String& s) {
+    if(this != &s) {
+        delete[] str;
+        len = s.len;
+        str = new char[len+1];
+        strcpy(str,S.str);
+    }
+    return *this;
+}
+
+```
+
+C++ functions also may have default arguments. The right most not initialized argument must be supplied with a default initializer before any on the left can be supplied.
+
+### Four Pillars of Object Oriented Design
+
+* Abstraction
+* Encapsulation
+* Modularity
+* Heirarchy
+
+Abstraction is the idea that we should base all of our implementation off abstractions - simplified models of complex systems. In abstractions, the inessential details are ignored. In the context of OOP (Object Oriented Programming), Abstraction is in regards to class data types.
+
+Encapsulation is in regards to keeping data hidden in classes and invisible to other classes. The point of doing this is to reduce coupling between objects.
+
+Modularity is the property of a system being decomposed into a set of cohesive and loosely coupled modules. A class/object would be the lowest level of modularity. Higher levels is in regards to physical containers which the classes and objects are placed.
+
+Hierarchy, is the use of inheritance, abstraction, etc. The importance of hierarchy is particularly helpful when developing complicated structures, by keeping everything organized.
+
+### Friend classes in C++
+
+The following can be 'friends' to a class:
+
+* A global function, visible to a class.
+* A member function of other classes in the program, visible to the class.
+* Another class, that is visible to the class.
+
+How are they declared?
+
+```cpp
+void f();
+
+class A {
+        int a;
+        friend void f();
+    
+    public:
+        A();
+        void print();
+}
+```
+
+### Static Members in C++
+
+A static class member acts as a global object among the objects of the same class. Information hiding can still be enforced (private static is a thing). A static data member is initialized outside the class definition, and can be constant or a class object.
+
+For example, please see the following:
+
+```cpp
+class foo {
+    private:
+        static int i;
+};
+```
+That would be a static private variable. To initialize it:
+
+```cpp
+int foo::i = 0;
+```
+
+### Overloading Operators in C++ 
+
+A class designer can provide a specific set of operators to work with the objects of the class. This is achieved by defining an operator function. An operator doesn't need to be a member function, but must take at least one class argument. This prevents the programmer from overloading the behaviour of operators for built-in data types.
+
+It's important to note that an operator function should not change the nature of an operator. For example, the overloaded operator function cannot convert an unary operator to a binary operator, etc. 
+
+Let's work on overloading the + operator for a string class.
+
+Header file:
+```cpp
+class String {
+    public:
+        ...
+        String operator+(const String& s);
+    private:
+        char *storageM;
+        int length;
+};
+```
+
+CPP file:
+```cpp
+String String::operator+(const String& s) {
+    String temp;
+    temp.length = length + s.length;
+    delete[] temp.storageM;
+    temp.storageM = new char[temp.length +1];
+    strcpy(temp.storageM, storageM);
+    strcat(temp.storageM, s.storageM);
+    return temp;
+}
+```
+ ### Member and Non-Member functions
+
+ If the first parameter of an overloaded function is an object of another class, the function must be a nonmember function. However, if it needs access to the data members, it needs to be a friend.
+
+ By definition, the assignment '=','[]', '()', and '->' are required to be class members.
+
+ ### Type Conversion
+
+ ```cpp
+ String::String (int len) {
+     storageM = new char[len+1];
+ }
+ ```
+Constructors with only one argument can act as implicit type conversion to convert a given argument to the type of the class.
+
+### Overloading the postfix and prefix operators
+
+```cpp
+class String {
+    public:
+        String();
+        String(char *s);
+        ...
+    private:
+        char* cursorM;
+        char* storageM;
+        int length;
+}
+
+//postfix
+char String::operator++(int) {
+    char ret = *cursorM;
+    cursorM++;
+    return ret;
+}
+
+//prefix
+char String::operator++() {
+    cursorM++;
+    return *cursorM;
+}
+```
+
