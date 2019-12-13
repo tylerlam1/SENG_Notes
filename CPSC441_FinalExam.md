@@ -284,3 +284,167 @@ The link layer is implemented in the "adaptor". Basically in the network interfa
 The datagram is transferred by different link protocols over different links. It encapsulates datagrams into frames. 
 
 It provides reliable delibery and flow control between adjacent nodes. There is error detection and correction.
+
+There are three ways to do error detection:
+* Parity Checking
+* Internet Checksum
+* Cyclic Redundancy check (CRC)
+
+In Parity Checking, you'll have 1D and 2D parity checking.
+
+In Checksum:
+* The sender treat content as a sequence of 16-bit integers. Finds the sum of the segments and inverts them.
+* Receiver computes the checksum and if S == header.checksum, no error detected.
+
+In Cyclic Redundancy Check:
+* Do long division, wait till remember length becomes the same length as the diviser bits.
+
+There are two types of "links": 
+* point-to-point (PPP): dial up access, links between ethernet switch and host
+* broadcast - 802.11 wireless LAN
+
+Multiple Access protocol is used for managing communication across multiple access links.
+
+Inteference occurs when two or more transmissions happen simultaneously.
+Collisions happen when a node receives multiple signals at a time.
+
+The Multiple access protocol determines when a node can transmit. We can define this multiple access protocols into three broad classes:
+
+* Channel Parititioning: (FDMA, TDMA)
+* Random Access (Slotted ALOHA, unslotted ALOHA, CSMA, CSMA/CD)
+* Taking Turns (token passing, polling)
+
+Channel parititioning share channel efficiently and fairly high loads. Its inefficient at low loads.
+
+In TDMA, each station gets fixed length slot.
+
+In FDMA, channel spectrum is divided into frequency bands.
+
+Let's look at random access.
+
+Slotted ALOHA:
+* All nodes are synchronized and start to transmit at beginning of time slot.
+* A node detects collision when two or more nodes transmit in the same slot. The node retransmit the frame in each subsequent slot with proability p.
+* Probability of success = p(1-p)^(N-1)
+* Efficiency = Np(-1-p)&(N-1)
+
+Pros: 
+* Doubles the effiency of ALOHA
+* Adaptable to changing station population
+
+Cons: 
+* Maximum efficiency of 37%
+* Requires queuing buggers
+
+Unslotted ALOHA:
+* No synchronization
+* User transmits when it has packets and when collisions occur, all frames are destroyed
+
+
+CSMA:
+
+* Listen before transmit
+* If the channel is idle, it transmits the entire frame
+* If the channel is busy, it defers transmission
+
+The problem remains with collisions.
+
+CSMA/CD:
+Collision detection is done by using LANs. It measures signal strengths, compare transmitted, received signals
+
+Polling is pretty simple. Master node invites slave notes to transmit in turn. However, polling overhead, latency and a single point of failure at the master is the problem.
+
+Token passing is when a control token passed from one node to another sequentially. The concerns are the token overhead, latency, and single point of failure.
+
+ARP tables are used to convert between IP address and MAC address. (Address Resolution Protocol)
+
+Here are the steps:
+1. Create a IP datagram
+2. The ARP query is broadcasted with the destination MAC address.
+3. Each host on the same LAN replies with its MAC address.
+4. The IP-to-MAC address is cached in the ARP table.
+5. A link layer frame containing the datagram with MAC address is created
+6. Frame is sent
+7. A router NIC receives this frame
+8. Router removes the IP datagram from the frame and makes routing decision
+9. Router uses ARP to get Bob's MAC address
+10. Router creates frame containing the IP datagram with Bob's MAX address
+
+
+The ethernet is the dominant LAN technology. It's simpler, cheaper than token LANs. Uses the unslotted CSMA/CD process.
+
+### Switches in the Link Layer
+
+The switch tabe is initially empty. For each incoming frame, record the src MAC address, the incoming interface and the time. An entry is deleted if no frames are received from that address after a timeout.
+
+### Switches vs Routers
+
+The router is a network layer device that maintains routing tables, implement large routing algorithms, and is used in large networks. 
+
+Switches are link layer devices that maintain switch tables, implement filtering, learning algorithms, and used in small networks.
+
+A hub is a physical-layer repeater. Bits coming in one link go out all other links at the same rate. All nodes connected to a hub can collide.
+
+Switches are smarter than hubs. They store and forward ethernet frames. Use CSMA/CD to access link, and buffer frames. Allows multiple simultaneous transmissions.
+
+### Point-To-Point 
+
+There is one sender, one receiver. 
+
+No need for MAC addresses or MAC protocol. No error correction or flow control.
+
+When we having to do byte stuffing, stuff an escape byte in from of the repeated flag pattern.
+
+### Multiprotocol Label Switching (MPLS)
+
+Goal: High speed IP forwarding using fixed length labels instead of IP addresses. Looking ip labels is faster than the longest prefix matching of IP ddresses.
+
+## Chapter 7
+
+Bit Error Rate (BER): The probability that a transmitted bit is received in error at the receiver. This means decreased signal strength, interference with other sources, or multipath propogation.
+
+Terminology:
+* Base Station = Access Point (AP)
+* Infrastructure Mode = A basic service set(BSS)
+
+When joining a wireless network, a host scans channel, listens for beacon frames containing the AP's name and MAC address,
+
+### Two Scanning Techniques:
+Passive Scanning:
+* APs send beacon frames
+* Hosts sends association request frame to Access Point
+* AP sends association response
+
+Active Scanning:
+* Host probes request frames
+* AP send probe response frames
+* Host sends association request frame
+* AP sends association response frame
+
+In WiFi, collision avoidance is done with something called (CSMA/CA).
+
+* Sender: If sense channel is idle, then it transmits the entire frame. If it is busy, it sets a timer.
+* It transmits again if timer expires. If no ACK is received again, it repeats the previous step with a larger timer.
+* Receiver: If frame received is OKAY, it returns an ACK after the SIFS.
+
+The idea is to allow the sender to reserve the channel rather than random access of data frame: avoid collisions of long data frames.
+
+Sender first transmits small RTS packets to recevier. The receiver broadcasts CTS in response to RTS. CTS is heard by all the nodes -> which means all other stations defer transmission.
+
+### Mobility
+
+SUppose a host moves from one AP to another. It stays in the same subnet.
+
+The IP address stays the same.
+
+Association with the newer AP is done using active or passive scanning.
+
+#### MAC Protocol: CDMA
+
+Another protcol based on channel partitioning. Each bit is encoded by multiplying the bit by a signal that changes at a much faster rate.
+
+#### Indirect routing
+Communication from the correspondant to the mobile node goes through home agent then to remote agent. A mobile node has a pernament address and a care-of-address.
+
+#### Direct routing
+The correspondant gets foreign address of mobile, sends directly to mobile
