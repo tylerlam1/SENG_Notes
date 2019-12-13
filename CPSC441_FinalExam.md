@@ -156,3 +156,131 @@ There are three types of switch fabric.
 * Memory: Traditional computers with switching under direct control of the CPU. Packet copied to systems memory.
 * Bus: Datagram from input port memory to output port via shared bus. 
 * Crossbar: Overcomes bus bandwidth limitations
+
+# Last Hours Review
+
+The following are the levels to the OSI Model being studied in this class:
+* Application Layer (HTTP, SMTP, POP3, IMAP)
+* Transport Layer (Process to Process communication - TCP, UDP)
+* Network Layer - (IP, routing protocol)
+* Link Layer - (PPP, Ethernet)
+* Physical Layer
+
+Let's investigate the Network Layer.
+
+The network layer can be separated into two different planes. The data plane, and the control plane.
+
+### Data Plane
+
+In each router, the header fields of all IP datagrams are inspected. The sender encapsulates the segments into datagrams, and the receiver delivers the datagrams to the transport layer.
+
+Routing basically involves all the network routers, and the collective action of all of them determine the path that the packets will take.
+Fowarding involves the transfer of a packet from an incoming link to the outgoing one.
+
+The data plane is a local, per-router function. Determines how the datagram is forwarded to the output port from the input port.
+
+The control plane is network wide logic and detemrines how datagram is routed end-to-end from the source to the destination.
+
+Inside a Router, we have several parts. We have the routing processor, and a switching fabric as well.
+
+In the input port, you're given the lookup (which is the destination IP and port), trying to complete processing at "line speed", and queuing (if datagrams arrive faster than forwarding rate).
+
+In the output port, buffering (if datagrams arrive faster than transmission), and scheduling.
+
+There's three types of switching:
+
+* Memory - Traditional computers under direct control of CPU. The packet is copied to the system memory and speed limited by memory bandwidth
+* Bus - Datagram from input port memory to output port via shared bus. Switching speed limited by the bus bandwidth
+* Crossbar - Tries to overcome the bus bandwidth limitations
+
+In the input and output ports of the router, overflow may occur which would lead to dropped packets.
+
+HOL blocking - queued dratagram at the front of queue prevents others in the queue from moving forward. 
+
+SCHEDULING decides which packets to drop.
+
+When the IP datagram MTU size is bigger than the capacity of the link, we have to do what is called IP fragmentation.
+
+The IPv4 is a 32-bit identifier for each host/router interface. A router typically has multiple interfaces, and the host typically has one interface.
+
+The IP address is usually configured by the system administrator, and the DHCP (Dynamic Host Configuration Protocol) allows a host to dynamically get its IP address when joining the network.
+
+The subnet part of the IP address comes from the IDP provider. 
+
+When converting from IPv4 to IPv6, not all the routers need to be upgraded simultaneously. However, loss of header info make occur during the conversion.
+
+Each router comes a flow table that is computed and distributed by a logically centralized routing controller. SDN is basically what this is, which allows a central control.
+
+## Control Plane
+
+Let's review the control plane.
+
+There are two different routing algorithms associated with the Control Plane. 
+
+There are the "Link State" algorithms (Dijsktra's) and the Distance Vector (Bellman-Ford) ones.
+
+In link state, the information is global and all routers have complete topology.
+
+In distance vector, there is decentralized information.
+
+When routing on the internet, there are two main types of routing as discussed below.
+* OSPF
+* BGP
+
+Autonomous Systems (AS) are routers in the same region.
+
+For Inter-AS routing, there are two protocols. 
+
+* RIP - Routing Information Protocol - Distance Vector. This is used for lower tier ISPs.
+* OSPF (Open Shortest Path First) - Link State. Used for upper-tier ISPs.
+* IGRP - (Interior Gateway Routing Protocol) - Distance vector, used to overcome limitations in RIP.
+
+* BGP - Border Gateway Protocol
+
+In the OSPF (Open Shortest Path First Protocol), a router constructs the complete topological map of the entire Autonomous Systems (AS). Each area runs its own OSFP link state algorithm. The internal details remain invisible to the outside.
+
+Couple Features of the OSPF 
+* Security - All messages are authenticated
+* Mutliple same-cost paths allowed
+* For each link, multiple cost metrics for different types of service
+* Hierarchical OSPF in large domains
+
+What about the BGP?
+
+BGP makes sure that all the ASes in the internet know about each subnet and how to get there. Destinations are no longer hosts but are CIDRized prefixes which each prefix representing a subnet or a collection of subnets.
+
+BGP provides means to:
+* Obtain subnet information from neighbouring ASes
+* Propogate reachability info to all AS internal routers
+* Determine good routes
+
+Terminology: 
+* AS-PATH: ASs visited by the advertisement message
+* NEXT-HOP: specific internal AS router to next-hop
+
+In the SDN Control Plane (Software Defined Networking), this plane controls the routing of the entire network. The good things about a logically centralized control plane is the following:
+* Easier network management - avoid router misconfigurations
+* Table based forwarding (OpenFlow API) allows programming routers
+* Centralized programming easier
+* Distributed programming is harder
+
+In the OpenFlow Protocol, the communication between the controller and the switches is governed. TCP is used to exchange messages. There are three classes of OpenFlow Messages:
+* Controller-to-Switch
+* Asynchronous (switch to controller)
+* Symmetric (misc)
+
+In switches to controller, the packet-in (transfer packet to controller). Flow removed - table entry removed. And then the controller is informed of change.
+
+In Controller to Switches, 
+* Features: Controller queries/sets switch features
+* Configure: Controller queries sets switch configuration parameters
+* Modify-state: add, delete, modify flow entries
+* Packet-out: controller can send this packet out a specific switch port
+
+## Link layer
+
+The link layer is implemented in the "adaptor". Basically in the network interface card -- NIC.
+
+The datagram is transferred by different link protocols over different links. It encapsulates datagrams into frames. 
+
+It provides reliable delibery and flow control between adjacent nodes. There is error detection and correction.
