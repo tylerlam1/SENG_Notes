@@ -448,3 +448,27 @@ Communication from the correspondant to the mobile node goes through home agent 
 
 #### Direct routing
 The correspondant gets foreign address of mobile, sends directly to mobile
+
+## More Review on Transport Layer 
+
+The transport layer provides process-to-process logical communication between processes. 
+
+Let's focus on Slow Start & Congestion Avoidance.
+
+Suppose the sender is sending packets to a receiver.
+
+Initially, CongWIn = 1 MSS, threshold = 64 KB. Yuo double the CongWin for every ACK reeived.
+
+When the CongWin >= threshold, the Congestion Avoidance phase is entered.
+
+In the Congestion Avoidance phase, you increase CongWin by a single MSS every RTT. (Or MSS*MSS/Congwin).
+
+
+Timeout = 
+Threshold = Congwin / 2
+Congwin = 1 MSS
+Retransmit
+
+3 Duplicated ACKs:
+Threshold = Congwin / 2
+Congwin = Threshold
