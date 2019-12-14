@@ -228,3 +228,45 @@ while(1) {
 * Super Loop: Totally adequate in many embedded appliactions where the system only requires basic functionality, no timing issues are present.
 * Pre-emptive Scheduler: uses an idle() when not doing anything useful and uses interrupts to wake system up. 
 * Co-operative Scheduler: how uTTCOSg works. Has a list of tasks that get run based on the current time and period and delay. Each task has a Run-Me-Now variable so that DispatchTask() will run when it is not zero.
+
+## Interrupts
+
+There are three approaches when reading from an external device.
+
+1. Wait - Wait till device ready. Read the control register and keep waiting until the control value goes from 0 to 1. Processor is always active and you're persistently waiting.
+2. Polling - This checks each device sequentially. Ex. hecks device 1 -> if not ready checks 2 -> and so on
+
+An interrupt is basically an alarm clock. It will cause all else to be abandoned and execute an ISR (Interrupt service routine). All the registers changed by the ISR must be saved and restored at the end.
+
+### Software Interrupts
+
+Software interrupts occur when you write to ILAT (which is ready only) focusing a fake interrupt.
+
+This is done using raise. We write to ILAT so long as the IMASK is set appropriately. Software interrupts will occur every time around a loop but a real interrupt will not.
+
+### CoreTimer Interrupts
+
+CoreTimer interrupts are used in assignment 2. 
+
+* Is EVT6 called IVTMR on core timer vector table
+* to set EVT table entry y
+* *pEVT6 = (void) (*coretimer_ISR) or registerHandler(ik_timer,coretimer_ISR);
+
+
+## CoreTimer
+
+On all processors is a dedicated timer. The core timer is clocked by the internal processor clock and is typically used as a system tick clock for generating periodic operating system interrupts. CoreTimer works on both the BF533 and BF609 but the simulator period needs to be adjusted - 0x100000 = 5 seconds on real time 609 so much smaller needed on the 533 simulator.
+
+* TCNTL = Basically controls the start/behaviour of the timer (similar to coffeepots control bits)
+
+On the TCNTL - send 0x0007 to make active. May have to reset sticky bit to 0 so tht you can get signal when the timer goes off again.
+
+* TSCALE - storing the scaling value that is one core clock (CCLK) cycle less than the number of cycles between each decrement of the timer count
+
+* TPERIOD - Tolds the timer period. Cannot be written when the timer is running so should be set before the timer is started.
+
+* TCOUNT - holds the current count for the timer. 
+
+## GP Timer
+
+* TIMER_ENABLE(Timer Enable Register)and the TIMER_DISABLE(Timer Disable Register) can be set as the SET and CLR registers for the GP Timer
