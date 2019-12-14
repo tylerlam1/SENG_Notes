@@ -174,3 +174,57 @@ _readProcessorCycles_ASM:
 _readProcessorCycles_ASM.END;
 RTS;
 ```
+
+When calling functions in ASM, you need to use the .extern keyword.
+
+```assembly
+
+.extern _Subroutine_Name;
+CALL _Subroutine_Name;
+
+```
+
+When defining function prototypes for assembly functions, please make sure to have the extern "C" in front of the function declaration. This is for something called name-managling, which means that the compiler changes the compiled name to a assembly name. Using *extern "C"* turns it off. 
+
+As in MiPs, if you're calling another subroutine from a subroutine, you need to save the non-volatile registers in the stack. Below is an example of how this is done.
+
+```assembly
+[--SP] = FP;
+FP = SP;
+SP += -16;
+
+[--SP] = R4;
+[--SP] = R5;
+
+R5 = 5;
+
+// do stuff
+
+R5 = [SP++];
+R4 = [SP++];
+
+SP = FP;
+FP = [SP++];
+```
+
+## uTTCOS
+
+uTTCOSg is a time triggered cooperative operating system. u emans that uTTCOS has a low memory cost and g is the difference between the 2015 and 2016 versions.
+
+1. Initialize the TTCOS
+
+```cpp
+uTTCOSg_Init_Scheduler();
+uTTCOSg_AddThread(function, DELAY, THREAD);
+uTTCOSg_Start_Scheduler();
+
+while(1) {
+    uTTCOSg_DispatchThreads();
+}
+```
+
+### Some terminology
+
+* Super Loop: Totally adequate in many embedded appliactions where the system only requires basic functionality, no timing issues are present.
+* Pre-emptive Scheduler: uses an idle() when not doing anything useful and uses interrupts to wake system up. 
+* Co-operative Scheduler: how uTTCOSg works. Has a list of tasks that get run based on the current time and period and delay. Each task has a Run-Me-Now variable so that DispatchTask() will run when it is not zero.
