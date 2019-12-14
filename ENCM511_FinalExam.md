@@ -145,3 +145,32 @@ R0 = R1 | R2;
 R0 = ~R1;
 ```
 Please keep in mind you cannot add a pointer and a data register together.
+
+```assembly
+R0 = [P0]; //load a 32-bit value from the memory location at P0 into R0
+R0 = W[P0]; //store a 16-bit value from the memory location at P0 into R0;
+R0 = W[P0](Z); //store a zero-extended unsigned 16 bit value from memory location at P0 into R0
+R0 = W[P0](X); //store a sign-extended (signed) 16-bit value from memory location at P0 into R0
+
+R0 = [P0+4]; //this is how you offset
+[P0] = R0; // store a 32-bit value from R0 into memory location at P0
+W[P0] = R0; //store lower 16-bits from R0 into P0
+```
+
+Function arguments are passed into the R0, R1 and R2 registers. Any further arguments needed are placed on the stack.
+
+Return values in asm subroutines are typically R0. If you need more than 32-bits, then use R1.
+
+Here is some boilerplate example.
+
+```assembly
+
+.section program;
+
+.global _readProcessorCycles_ASM;
+
+_readProcessorCycles_ASM:
+
+_readProcessorCycles_ASM.END;
+RTS;
+```
