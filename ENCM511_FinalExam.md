@@ -123,3 +123,25 @@ Problems:
 .extern tells the compiler that the definition is an external file. Name mangling is when the compiler messes up a C++ function name when overloading (multiple overloads have the same name). 
 
 Voltaile registers are registers that change in response to hardware, so the software need to take their erratic changing into account. ssync makes reads and writes happen now.
+
+#### ASM
+
+In Blackfin, the distinction between data registers (R registers) and pointer registers (P registers) are made. All R registers are 32 bits, and all P registers are 32 bits. Volatile registers are R0, R1, R2, R3, and non-voltaile reghisters are R4, R5, R6, and R7.
+
+SP points to the top of the stack. FP points to the bottom of the stack.
+
+When changing register values, here are some examples.
+
+```assembly
+    R1 = R2;
+```
+That is for setting registers equal.
+
+Let's add and subtract, and do some bitwise.
+
+```assembly
+R0 = R1 & R2;
+R0 = R1 | R2;
+R0 = ~R1;
+```
+Please keep in mind you cannot add a pointer and a data register together.
