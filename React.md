@@ -131,3 +131,16 @@ return (
 Let's also take a look at nested components.
 
 The advantages of React is that you can nest components within components. By doing this, you can really start breaking down your application/webpage into many basic manageable parts. This separates logic and UI management, which is an important part of developing clean, manageable and readable code.
+
+When rendering a component to the DOM, it is important to note there is a slight syntax difference compared to rendering JSX elements.
+
+```javascript
+ReactDOM.render(<ComponentToRender />, targetNode)
+```
+
+## Props
+
+Props, or Properties, is one of the most important parts of React. 
+
+In React, you can pass props from parent components to child components. 
+
