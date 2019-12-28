@@ -39,3 +39,30 @@ This function is what places the JSX in React's lightweight representation of th
 
 ## More on JSX
 
+When working with a JSX element, it is important to keep in mind that a nested must only resturn a single element. The parent element would wrap all other levels of the nested elements. Therefore, if you to have several <h1> or <p> tags, you should have a <div> tag encapsulate all of it.
+
+When adding comments, use {/* */} to wrap any comment text.
+
+## Rendering HTML elements to the DOM
+
+React allows you to easily render React elements to the DOM using the following piece of code.
+
+```Java
+ReactDOM.render(componentToRender, targetNode);
+```
+
+The first argument denotes the React element or component you want to render, and the second argument is the DOM node that you want to render the component to. It goes without saying that ReactDOM.render() should be called after your JSX element declarations.
+
+## Defining HTML classes in JSX
+
+In JSX, you can no longer use the word class to define HTML classes. Instead, JSX uses className. The following is an example of this in action.
+
+```javascript
+const JSX = (
+    <div className = 'myDiv'>
+        <h1>Adding a class to this div.</h1>
+    </div>
+)
+```
+
+Please be advised that camelcase is used for all HTML attributes and event references. 
