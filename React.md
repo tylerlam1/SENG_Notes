@@ -142,5 +142,41 @@ ReactDOM.render(<ComponentToRender />, targetNode)
 
 Props, or Properties, is one of the most important parts of React. 
 
-In React, you can pass props from parent components to child components. 
+In React, you can pass props from parent components to child components. For instance, you can pass a property *user* from a parent to child component.
+Imagine you have a App parent component and a Welcome child component.
 
+```javascript
+<App>
+    <Welcome user='Tyler'>
+</App>
+```
+
+The child component can promptly access this property using the following syntax.
+
+```javascript
+const Welcome = (props) => <h1>Hello, {props.user}!</h1>
+```
+
+In addition, you can also pass an array as props. When passing an array to a JSX element, it must be treated as JavaScript and wrapped in curly brackets.
+
+You can also set default props in React. This allows for a property to have a default value if nothing is modified in props. To override a default prop, you just simply need to explicitly set a new prop value.
+
+As good practice, it may be valuable to use PropTypes to explicitly define the type of property a child component may expect. For example, if a component expects an array, you can use PropTypes to make sure it always receives an array in props.
+
+In a ES6 React Component, you would simply use this.props to access props.
+
+Good programming practices always encourages the use of stateless functional components whenever possible. You always want to minimize statefulness, as it helps contain state management to a specific area of the application. This makes the application easier to maintain and follow how state changes.
+
+## State
+
+In addition to props, state is one of the most important concepts in React. State is the information your application needs to know about, and is subject to change. Your application responds to state changes and the UI is updated as needed.
+
+A React component has state by initializing *state* in the constructor. The property must be set to a JavaScript object. The following is an example.
+
+```javascript
+this.state = {
+    // describe the state here
+}
+```
+
+Throughout the life of the component, the state is maintained. It can be complicated or simple. 
