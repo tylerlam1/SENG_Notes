@@ -179,4 +179,37 @@ this.state = {
 }
 ```
 
-Throughout the life of the component, the state is maintained. It can be complicated or simple. 
+Throughout the life of the component, the state is maintained. It can be complicated or simple. In a stateful component, if you want to access a state value within a return statement, you must use the value inside curly braces.
+
+Changes in state automatically re-renders the necessary components (including any child components that receive the data as a prop). React updates the actual DOM as necessary. State is also completely encapsulated.
+
+You only need to use the curly braces in the return statement. In the render() method, it is not necessary to use the curly braces.
+
+When updating state, it is important not to set state directly. Instead, you should use a this.setState() function that updates the state by entering the necessary key value pairs. 
+
+```javascript
+this.setState({
+    name: 'Lam'
+})
+```
+An important idea to keep in mind is that class methods in a component typically do not have access to the *this* keyword by default. As such, you need to *bind* it in the constructor to basically let the constructor know what this means. This is shown as below.
+
+```javascript
+this.handleClick = this.handleClick.bind(this)
+```
+Where handleClick is a class method.
+
+Suppose that a setState call needs access to the previous value of state. When doing this, you should pass state and props in as parameters into set state as shown below.
+
+```javascript
+this.setState((state,props) => ({
+    counter: state.counter + props.increment
+}));
+```
+
+## Controlled Input and Forms
+
+HTML form elements work differently than other DOM elements in React. This is due to the fact that form elements naturally keep some internal state. This includes elements like *input*, *textarea*, and *select*. In React, components have their own state, which is only updated with setState().
+
+We can combine the two by utilizing React state. Thus, the React component that renders the form also controls what happens to the form in the subsequent user input. This is known as *Controlled Component*, where the input form element is also controlled by React.
+
