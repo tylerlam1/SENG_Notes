@@ -39,7 +39,7 @@ This function is what places the JSX in React's lightweight representation of th
 
 ## More on JSX
 
-When working with a JSX element, it is important to keep in mind that a nested must only resturn a single element. The parent element would wrap all other levels of the nested elements. Therefore, if you to have several <h1> or <p> tags, you should have a <div> tag encapsulate all of it.
+When working with a JSX element, it is important to keep in mind that a nested must only resturn a single element. The parent element would wrap all other levels of the nested elements. Therefore, if you to have several h1 or p tags, you should have a div tag encapsulate all of it.
 
 When adding comments, use {/* */} to wrap any comment text.
 
@@ -66,3 +66,5 @@ const JSX = (
 ```
 
 Please be advised that camelcase is used for all HTML attributes and event references. 
+
+## Self Closing tags in JSX
