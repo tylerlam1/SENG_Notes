@@ -68,3 +68,66 @@ const JSX = (
 Please be advised that camelcase is used for all HTML attributes and event references. 
 
 ## Self Closing tags in JSX
+
+In HTML, basically all tags need to be open and closed. However, there may be special cases where the tags are self closing, like line-break (br) tags.
+
+In JSX, any element can be written with a self-closing tag, like shown below. Each element *must* be closed.
+
+```javascript
+<div />
+```
+
+## Components
+
+Everything in React is a component. As mentioned above, a React web page is built from components. There are two ways to create a React component.
+
+1. Using a JavaScript function. By creating a function this way, you are creating a stateless functional component. A stateless functional component means that this component will receive and render data, but will not track or manage it in any way. Below is an example of a React component.
+
+```javascript
+const DemoComponent = function() {
+    return (
+        <div className = 'customClass'/>
+    )
+}
+```
+
+Please note that function names must start with a capital letter. You can create complicated HTML pages that consists of many different components, which allows for easier maintenance and development process.
+
+The other way to create a React component is with ES6 syntax.
+
+6. Using React.Component and class
+
+By using React.Component, many React features can now be utilized like local state and hooks. Below is an example of a React Component using class.
+
+```javascript
+class Kitten extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <h1>Learning React!</h1>
+        )
+    }
+}
+```
+As we have gleaned from our 409 class, the extends keyword allows class Kitten to inherit all the features from React Component. The constructor,  passes in props to the superclass. Props basically stands for properties.
+
+Next, let's investigate how to mend multiple React components together.
+
+When combining multiple React components together, you need a parent component which renders these components together. This is done by having a return statement that encapsulates the child component name in a self-closing JSX tag.
+
+```javascript
+return (
+    <App>
+    <Navbar />
+    <Dashboard />
+    <Footer />
+    </App>
+)
+```
+
+Let's also take a look at nested components.
+
+The advantages of React is that you can nest components within components. By doing this, you can really start breaking down your application/webpage into many basic manageable parts. This separates logic and UI management, which is an important part of developing clean, manageable and readable code.
