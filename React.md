@@ -218,3 +218,37 @@ We can combine the two by utilizing React state. Thus, the React component that 
 There may be times where you want to pass the state as props. That is perfectly legal - however data flow should only go from the stateful parent component to child component (unidirectional data flow). Child components receive the state data they need. It is good programming practice to avoid managing state in as many components as possible. Components should only be as complicated as they need to be.
 
 Also, state is not limited to data. The props being passed can be functions or methods that is defined on a React component. This allows child components to interact with their parent components. This is done in the same way as you would pass any state.
+
+## Lifecycle Hooks
+
+Lifecycle hooks allow programmers to catch components at certain periods in time. This may include before they are rendered, before they update, or before they receive props, etc.
+
+The following are lifecycle methods
+
+* componentWillMount() - called before render
+* componentDidMount()
+* shouldComponentUpdate() - can be used to optimize performance (return boolean)
+* componentDidUpdate()
+* componentWillUnmount()
+
+## Event Listeners
+
+React provides pre-defined event handlers like onClick() that is already available to use. However, if you want to add a event listener onto a component that doesn't have this readily available, you'll need to add it to the component directly using lifecycle hooks.
+
+The following piece of code is the typical syntax for adding a event listener.
+
+```javascript
+document.addEventListener(event, callback)
+```
+
+You can also remove an event listener as follows.
+
+```javascript
+document.removeEventListener(event, callback)
+```
+
+Good programming practice dictates the cleanup of React components before and after they are mounted/unmounted.
+
+## Styling
+
+Inline styling in JSX is very similar to HTML. However, you need to set the strings to a JavaScript object. Please ensure to maintain camel case syntax when declaring attributes.
