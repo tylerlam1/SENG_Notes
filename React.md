@@ -213,3 +213,8 @@ HTML form elements work differently than other DOM elements in React. This is du
 
 We can combine the two by utilizing React state. Thus, the React component that renders the form also controls what happens to the form in the subsequent user input. This is known as *Controlled Component*, where the input form element is also controlled by React.
 
+## Important Ideas Regarding Relationship between State and Props
+
+There may be times where you want to pass the state as props. That is perfectly legal - however data flow should only go from the stateful parent component to child component (unidirectional data flow). Child components receive the state data they need. It is good programming practice to avoid managing state in as many components as possible. Components should only be as complicated as they need to be.
+
+Also, state is not limited to data. The props being passed can be functions or methods that is defined on a React component. This allows child components to interact with their parent components. This is done in the same way as you would pass any state.
