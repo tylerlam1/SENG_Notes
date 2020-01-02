@@ -54,4 +54,6 @@ After doing this, the components only appear when the paths are entered into the
 <Link to="/about">About us </Link>
 ```
 
-That's all. The site will now have clickable links that 
+That's all. The site will now have clickable links that work.
+
+Next, it may be helpful to investigate *animated transitions*.
