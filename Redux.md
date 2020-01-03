@@ -73,4 +73,27 @@ You can see everything is stored in key-value pairs. The `notes` key will contai
 
 ## Sending Action Data to the Store
 
-In addition to sending types, you can also send action state to the store.
+In addition to sending types, you can also send action state to the store. Simply add the necessary data into the action object you're sending.
+
+## Middlewares
+
+Redux Middlewares are used for asynchronous actions. Our current action/reducer process flow is relatively clean. But what if we wanted to add in an external API call somewhere? How do we do this without interrupting the flow of the application?
+
+Middleware allows this to happen.
+
+Middleware essentially allows 'side-effects' to run without blocking state updates. Therefore, we can make external API calls, log actions, and perhaps do crash-reporting as well.
+
+Here's the current flow of data without middleware.
+
+1. An event occurs.
+2. An action is dispatched that informs Redux Store of this change.
+3. The reducer creates a new state that reflects this change.
+4. New state is passed into React via props.
+
+Middleware adds a step between steps 2 and 3. Let's take a look.
+
+1. An event occurs.
+2. An action is dispatched that informs Redux Store of this change.
+3. Middleware receives the action.
+4. The reducer creates a new state that reflects this change.
+5. New state is passed into React via props.
