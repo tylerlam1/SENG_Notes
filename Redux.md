@@ -26,7 +26,16 @@ const action = {
 }
 ```
 
-Once the Action is created, you need to send the action to the Redux Store so that the state can be updated. This is what Redux Action Creators are used for. A Action Creator returns the type of the action event when called.
+Once the Action is created, you need to send the action to the Redux Store so that the state can be updated. This is what Redux Action Creators are used for. A Action Creator returns the type of the action event when called. As the name suggests, an action creator creates an action as shown below.
+
+```javascript
+function addTodo(text) {
+    return {
+        type: ADD_TODO,
+        text: 'sooso'
+    }
+}
+```
 
 In order to dispatch an action event, you use the following syntax.
 
@@ -97,3 +106,24 @@ Middleware adds a step between steps 2 and 3. Let's take a look.
 3. Middleware receives the action.
 4. The reducer creates a new state that reflects this change.
 5. New state is passed into React via props.
+
+## Recap
+
+To recap everything, let's trace the steps of data flow from the React application View to the Redux Store. Keep in mind the view would be the front-end of the application and the Redux Store is the location where the application state is stored.
+
+Redux architecture *strictly* revolves around _unidirectional data flow_. All data in an application follows the same lifecycle pattern, which makes your application easier to understand. 
+
+1. An event takes place in the view. 
+2. This action is a object that describes that happened. You may see an example below.
+
+```javascript
+{ type: 'LIKE_ARTICLE', articleID: 42 }
+```
+
+3. The action is dispatched to the Redux Store. This is done by using `store.dispatch(action)`. 
+
+4. Once the Redux Store receives it, it will call the reducer function provided. The reducer takes the current state and the action.
+
+Please note that you may have multiple reducers, and you can call `combineReducers` to combine all reducers to one.
+
+5. The Redux store saves the complete state tree returned by the root reducer.
