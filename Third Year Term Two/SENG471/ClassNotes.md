@@ -42,7 +42,7 @@ At each part of your RE steps, you need to have a verification/validation step t
 
 Moving forward in the Software Lifecycle is considered to be forward engineering. Going backward is considered reverse engineering. An example of forward engineering is going from *Requirements Analysis* to *Design*.
 
-## Cost of Requirement Errors
+### Cost of Requirement Errors
 
 As you get deeper into the Software Lifecycle, it becomes increasingly expensive to remediate issues associated with requirement errors. There is as much as a 200:1 cost ratio between finding errors in the requirement stage versus the maintenance stage.
 
