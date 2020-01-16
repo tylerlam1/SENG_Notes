@@ -41,3 +41,67 @@ This includes:
 
 DBMS should also have protection and security measures to prevent unauthorized access. "Active" processing to take internal actions on data. It should present and visualize data in a good way.
 
+<img src="images/DatabaseCatalogExample.png">
+
+The main characteristics of the database approach is to:
+
+1. Provide insulation between programs and data, called program-data independence. Allows changing data structures and storage organization without having to change the DBMS access programs.
+
+2. Data abstraction: A data model is used to hide storage details and present users with a conceptual view of database.
+
+3. Support multiple views of the data: Each user may see a different view of the database, which describes only the data of interest to the user. 
+
+4. Sharing of data and multi-user transaction processing: This means support for concurrent users and concurrency control. 
+
+When categorizing the database users. users may be divided into:
+* Those two actually use and control the database content, those who design, develop and maintain database applications ("ACTORS")
+* Those who design and develop the DBMS software and related tools ("WORKERS")
+
+
+Here are some of the advantages of using the database approach:
+
+* Controlling redundancy - allows sharing of data
+* Restricting unauthorized access
+* Persistent storage
+* Storage structures
+* Provide optimization of queries for effificent processing
+* Providing backup and recovery
+* Multiple interfaces to different classes of users
+* Standards on enforcing data types/names, etc.
+* Reduced development time
+* Flexibility to change data structures
+* Availability of current information
+
+### Data Models
+
+A data model is a set of concepts to describe the structure of a database, the operations for manipulating these structures, and certain constraints that the database should obey.
+
+A data model structure and constraint is used to define the database structure, which includes elements, relationships, etc.
+
+Data Model operations are database retrievals and updates.
+
+There are different categories of data models.
+
+* Conceptual data models (Provide concepts that are close to the way that many users perceive data)
+* Physical data models (Provide concepts that describe details of how data is stored through the comptuer)
+* Implementation data models (Provide concepts that fall between the above two)
+* Self-describing data models (Combine the description of data with data values)
+
+## Schemas vs Instances
+
+A schema is the description of a database. It is a database structure, data types and constraints.
+
+The database instance is the actual stored data at a particular point in time. 
+
+The database state is split into three parts:
+* Database state (content of a database at a moment in time)
+* Initial database state (database state initially loaded in)
+* valid state (state that satisfies the structure and constraint of the database)
+
+Database schema is split into three levels:
+* Internal schema describes the physical storage structures and access paths
+* Conceptual schema describes the structure and constraints for the whole database for a community of structures
+* External schema at the external to describe the various user views
+
+You can commonly refer a Schema as a intension, and a state as a extension. A schema can be simply visualized as the table headers in a table. A state includes all the rows of data in the table.
+

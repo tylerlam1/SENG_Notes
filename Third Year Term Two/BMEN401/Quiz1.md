@@ -101,3 +101,4 @@ Things to keep in mind during interviews:
 ## Value exploration
 
 One of the most important factors associated with device development is maximizing economic value. This starts during needs exploration. During any observation, innovators should always be looking out for inefficiencies, or other undue costs that can be eliminated. 
+
