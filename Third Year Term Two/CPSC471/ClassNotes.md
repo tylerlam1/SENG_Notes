@@ -105,3 +105,50 @@ Database schema is split into three levels:
 
 You can commonly refer a Schema as a intension, and a state as a extension. A schema can be simply visualized as the table headers in a table. A state includes all the rows of data in the table.
 
+A external level schema would be a ERD or something (interpretable by a non-computer science major).
+
+## DBMS Languages
+
+* DDL - Create the schema (conceptual)
+* DML - manipulate the data 
+
+### Three-Tier Client-Server Architecture
+
+<img src="images/ThreeTierArchitecture.png" >
+
+## Entity Relationship Diagram
+
+The UML Class Diagrams are popular in industry to document conceptual database designs.
+
+### Concepts
+
+* Entities are specific things or objects in the mini-world that are represented in the database
+
+* Attributes are properties used to describe the entity.
+
+A specific entity will have a value for each of its attributes. Each attribute has a value set associated with it (intege, string, date) ...
+
+### Types of Attributes
+
+* Simple (Atomic) - Each entity has a single atomic value for the attribute. For example, age or sex.
+
+* Composite - The attribute can be divided into subpart. For example, a Address may be divided into subparts. The composition may form a hierarchy, where some components are composite.
+
+### Single-Valued vs Multi-valued
+
+* Multi-valued is when a entity has multiple values for an attribute. 
+* In general, composite and multi-valued attributes may be nested artibrarily to any number of levels.
+
+### Stored vs Derived Attributes
+
+* Derived Values - Attributes whose value are derived from other values.
+
+* Fixed Values - Attributes whose value are not derived from other ones
+
+### Entity Types and Key Attributes
+
+* Entity type define a collection of entities with the same attributes
+* An attribute for an entity type for which each entity must have a unique value is called key attribute
+
+
+
