@@ -102,3 +102,42 @@ Things to keep in mind during interviews:
 
 One of the most important factors associated with device development is maximizing economic value. This starts during needs exploration. During any observation, innovators should always be looking out for inefficiencies, or other undue costs that can be eliminated. 
 
+## Needs Exploration
+
+To start considering a need, think about:
+* personal or family experience
+* professional observations
+* literature reviews
+* clinical information 
+
+There are a lot of sources to find possible problems. Regardless of whatever you're doing, you first need to do background research. You need to figure out things before you start.
+
+But why? It's because so you would know what questions to ask.
+
+Next, you need to make sure you have access to observation/interview opportunities. If you can't gain access to a lab in your area of choice, it may be wise to reconsider it.
+
+You should prepare your observation/interview next. 
+Take notes, doucment. 
+Following that, you should post-explore and summarize.
+
+WHen asking questions:
+* Don't use 'usually'
+* Ask for stories
+* Dig into details
+* Look for non-verbal cues
+* silence is needed for reflection
+* avoid binary questions
+* document everything
+* why is my favorite question
+
+### Identification
+
+When identifying problems:
+* look out to what problems, but don't look to solve them rn
+* aim for quantity first - you will filter later
+* remember technology should not be a limiting factor
+
+When documenting:
+* Can take place in many mediums (graphics, video, recording)
+* reflect on every step and interaction
+* if made as a team, you should communicate with everyone
