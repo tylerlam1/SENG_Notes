@@ -150,5 +150,50 @@ A specific entity will have a value for each of its attributes. Each attribute h
 * Entity type define a collection of entities with the same attributes
 * An attribute for an entity type for which each entity must have a unique value is called key attribute
 
+## Entity Relationship Diagrams
 
+## Entity Types and Key Attributes
+
+* Entity types define a collection of entities with the same attributes
+    * For example, EMPLOYEE and PROJECT
+* An attribute of an entity type for which each entity must have a unique value is called key attribute
+    * For example, SSN of EMPLOYEE
+
+It is important to note that:
+* A key attribute must be composite (VehicleTagNumber is a key for the CAR entity, Number & State)
+* AN entity type may have more than one key (VIN number and VehicleTagNumber)
+
+## Entity Set
+
+* Each entity type has a collection of entities stored in the database
+    * called the entity set or sometimes entity collection
+* Entity set is the current state of entiries of that type that are stored in the database
+
+## Value Sets (Domains) of Attributes
+
+Each simple attribute is associated with a value set.
+
+* A value set specifies the set of values associated with an attribute
+* Value sets are not displayed in ER diagrams
+
+* Value sets are similar to data types in most programming languages - eg. integer
+
+## Relationships
+
+* A relationship relates two or more distinct entities with a specific meaning
+    * EMPLOYEE John Smith works on the ProductX Project
+    * EMPLOYEE Franklin Wong manages the research DEPARTMENT
+* Relationships of the same type are grouped or typed into a relationship type
+    * the WORKS_ON relationship type in which EMPLOYEES and PROJECTS participate
+    * MANAGES relationship type in which EMPLOYEES and DEPARTMENTS participate
+* The degree of a relationship type is the number of participating entity types
+    * both MANAGERS and WORKS_ON are binary relationships
+    * We can also have ternary relationships - many to many relationships
+
+## Relationship Type vs Relationship Set
+* Relationship Type:
+    * Is the schema description of a relationship
+    * Indentifies the relationship name and the participating entity types
+    * Also defines relationship constraints
+* Relationship Set:
 

@@ -123,5 +123,83 @@ Since UCID + Password = Users, it's a bridge between non-machine and machine
 2. Encryption algorithm
 3. Cache content
 4. Security sockets
+### Software Requirements Specification
+The following are purposes:
+* Contractual for development
+* Baseline for evaluation
+* Baseline for change control
 
+Audience of SRS:
+* Clients
+* Your team (Developers/testers/architecture/maintenance)
+* Business analysts
+* Regulators
+* Managers (Project)
 
+### SRS: Degree of Formality
+For a tiny project (where you have one programmer):
+* It may be 2 months of work
+* 5 page memo
+* purpose is to clarify programmer's understanding
+* From a management view, SRS is irrelevant. All the resources have already been allocated
+* The primary reader is the author, secondary is client
+
+For a large project (50 programmers):
+* 2 years of work
+* 500-page SRS
+* purpose is build-to documents - must contain enough detail for all programmers and testers
+* will use the SRS to estimate resource needs and plan development
+* primary reader is managers, programmers & testers, secondary is clients, and senior management
+
+### Authors
+
+The SRS should fulfill the clients needs, not wishes.
+
+### Exercises
+
+1. The control shall provide status messages at regular intervals not less than every 1 minute.
+    * The problem is that there is no upper bound for the regular intervals. Add a upper bound.
+2. When the elevator is within 20 cm of the sensor's position, the sensor sends a high signal; otherwise a low signal.
+    * We need to change this to a requirement (it's currently a implementation). 
+    * The sensor should send a notification signal when the elevator .... 20 cm.
+3. Charge numbers should be against the master list of corporate charge numbers, if possible.
+    * We can *get rid* of if possible
+    * It is also not complete. Then we need to is that a administrator/operator must be informed if the validation fails.
+
+* Ambiguity
+* Redundance
+* Incomplete
+* Inconsistent
+* Not understandable
+
+The above are very common problems with requirements. 
+
+The slides have a full list of things to consider when writing an SRS.
+
+## SRS Content
+
+* Constraints -> Assumptions/standards
+* External interfaces -> users, HW and other SW
+* Functionalities -> Features
+* Attributes (non-functionalities) -> considerations
+* Performance
+
+It should not include:
+
+* Product development plans
+* Assurance plans
+* Product designs
+
+Typical Mistakes:
+
+* Noise
+* Silence* - When you didn't properly describe something.
+* Over-specifications
+* Contradiction
+* Ambiguity
+* forward refernce
+* wishful thinking
+
+### Report to Operator
+
+- In class example, will talk over on Friday
