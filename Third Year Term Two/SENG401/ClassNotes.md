@@ -159,3 +159,26 @@ Is the data consistent among different machines? Data takes time to travel and y
     * unit tests
     * component tets
     * integration tests
+
+## Software Architectures
+
+Why should we evaluate software architectures? 
+* Learn from the past -> patterns
+* exists early -> catch errors/problems early - early is better (less cost)
+* Choice of each architecture that influences the project, from coding to learn to schedule
+* fast while architecture is on paper
+
+When? 
+* the architecture is specified
+
+What is the outcome?
+* is it suitable? Does the quality meets your goal? can it be built with resources
+* which of two or more are most suitable?
+
+We need to know what is important (these are non-functional requirements).
+
+Scalability is not a scalar.
+* which attributes are affected by architecture
+* which of our goals are okay? which are problematic?
+
+Software Architecture Patterns.

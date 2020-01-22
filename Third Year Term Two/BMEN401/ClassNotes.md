@@ -63,3 +63,11 @@ It's important to have a strategic focus when building a solution. There are sev
 * Motivation behind biodesign innovation process
 * Factors that influence biomedical device impact
 * Elements that determine strategic focus
+
+## Needs Statement
+
+A way to identify internal view of the organs in cancer patients that would help medical professionals find better ways to fight cancer.
+
+why internal only, cancer only?
+
+New statement: A way to identify internal view of the organs in patients with internal disorders that would help medical professionals find ways to combat illnesses.
