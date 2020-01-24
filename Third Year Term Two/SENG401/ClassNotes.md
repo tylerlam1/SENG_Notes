@@ -182,3 +182,34 @@ Scalability is not a scalar.
 * which of our goals are okay? which are problematic?
 
 Software Architecture Patterns.
+
+## Architectural Evaluation
+
+* Most of the modern software systems require to be modifiable and have good performance. 
+* What exactly measures modifiability, usability, security, performance, and reliability mean?
+* Can a system be analyzed to determine these qualities?
+* How soon can analysis occur?
+
+When determining whether an architecture satisfies its requirements often involves:
+* Being very explicit about what the requirements are and how they are reflected in architecture
+* understanding where one has to make trade-offs between different design alternatives
+* applying analysis wherever possible to determine consequences
+* mediating between desires of different stakeholders
+
+When evaluating software architecture, we can do informal/ad-hoc architectural evaluation
+
+There are better evaluation methods than ad-hoc evalution:
+* SAAM (Software Architecture Analysis Method) - Scenario based evaluation
+* ATAM (Architecture Tradeoff Analysis Method) - Scenario based evaluation with focus on trade-offs
+* SACAM (Software Architecture Comparsion Method) - Business goal-driven comparison of architecture alternatives
+* CBAM (Cost-Benefit Analysis Method) - Focus on economic aspects
+
+### ATAM
+
+ATAM is a method for evaluating software architectures relative to goals specified by quality attributes. ATAM exposes architectural risks that potentially inhibit the achievement of business goals.
+
+ATAM not only reveals how well in architecture satisfies particular quality goals, but also provides insight on how quality goals can possibly traded-off with one another.
+
+### Goal 
+
+Evaluate whether the design decisions satisfactorily address quality requirements
