@@ -197,3 +197,12 @@ Each simple attribute is associated with a value set.
     * Also defines relationship constraints
 * Relationship Set:
 
+## Enhanced Entity Relationship
+### Subclass vs superclass
+
+* A entity may have subgroups that need to be represented because of their significance to the database. For example, a Employee entity may have subgroups SECRETARY, ENGINEER, MANAGER, TECHNICIAN, etc
+* When going from superclass to subclass, its called specialization
+* When going from subclass to superclass, its called generalization
+
+
+

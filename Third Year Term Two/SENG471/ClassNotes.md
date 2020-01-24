@@ -202,4 +202,52 @@ Typical Mistakes:
 
 ### Report to Operator
 
+*The system shall report to the operator all faults that originate in critical functions or that occur during execution of a critical functions or that occur during execution of a critical seuqnece and for which there is no fault recovery response.*
+
 - In class example, will talk over on Friday
+
+FTFTFTTT
+
+In this exam, the statement format is in the form (C1) OR (P1 AND P2)
+
+The goal of software requirements engineering is to reduce ambiguity. 
+
+## Organizing SRS
+
+This is how you organize SRS:
+* external stimulus 
+* system feature
+* system response
+* external object
+* user type
+* mode 
+* subsystem
+
+## Domain Properties
+a. Application domain
+b. All interfaces (external) like hardware, other software, operated
+c. Constraints
+d. Requirements 
+
+## Formal Inspection
+
+* Software inspections and their cousins and reviews are proven techniques for reducing the number of defects in a program before it goes out the door.
+* The greatest leverage from the time spent on software inspections comes from examining requirements documents
+
+Walkthrough is a little bit faster than an inspection.
+
+Steps:
+1. Planning
+2. Overview
+3. Preparation
+4. Inspection
+5. Rework
+6. Follow-Up
+
+Possible Reviewers:
+* YOU
+* Developer
+* Tester/QA
+* Other members
+* Client/Customer
+* Your boss
