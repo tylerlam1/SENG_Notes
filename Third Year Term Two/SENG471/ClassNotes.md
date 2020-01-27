@@ -251,3 +251,30 @@ Possible Reviewers:
 * Other members
 * Client/Customer
 * Your boss
+
+## Feasibility Study
+
+Imagine you are a Junior Engineering in Training. You just started in the company. Someone comes up to you to ask for help.
+
+Or a senior comes up and gives you a piece of paper. 
+
+The instructions are not clear as you would like. 
+
+The goal of inspection is to point out the problem. i.e. you can break up sentences.
+
+In a example: *The Apps should be downloaded in less than ten seconds on all kinds of computer devices.*
+* Computer Devices is ambiguous
+* What's the speed of the internet? The download time is dependent on the download speed 
+
+But why feasibility study? 
+
+Let's go back to the EIT example. The fact that your senior gave you a project means you can use this chance to learn about the company. The objective of the feasibility study is to determine the possibilities of a sytem and alternatives. This helps support your claim on whether you should pursue this project to management. In other words, it determines whether a project is feasible. Is there any backups?
+
+In a feasibility study, your job is not to make a decision for your company. Rather, its used to provide information on what can happen, potentially alternatives, etc. All about the information. Like information about can the company afford it? is current technology available to do it?
+
+There are different types:
+* Technical - i.e. is the current technology up to date to complete this project
+* operational - i.e. general resources/human resources
+* Schedule - Does this fit inside the schedule
+* Economic - Make a recommendation
+

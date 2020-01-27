@@ -204,5 +204,20 @@ Each simple attribute is associated with a value set.
 * When going from superclass to subclass, its called specialization
 * When going from subclass to superclass, its called generalization
 
+### Cardinality Ratios
+* One-to-one (1:1)
+* One-to-many (1:N)
+* Many-to-One (N:1)
+* Many-to-Many (M:N)
 
+## Participation
 
+* In total participation, where every entity in participates - double line 
+* In partial participation, where not all entity needs to participate - single line
+
+## Disjointness
+
+* Disjoin specialization/generalizations
+    * Entities of subclasses of the same superclass are mutually exclusive
+* In the case of overlap, we use overlap specialization/generalizations
+    * 
