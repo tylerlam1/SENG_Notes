@@ -213,3 +213,28 @@ ATAM not only reveals how well in architecture satisfies particular quality goal
 ### Goal 
 
 Evaluate whether the design decisions satisfactorily address quality requirements
+* Traceability: Elicit rationale of design decisions
+* Discover risks: Alternatives that might create problems in some quality attribute
+* Sensitivity Points: Alternatives for which a slight change makes a significant difference in a quality attribute
+* Tradeoffs: Decisions affecting more than one quality attribute
+
+## Components and Frameworks
+
+Reuse is the use of parts in one product to facilitate the development parts of the application with different functionalities.
+
+* Accidental Reuse
+    * To identify where existing subsystems and components may be reused based on their interfaces.
+* Systematic Reuse
+    * Reuse of expertise, standard designs, algorithms, functions, libraries, frameworks
+
+A component is an encapsulated software unit with specified interfaces and explicit context dependencies that provide client applications with access to its services.
+
+A framework is a reusable design of all or part of a system that is represented by a set of abstract classes and the way their instances interact. The skeleton of an application that can be customized by a app dev.
+
+## Product Line
+* Product Family: A set of products with many commonalities and new differences
+* Product Population: A set of products with many commonalities but also many differences
+* Product Line: A set of software intensive systems that share a common, managed set of features satisfying the specific needs of a particular market segment or mission and that are development from a common set of core assets.
+
+
+

@@ -220,4 +220,10 @@ Each simple attribute is associated with a value set.
 * Disjoin specialization/generalizations
     * Entities of subclasses of the same superclass are mutually exclusive
 * In the case of overlap, we use overlap specialization/generalizations
-    * 
+
+## Categories
+* Union - can only appear in one of the entities
+    * Denoted by symbol U
+* Category vs Intersection
+    * Intersection - Entity needs to appear in every superclass
+    * Category - Entity need to appear in at least one superclass

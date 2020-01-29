@@ -78,3 +78,32 @@ When considering errors, there are two meanings:
 
 
 
+## JUNIT
+
+When doing test execution, you need to use mocking. You are free to choose your mocking framework. Example of jMock tests for the SUT of the Assignment 2 will be given. 
+
+Unit testing itself is quite simple. The goal is to separate unit under test from the rest of the system, and test that. Imagine you want to test add(x,y). 
+1. Create a program that calls SUT.
+2. Executes it with the setup value of its arguments and spits out the execution result.
+3. Compare output with expected value.
+
+Problem is that it is not very extendible, and quite difficult to manage it in a larger environment. 
+
+The scope: Ensure that each unit has been implemented correctly.
+* Looking for problems in isolation
+
+When unit testing, focus on developed components and surroundings, invalid data, boundaries, and one sample from each equivalent class of input data.
+
+### Terminology:
+* Test Drivers: Modules that act as temporary replacement for a calling module and give the same output as that of actual product
+* Test execution: The execution of an individual unit test
+* Test case: A test case is the most elemental class.
+* Test suites: A test suite is a set of tests that all share the same fixture.
+* Assertion: An assertion is a function or macro that verifies the behaviour of a unit under test.
+
+### Anatomy
+1. Get the SUT
+2. Get the test case classes
+3. Create test suite class
+4. Create test runner class
+5. Compile and run
