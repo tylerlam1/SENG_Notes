@@ -236,5 +236,30 @@ A framework is a reusable design of all or part of a system that is represented 
 * Product Population: A set of products with many commonalities but also many differences
 * Product Line: A set of software intensive systems that share a common, managed set of features satisfying the specific needs of a particular market segment or mission and that are development from a common set of core assets.
 
+## Beyond Design Patterns
+* Function Libraries
+* Class Libraries
+* Design Patterns
+* Components
+* Frameworks
+* Software Product-Lines
+
+## Frameworks
+
+A reusable design of all or part of a system that represented by a set of abstract classes and their instance interact. 
+* Defines how objects work together to get something
+* Defines the superclasses or public interface
+* The skeleton of an application that can be customized by an application
+
+Frameworks interact with application logic through:
+* Subclassing
+
+For example, let's investigate the *Inverstion of Control* principle. Frameworks invert the role of control between the application and infrastrcture. With a framework, you are no longer in control. The framework controls the way your application works.
+
+Frameworks has some notions like Events (mouse), hooks (exit) and subclassing (frame). Application lives inside the framework.
+
+
+
+
 
 

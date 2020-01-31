@@ -72,3 +72,33 @@ pitfalls:
 why internal only, cancer only?
 
 New statement: A way to identify internal view of the organs in patients with internal disorders that would help medical professionals find ways to combat illnesses.
+
+## Concept Generation
+### Class Activity
+1. Team 5
+2. WE have 4 members
+3. Electrical, mechanical, software
+4. Nope
+
+Ideas:
+* Facilitator is Sophia
+* Wheelchair that has mechanism to raise seat up - Lock the wheel chair and it can go up and down
+    * Mechanically powered
+    * Voice activation
+    * Something they can use their feet for
+* Make a chute to slide things down
+* Conveyer belt to lift things up
+* Lower-body exoskeleton
+* Mechanical arms - With a camera so you can see what you're doing
+    * Building on that - something like a drone?
+* Inflatable wheels - they can lift you up
+* Airport Tray that grabs the item - uses friction
+* Plunger suction - open doors and grab the item
+* A clamp arm  - can detect a arm handle
+    * Balloon powered type of door handler opener
+* When placing things inside a cabinet, something that can encase delicate items before they are placed would be useful
+* A clamp similar to what works for the blue chart/recycling bin, etc.
+* Hydraulic Power
+* Wheels on the table
+* Movable shelves
+* Carousel up and down

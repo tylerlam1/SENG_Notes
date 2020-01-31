@@ -107,3 +107,34 @@ When unit testing, focus on developed components and surroundings, invalid data,
 3. Create test suite class
 4. Create test runner class
 5. Compile and run
+
+## Mocks and Stubs
+
+Sometimes SUTs have dependencies (recall UML). Unit tests should not have dependencies. When testing collaborative units together, use integration test, feature test.
+
+A stub is a fake class that coomes with preprogrammed return values. It's injected into the class under test to give control over being what's tested. A stub is often and-coded in the implementation language, i.e. no need to use a mock framework but it is okay to use one.
+
+Steps:
+* Setup - Prepare SUT that is being tested and its stubs collaborators
+* Exercises - Test the functionality
+* Verify State - Use asserts to check object's state
+* Teardown - Clean up resources
+
+A mock object is a fake object that devices whether a unit test has passed or failed by watching interactions between objects.
+
+We need a mock object when a unit of code depends on an external object. A mock framework example would be jMock, Mockito, PowerMocks, EasyMock, etc.
+
+Let's compare a mock and a stub.
+
+A stub gives out data that goes to the object/class under test. The unit test directly asserts against class under test, to make sure it gives the right result when fed this data.
+
+A mock is created and waits to be called by the class under test. It makes sure it is contacted in exactly the right way.
+
+To test Lifecycle with Mocks:
+* Setup data - prepare object that is being tested
+* Setup expectation - Prepare expectations in mock that is being used by primary object
+* Exercise - Test the functionality
+* Verify expectations - Verify that correct methods has been invoked in mock
+* Verify state - Use asserts to check object's state
+* Teardown - Clean up resources
+
