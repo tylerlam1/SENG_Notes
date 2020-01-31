@@ -278,3 +278,37 @@ There are different types:
 * Schedule - Does this fit inside the schedule
 * Economic - Make a recommendation
 
+### Computing Costs
+
+* Costs
+* APEGA website - salary survey results is published
+* Salary: $25.00/hour + 20% benefits
+    * Your co-workers may ask you to use $50.00/hour
+    * This is because they need to cover overhead and other costs
+* Contigencies
+
+So when you're doing cost-benefit analysis:
+* identify cost and benefits
+    * tangible and intangible
+    * one-time and recurring
+* determine cash flow
+    * project costs and benefits
+    * calculate Net present value (NPV) for all future costs/benefits
+* analyze cost-benefit
+    * ROI - After break even point, how much can you gain from after investment
+    * Break-even point - break even, as the name suggests
+
+When calculating Net Present Value, let's investigate some terms:
+* Discount Rate -  annual average return for investment
+* PV = 1/(1+i)^n, where n = years down the road. 
+* present value (PV) - current year $ value
+*  Inflation rate - find on Bank of Canada website
+* NPV - (cumulative PV of all benefits)
+* Break-even = Yr. 4 + (beginning year mount)/ (endeyearamount + beginningyearamount)
+
+For the in class example:
+* 4 + (11262)/(13696 + 11262) = 4.45 years
+
+To find the ROI:
+
+* (NPV)/(Cumulative PV of all costs) = (13969)/(114217 + 3119) = 11.9%
