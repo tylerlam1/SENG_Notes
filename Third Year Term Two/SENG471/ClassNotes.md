@@ -357,4 +357,4 @@ When modelling goals, we can use differnt types of notation:
 
 The objective is conflict resolution.
 
-
+Soft goals become non-functional requirements (on top). Hard goals are functional requirements (bottom).
