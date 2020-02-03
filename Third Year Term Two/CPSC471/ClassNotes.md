@@ -227,3 +227,47 @@ Each simple attribute is associated with a value set.
 * Category vs Intersection
     * Intersection - Entity needs to appear in every superclass
     * Category - Entity need to appear in at least one superclass
+
+## Relational Models
+
+Preclass discussion (about ERDs and EERDs):
+* In a ERD, when we have a subclass, we can neglect it if it's not being used significantly. 
+* A entity should have an attribute. If not, state it in the assumption.
+* A entity may have multiple key attributes
+* A partial key can be a combination of all the attributes of the superclass
+
+Know your tutorial number for Wednesday's class. Today is an introduction to relational models.
+
+The relation model of Data is based on the concept of a relation.
+
+A relation is basically an entity (like a table). In the table is called attributes. The column describes the data being stored in that column. The rows are called tuples, entity instances, rows (all have the same meaning). 
+
+Each relation should have a key attribute. This is where each tuple is unique. 
+
+A set is an unordered collection of unique elements. A multiset is an unordered collection of elements. 
+
+We can also represent relations mathematically. Look at the slides on how to do that.
+
+A schema of a relation is denoted by R(A1,A2,A3...). A1,A2,..,AN are attributes. Each attribute has a domain or a set of valid values. For example, the domain of SSN is 9 digit numbers.
+
+Each attribute should have a domain or datatype. A datatype could be boolean, integer, etc. The domain is the expected number to be stored there (basically how it's stored). A domain can be stored on the DBMS level or application level. 
+
+A tuple is an ordered set of values, enclosed in angled brackets. You can think of it as ordered since the columns in the table are ordered. For example, a 4-tuple has 4 values.
+
+The relation state is basically the set of tuples that match the relation schema (...I think). You can call them state. Having the same Relation State means that Relation state doesn't care about the order of data, as long as the same data is there.
+
+Tuples typically are not considered to be ordered. Each attribute should have an atomic value. From what I'm understanding, I think he means that each column in a database table must be atomic (single value). Also, primary keys should never be null values.
+
+Imagine we have a relation schema.
+
+This is represented by:
+
+Student(Name, Phone, Location). This whole thing is called relation schema.
+
+Student is the Relation Name. The relation state is the set of tuples.
+
+When looking at schema vs state, state is more about the data and schema is more bout the structure. The basic operations for changing the database:
+* INSERT - New tuple added
+* DELETE - Delete an existing tuple
+* MODIFY - Modify an existing attribute in a existing tuple
+
