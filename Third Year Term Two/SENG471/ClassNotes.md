@@ -312,3 +312,49 @@ For the in class example:
 To find the ROI:
 
 * (NPV)/(Cumulative PV of all costs) = (13969)/(114217 + 3119) = 11.9%
+
+## Stakeholders Goals
+
+The objective of requirements engineering is to elicitate necessary information. Elictate is to find, to get. 
+
+When doing Requirements Elicitation:
+* Which problem needs to be solved? Boundaries
+* Where is the problem? Application domain
+* Whose problem is it? Stakeholders
+* Why does it need solving? Stakeholders goal
+* How might a software system help? Scenarios
+* When does it need solving? Development constraints
+* What might prevent from solving it? Feasibilities
+
+Here's the approach:
+* Focus on why systems are constructed
+* Express the why as a set of stakeholder goals
+* Use goal refinement to arrive at specific requirements
+* Goal analysis
+* Goal evolution
+* Goal hierarchies
+
+It's important to focus on *why* to derive goals:
+* Advantages
+* Disadvantages
+
+Goals can change throughout time. 
+
+In goal analysis, we need to consider the:
+* Why - The high level goals
+* How - Lower Level goals (operations)
+* How else - alternatives
+
+When modelling goals, we can use differnt types of notation:
+* Hard goals - represented by a circle
+* Soft goals - represented with a cloud
+* Help (+)
+* Hurt (-)
+* Make (++)
+* Break (--)
+* Order (->)
+* AND (default), OR
+
+The objective is conflict resolution.
+
+
