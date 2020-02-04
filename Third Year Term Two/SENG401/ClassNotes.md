@@ -258,6 +258,51 @@ For example, let's investigate the *Inverstion of Control* principle. Frameworks
 
 Frameworks has some notions like Events (mouse), hooks (exit) and subclassing (frame). Application lives inside the framework.
 
+## What is Feedback?
+
+* Giving your opinion on someone elses work.
+* Feedback is a part of exchanging ideas. Take an idea, and exchange ideas about.
+* How we continue to improve something... etc
+
+## Why collaborate?
+* Divide and conquer
+* People have different skills, people can together build much better project
+* People don't hve to learn everything
+
+But who should collaborate?
+* Software Engineers, Hardware Engineers
+* Clients (they have input on what they want)
+* Project Manager
+* Marketing - how you can eventually sell a product?
+* Testers, designers, owners, etc.
+
+Product Managers at Google look at the long term. What are people interested in? What are similar products doing? They focus on everything around the user input. Project Managers are different than Product Managers - they look at timelines, etc.
+
+The UI/UX Designers focus on making the product on making everything appealing to the user.
+
+We can also focus on more general groups:
+* Stakeholders - People who have an interest in the work, because they use it, fund it, or are involved in the industry.
+* Domain Expert - someone knowledge in one or more of the system you work with either the main product, or a system which you reply; e.g. database admin, reliability engineer, business logic expert.
+
+## Rules for Successful Collaboration
+* Communication
+* Being open-minded, open to other perspectives
+* Listening attentively
+* Don't take things personally - separate *ideas* from *people*
+* There are no "heroes" in a team effort - don't depend on a single person. Everyone has a stake in the results, etc.
+
+Collaboration does not mean:
+* Consensus - Not about everyone agreeing. It's about exchanging. It's not necessarily about bringing in all ideas, but talking debating and talking about ideas
+* Sometimes it means you have to be bold - Doesn't necessarily mean having a fully-fleshed idea (business idea, etc).
+* Sometimes external forces (other classes, etc) may affect your decision. i.e. choose if you want to make something really fancy, or simply straightforward
+
+How can collaboration fail:
+* Lack of communication - You MUST speak up. 
+* People have different expectations - sometimes just result of lack of communication (i.e. people build same thing, team members have a different idea of the resulting product)
+
+Doesn't matter if you're a 4.0 student or what not, your ideas won't succeed if you don't communicate, test and discuss them. They need contact to the real world.
+
+
 
 
 
