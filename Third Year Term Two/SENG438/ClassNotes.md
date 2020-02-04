@@ -138,3 +138,39 @@ To test Lifecycle with Mocks:
 * Verify state - Use asserts to check object's state
 * Teardown - Clean up resources
 
+## Quick Review
+
+Blackbox testing applies to all granularity levels. 
+
+### Testing
+
+Equivalence class partitioning is when inputs in an equivalence class are assumed to be treated the same by the system. 
+
+When doing Equivalence Class Testing (ECT), you divide input set into a partition that can be considered the same. 
+* Equivalence Class - partition of the input space in such a way that input data have the *same effect* on the SUT.
+* Completeness - Entire input set is covered
+* Disjoint classes - to avoid redundancy
+* Equivalence classes must be chosen wisely.
+* guessing the likely system behaviour is needed.
+
+A group of test cases are "equivalent" if:
+* They all test the same unit
+* If one test case can catch a bug, the others will probably do
+* If one test case does not catch the bug, the others probably do.
+* They all invoke the same input variables
+* They all affect the same output.
+
+The entire set of inputs can be divided into two subsets:
+* one containing all the expected or legal inputs
+* the other containing all unexpected inputs
+
+There's different types of ECT, like strong and weak ECT.
+
+## Boundary Value Testing
+
+While equivalence partitioning selects tests from within equivalence classes, boundary value analysis focuses ont ets at and near the boundaries of the equivalence classes. Tests derived may overlap.
+
+Hints:
+* Check if the boundary conditions for variables are set correctly
+* Check if the inequality boundary conditions can be changed to equality or not
+* Check if the counter variables allow departure from loop or not
