@@ -302,6 +302,28 @@ How can collaboration fail:
 
 Doesn't matter if you're a 4.0 student or what not, your ideas won't succeed if you don't communicate, test and discuss them. They need contact to the real world.
 
+## Design Documents and Diagrams
+
+Each style has their own design documents template, and style.
+
+A design document is important as it:
+* Provides a description of the system for stakeholders
+* Validation that the intended design meets stakeholder needs
+
+Document metadata - explains why you are actually doing this design.
+* Basically identifies the contents the contents of the document
+* Easy to reference from other documents
+Has authors, contributors, title, date (indicates how fresh your system is), purpose, background reading, and context (broader description to how this fits into everything else in your company). 
+
+A design document describes what you intend to build. 
+* Requirements
+* Components
+* Architecture
+* How it interacts with user
+* How data is stored
+* Technologies used
+* How is it deployed?
+
 
 
 
