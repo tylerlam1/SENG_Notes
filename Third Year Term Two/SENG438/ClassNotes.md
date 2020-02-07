@@ -182,3 +182,4 @@ Hints:
 
 * Decision tables help us visualize test suites.
 * Ideal for describing situations in which the number of combinations of actions are taken under varying conditions.
+

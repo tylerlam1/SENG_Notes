@@ -358,3 +358,32 @@ When modelling goals, we can use differnt types of notation:
 The objective is conflict resolution.
 
 Soft goals become non-functional requirements (on top). Hard goals are functional requirements (bottom).
+
+There are several tips regarding Stakeholders goals
+* Use multiple scenarios
+* Multiple perspectives
+
+## Requirements Elicitation
+
+You have sponsors, managers, users, stakeholders, software developers, and testers. They all play an important part in requirement elicitation. 
+
+Sometimes, bias may come into play. Here are some examples of sources of bias:
+* Social pressure, group think, impression management, wishful thinking, appropriation, misrepresentation, anchoring, inconsistency, availability, underestimation of uncertainty
+
+The requirements elictation process is as follows:
+1. Establish Objectives - Break your objective into what your need to achieve that objective. 
+2. Understand Background - What problem needs to be solve? Constraints? 
+3. Organize knowledge - How much do I know, how much do I not know? Goals Modelling .... etc
+4. Collect Requirements - Elicitate. 
+
+The first three bullets are pretty much background work, and need to be completed before the fourth bullet. 
+
+The different types of Elicitation techniques:
+* Traditional - Reading documents, analyzing data, interviews, etc.
+* Contextual - Ethnographic technques, discourse analysis
+* Collaborative 
+* Cognitive
+
+Traditional happens very often in the real world. It involves i.e. getting a document, and extrapolate from it. Basically, let them know which part can be reused and which cannot. Problems can come if you're copying old code to new code, and don't notice any differences (but there is). Other disadvantages is that it is missing requirements, or doesn't work. 
+
+When doing background reading, could be reading manual books. Advantages is that it is straightforward (quick and easy) to do, but it takes a long time and boring. Disadvantages is that it could be different in the future than it is now. 

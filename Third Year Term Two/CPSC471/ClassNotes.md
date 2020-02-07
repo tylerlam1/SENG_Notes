@@ -271,3 +271,22 @@ When looking at schema vs state, state is more about the data and schema is more
 * DELETE - Delete an existing tuple
 * MODIFY - Modify an existing attribute in a existing tuple
 
+### Constraints
+* Inherent constraints - based on data model
+* schema-based constraints - expressed in schema
+* Application constraints - enforced on application level
+
+Constraints are conditions that must hold true in all relational states.
+
+A key is always a superkey, but a superkey may not be a key. A superkey is a set of attributes SK of R with the following conditions:
+* No two tuples in any relation state have the same value for SK
+
+A key of R:
+* A minimal superkey
+* A key is a superkey K such that removal of any attribute from K results in a set of attributes that is not superkey
+
+If a relation has several candidate keys, one is chosen arbitrarily to be the primary key. The primary key attributes are underlined. A general rule when choosing a primary key: smallest of candidate keys.
+
+A primary key attribute of each relation schema cannot have null values in any tuple. Please note that other attributes of the relation schema may be constrained to disallow null values, even though they are not members of the primary key.
+
+A foreign key references another table. Sometimes the foreign key can be null. 
