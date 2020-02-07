@@ -174,3 +174,11 @@ Hints:
 * Check if the boundary conditions for variables are set correctly
 * Check if the inequality boundary conditions can be changed to equality or not
 * Check if the counter variables allow departure from loop or not
+
+## Decision Tables
+
+* Can help us deal with combination of inputs which produce different results
+* Has conditions, and necessary actions (result of what we expect). Each column is a test case.
+
+* Decision tables help us visualize test suites.
+* Ideal for describing situations in which the number of combinations of actions are taken under varying conditions.
