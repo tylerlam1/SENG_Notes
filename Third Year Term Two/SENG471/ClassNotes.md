@@ -387,3 +387,29 @@ The different types of Elicitation techniques:
 Traditional happens very often in the real world. It involves i.e. getting a document, and extrapolate from it. Basically, let them know which part can be reused and which cannot. Problems can come if you're copying old code to new code, and don't notice any differences (but there is). Other disadvantages is that it is missing requirements, or doesn't work. 
 
 When doing background reading, could be reading manual books. Advantages is that it is straightforward (quick and easy) to do, but it takes a long time and boring. Disadvantages is that it could be different in the future than it is now. 
+
+VAT = Value Added Tax 
+
+## Interviews
+
+* Keep it short
+* You can uncover opinions, feelings, goals, hard facts
+* Probe in depth
+* State objectives in the beginning
+* Watch out for answerable questions
+* Interviewer's attitude
+* Icebreakers
+
+Questionnaires:
+* Good for large amounts of people, remote administration
+* Bad cause its simplistics, little context
+* Watch for bias, with sample selection, appropriate questions, ambiguous questions
+
+## Scoping the Question
+
+Your goal is to avoid end up getting to a point where you design a software to do the requirements for you. You want the problem to be scoped effectively, and know all the problems.
+
+Be sure to ask all the stakeholders.
+
+First step, define the scope. Who is responsible for this particular project?
+We also need to scope the solution. 
