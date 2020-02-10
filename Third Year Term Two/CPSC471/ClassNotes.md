@@ -290,3 +290,28 @@ If a relation has several candidate keys, one is chosen arbitrarily to be the pr
 A primary key attribute of each relation schema cannot have null values in any tuple. Please note that other attributes of the relation schema may be constrained to disallow null values, even though they are not members of the primary key.
 
 A foreign key references another table. Sometimes the foreign key can be null. 
+
+## ERD/EERD to Relational Schema
+
+The goals are:
+* Preserve all information
+* Minimize null values
+* minimize redundancy
+* Maintain the constraints to as much as possible (it's not possible to do it completely)
+
+For all strong entities:
+1. Create a relation (table header and name)
+2. Each attribute would correspond to a table header
+3. Primary key is on the left
+4. Composite attributes are broken down and recorded only by their subattributes
+
+Weak entity types:
+1. In a weak entity, a partial key + name form the primary key of the relation
+
+Binary Relationships:
+* One - to - one relationship
+* Represented by participation. 
+    * If total participation, there is single relation (every employee would have a record of a car).
+    * If partial participation, there will be two relations (or else we have null entries).
+* If two entities participate in a relationship, you may set up a third relation
+    * The primary key of the third relation would be the combination of the PK of the first and second entities
