@@ -315,3 +315,13 @@ Binary Relationships:
     * If partial participation, there will be two relations (or else we have null entries).
 * If two entities participate in a relationship, you may set up a third relation
     * The primary key of the third relation would be the combination of the PK of the first and second entities
+    * Same thing with a ternary relationship
+
+When mapping Generalization/Specialization:
+* One way is to make superclass entity, and a entity for all subclasses
+* We can avoid making superclass a entity, but only subclasses with the attributes of the superclass
+* Flags
+* Lookups - (Make table for superclass)
+
+In multiple inheritance:
+* Create a new key attribute, called a surrogate key. 

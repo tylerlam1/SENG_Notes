@@ -322,7 +322,23 @@ A design document describes what you intend to build.
 * How it interacts with user
 * How data is stored
 * Technologies used
-* How is it deployed?
+* how is it deployed?
+
+## Rest APIs
+
+Representational State Transfer (REST) is a set of constraints on the structure of messages used to access a remote service (generally web services).
+
+REST is intended for client-server applications. The client initiates the request, and the server performs the action and responds.
+
+There is a Uniform Interfaces, where access to all resources follows the same pattern. Also, there's a shared communication protocol and data format.   
+
+REST is considered stateless. This means that the server does not store state, and the client is responsible for providing all data during each request.
+
+How this connection works should be transparent to the client. Whether the client talks to the server or an intermediary should be transparent to the client. This enables proxy, load balancing, and caching.
+
+A URI (Uniform Resource Identifier) represents a single resource. It is possible to cache a response, but some responses can be marked as non-cacheable.
+
+The URI structure easily allows for adding new resource type. URIs are easily parsed and handled by different servers. 
 
 
 
