@@ -102,3 +102,15 @@ Ideas:
 * Wheels on the table
 * Movable shelves
 * Carousel up and down
+
+## Regulations
+
+* Health Canada regulates food/drugs in Canada
+* FDA regulates the USA
+
+There are different classification rules, including determining the Class, Nature, Rules, etc. Determine whether the device is invasive/non-invasive, active/inactive.
+
+Definitions:
+* Invasive - Come into contact within the surface of eye, or penetrate the body, either through body orifice or through the body surface
+* Non-Invasive - By exclusion
+* Active - Operates on a source of energy rather than human body/gravity
