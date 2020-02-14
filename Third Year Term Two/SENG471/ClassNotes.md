@@ -413,3 +413,16 @@ Be sure to ask all the stakeholders.
 
 First step, define the scope. Who is responsible for this particular project?
 We also need to scope the solution. 
+
+## Issues in Modelling Requirements
+
+* Guide elicitation
+* Provide a measure
+* Uncover problems
+* Check understanding
+
+Model is an abstraction. It does not cover everything. It may not cover every aspect of a entity/relationship. Key point is that it should be good enough for your work. 90% is generally good enough.
+
+Example 1:
+* The customer receives the card, and then activates the card.
+* The arrow is really important
