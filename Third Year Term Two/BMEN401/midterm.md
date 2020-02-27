@@ -176,3 +176,34 @@ Europe has a uniform CE marking system accepted in the Union.
 * Preferably the manufacturer should comply with ISO 14385
 * Typically handled by third parties acting in behalf of the Authority
 * Data collected can be used for Health Canada but it will only be taken as preliminary data for the FDA.
+
+## Miscellaneous
+
+Here is the list of acceptance criteria of your mission statement/strategic focus:
+* Market dynamics and competition
+* Project fit with innovators mission and capabilities
+* Anticipated market growth
+* Effect on improving health outcomes
+* Effect of affordability/accessibility of care
+* Time/resources required to achieve results
+* Customers that need to be cultivated
+* Revenue/size market 
+
+The target market is the market segment that stands to gain the most value from a new solution.
+
+The following are key factors that can be used to divide the total market of all potential customers into distinct segments:
+1. size and growth
+2. competitive dynamics
+3. needs 
+4. willingness to pay
+
+The market landscape:
+* analyse the rough spending on the disease
+* analyse the cost of current solutions
+* analyse SWOT (strengths, weaknesses, opportunities, and threats) around current solutions
+* is there a cost gap?
+* Proter's five forces for a new solution
+
+HMW stands for "How might we..." and helps kickoff the brainstorming process by turning questions into ideation.
+
+Reduction to practice means the idea is being diligently pursued and there is credible prototype or reuslts.
