@@ -207,3 +207,54 @@ The market landscape:
 HMW stands for "How might we..." and helps kickoff the brainstorming process by turning questions into ideation.
 
 Reduction to practice means the idea is being diligently pursued and there is credible prototype or reuslts.
+
+## Midterm Review Slide
+
+The motivation behind the Biodesign Innovation process is to:
+1. identify need
+2. Invent device
+3. Implement solution
+
+The elements that determine strategic focus are:
+* Personal/Team Inventory
+* Opportunity
+* Other factors
+
+When defining the strategic focus, consider:
+* Personal elements
+* Acceptance criteria
+* Strategic focus
+
+During Needs Finding and Screening:
+1. Identify needs: Identify the needs but do not try to solve or choose yet?
+Make sure to document and reflect.
+2. Needs statements should include a problem on a population and the desired outcome.
+3. Common pitfalls associated with it are:
+    * Format (parts missing, negative)
+    * Scope (broad/narrow population)
+    * Solution (solution/current practice embedded, unmeasurable outcome)
+4. During disease state search: Epidemiology, clinical presentation, anatomy/physiology, clinical outcomes, economic impact, pathophysiology, current standard of care
+
+During concept screening, consider:
+* Risk, value and time
+
+There are different types of intellectual property. This includes:
+* Patents
+* Trademarks
+* Industrial design
+* Trade secrets
+
+The patentability is dependent on the following:
+* Novelty (uniqueness)
+* Utility (how useful it is)
+* Non-obviousness (how obvious it is to a skilled individual)
+
+The invention should be reduced to practice, meaning it should be prototyped.
+
+Players:
+* Inventor - person who invented it
+* Assignee - person/company who owns the product
+* Licensee - whoever can use the product
+
+Medical device classification:
+* Health Canada: Class I, II, III, IV
