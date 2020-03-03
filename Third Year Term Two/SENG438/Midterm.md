@@ -121,3 +121,74 @@ Fault forecasting:
 * There are two aspects
     * Qualitative - which aims to identify, classify, rank the failure modes, or the event combinations that would lead to system failures
     * Quantitative - which aims to evaluate in terms of probabilities the extent to which some of the attributes of dependability are satisfied
+
+
+# Inclass Midterm Review
+
+Chapters:
+1. Introduction
+2. Foundations of testing
+3. Unit testing - write unit tests using JUnit, SUT, write a program that includes our tests for SUT. Each class we have the before test, for, and after. Within each test, we have assertions for what we want to compare. We can compare two objects, two numbers, two strings, two arrays. The combination would comprise of your test suite. 
+4. Black box - just look at the requirements, and try to write the test cases based on the requirements. 
+5. White box - control flow
+6. White box - data flow - we made flow graphs, paths, conditions on each branch, what is important. We also covered metrics like line, decision/branch coverage, and condition coverage. Data flow is the modified of control flow, adding where the data is defined and where it is used. 
+
+In chapter 1, we had a lot of terminology available in the textbook. 
+
+In JUnit (Chapter 3), we learned about mocks and stubs. We should be able to write mocks and stubs if needed. 
+
+Chapter 4 was about black-box. It is equivalent to chapter 2 in textbook.
+
+We test your knowledge on the midterm, as well as the tools in the lab. 
+
+Samples questions:
+* coverage criterion subsumes if every test set that satisfies C1 also satisfies C2.
+* When do we need to use data-driven JUnit tests? When we want to write several test cases, but only the data changes.
+* Boundaty value analysis is stronger than equivalence class testing because more interesting things happen at the boundary. 
+
+Provide an example where the test covers 100% of statements but not 100% of decisions. Provide the test suite for decision coverage as well.
+
+Sometimes he will give you code and fill in missing parts. You may also be instructed to write some test cases for a given coverage criterion.
+
+Does testing prove the the correctness of the program? No guarantee the test suite can make the program work correctly. Testing can evaluate if the program is working okay, but can't prove its correct.
+
+Is it possible to test a program completely? No. 
+
+What is requirement traceability matrix (RTM)? Requirements in the black-box testing. In each row, we write the test case associated with the subset of those requirements. 
+
+Difference between high severity/high priority? Priority is due to timing, severity is to due with the user/environment and surrounding. 
+
+Decision coverage: Test cases for each decision
+Condition coverage: Test each combination of each decision
+
+Terms:
+* Test plan - the functions you want to test and the techniques used to test them
+* Failure - the thing that is observed
+* Fault - the thing that causes the failure
+* Failure rate - Failure/unit of time
+
+Software testing is NOT a single activity
+A failure causes a fault in a program F
+A fault is caused by an error T
+TDD is writing test and then implement the code T
+Black-box testing tests the production code F
+Smoke testing is a set of tests that aim that ensuring the most important functions work  T
+MockingJay is NOT a mock framework (not gonna be tested)
+
+By testing software before you release it, you're not can't guarantee software will work after release. You're just giving a 'best-effort' kind of thing.
+
+Short solution
+
+```Java
+@Test
+public void testLoginPage() {
+    String expectedUsername = "hey"
+    String expectedPassword = "buddy"
+    assertEquals(expectedPassword, login.getPasswordFromUsername(expectedUsername));
+}
+```
+
+1. Does (x, true, true, true) lead to 100% statement coverage? Convert it to a flow diagram and see.
+2. No
+3. Yes
+4. 8
