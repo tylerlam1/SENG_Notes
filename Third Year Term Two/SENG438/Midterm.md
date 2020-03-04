@@ -122,6 +122,352 @@ Fault forecasting:
     * Qualitative - which aims to identify, classify, rank the failure modes, or the event combinations that would lead to system failures
     * Quantitative - which aims to evaluate in terms of probabilities the extent to which some of the attributes of dependability are satisfied
 
+In this slideset, we have learned that:
+* Software errors/faults are inevitable 
+* Software failure are expensive and sometimes life threatening
+* Testing is a practical approach for finding faults to avoid failure
+* The need for software testers and test engineers is growing fast
+* We learn the basics of testing in this class
+
+Validation involves acceptance test, usability testing, user feedback. Verification includes unit testing, integration testing, inspections, etc. Validation is checking whether the system meets customer's actual needs. Verification is whether the system is well-engineered, and bug free.
+
+Software testing incorporates techniques to execute programs with the intent of finding as many defects as possible and/or gaining sufficient confidence in the SUT. A test case is a set of inputs and the expected outputs for a unit/module/system under test. A test suite is a set of test cases. Without the expected outputs, a test case is NOT complete.
+
+Terminology:
+* Direct input variable - a variable that controls the operation directly
+* Indirect input variable - a variable that only influences the operations or its effects are propagated to the operations. By giving a test case a indirect input variable, you are specifying the context. 
+
+Here are the types of test activities:
+* Exploratory testing - design test values based on domain knowledge of the program and human knowledge of testing, explatory testing
+* test-case design - design test values to satisfy coverage criteria or other engineering goal
+
+Approaches:
+* exploratory testing - tests are designed and executed at the samt time. Unscripted doesn't mean unprepared. It's about enabling choice, not constraining it.
+* Scripted testing - tests are first designed and recorded. Then tehre may be secuted at some later time.
+
+In exploratory testing, you use brain and fingers:
+* create realistic scenarios that will cause software failure
+* no strict plan
+
+In manual scripted testing, follows a path that is written by tester/or someone else:
+* the script includes test cases and test steps that are documented
+* no deviation from the path laid out in the script
+
+manual regression testing:
+* regression testing is testing done to check that a system update does not reintroduce faults that have been corrected earlier
+* usually performed after a bug fix code
+
+Here are some facts about the Waterfall Model:
+Pros:
+* simple and easy to understand and use
+* easy to manage due to rigidity of the model
+* phases are processed and completed one at a time
+* works well for smaller projects where requirements are well understood
+* clearly defined stages
+* easy to arrange tasks
+* process and results are well documented
+
+Cons:
+* no working software is produced until late during the lifecycle
+* high amounts of risk and uncertainty
+* not a good model for complex and object-oriented projects
+* does not allow for much reflection in revision
+
+Iterative Model:
+Pros:
+* some working functionality can be developed quickly and early
+* results are obtained early and periodically
+* parallel development can be planned
+* lest costly to change scope/requirements
+* testing and debugging during smaller iteration is easy
+* issues, challenges, and risks identified from each increment can be utilized/applied to the next increment
+* during life cycle softawre is produced early which facilitates customer evaluation and feedback
+
+cons:
+* more resources required
+* more management attention is required
+* system architecture or design issues mayarise because not all requirements are gathered
+* more complex
+
+Testing in V-Model:
+* Unit testing
+    * testing of individual components
+* integrationt testing
+    * testing to expose problems arising from the combination of components
+* system testing
+    * testing the complete system prior to delivery
+* acceptance testing
+    * testing by users to check that the system satisfies requirements
+
+V-Model:
+Pros:
+* highly disciplined model and phases are completed one at a time
+* works for smaller projects 
+* simple to use and easy to understand
+* easy to manage due to the rigidity of the model
+
+COns:
+* High-risk and uncertainty
+* Poor model for long and ongoing projects
+* similar cons to waterfall
+
+agile:
+pros:
+* is a realistic approach to software development
+* functionality can be developed rapidly and demonstrated
+* resource requirements are minimum 
+* suitable for fixed or changing requirements
+* delivers early solutions
+
+Cons:
+* you need an overall plan, an agile leader, and agile project manager
+* strict delivery management dictates the scope, functionality, and adjustments
+* high individual dependency since minimal documentation
+* transfer of technology may be difficult due to lack of documentation
+
+In test driven development, here are the steps:
+1. add a test
+2. run tests see new failure
+3. write some code
+4. run tests see all pass
+5. refactor
+
+Pros:
+* TDD shortens the programming feedback loop
+* guarantees the development of high quality code
+* provides concrete evidence that software is working
+* less debug time
+* reduce software failure rate
+
+cons: 
+* programmers like to code, not test
+
+Requirement analysis:
+* test team studies the requirements from a testing point of view to identify the testable requirements
+* The QA team may interact with various stakeholders (client, business analyst, technical leads, system architectrs) to understand the requirements in detail
+* requirements could be functional or non functional
+* autoamtion feasibility for the given testing project is also done in this stage
+
+Activities:
+* identify types of tests to be performed
+* gather details about testing priorities and focus
+* prepare requirement traceability matrix (RTM)
+* identify test environment details where testing is supposed to be carried out
+
+deliverables:
+* RTM
+* automation feasibility report
+
+In a RTM, your requirements will be your columns, and the test cases will be your rows. Your job is to mark which requirements each test case fulfills.
+
+The test plan:
+* preparation of test plan/strategy document for arious types of testing
+* test tool selection
+* test cost/effort estimation
+* resource planning and determining roles and responsibilities
+* training requirement
+
+deliverables:
+* test plan/strategy document
+* effort estimation
+
+what to write in a test plan document:
+* Introduction
+* references
+* test items (list the test items and their versions)
+* features to be tested
+* features not to be tested
+* approach
+* pass/fail criteria
+* suspension criteria and resumption requirements
+* deliverables
+* test environment
+* estimate
+* schedule
+* staffing and training needs
+* responsibilities
+* risks
+* assumptions and dependencies
+* approval
+
+Test case development:
+* this phase involves creation, verification, and rework of test cases and test scripts. test data, is identified/created and is reviewed then reworked.
+* create test cases, automation scipts
+* review and baseline test cases and scripts
+* create test data
+
+test environment setup:
+* test environment decides the software and hardware conditions under which a work product is tested
+* test environment setup is one of the critical aspects of testing
+
+test execution:
+* failure reports is a part of the deliverables
+
+closure:
+* testing team will meet, discuss and analyze testing artifacts to identify strategies that have to be implemented in the future
+* document the learning out process
+* prepare test metrics
+* prepare analysis
+* qualitative and quantitative reporting
+
+unit testing:
+* you can test functional and non-functional requirements
+
+exhaustive testing:
+* testing a possible inputs (practically impossible)
+* partitioning techniques - exploratory testing, systematic (white box, blackbox)
+
+Blackbox testing: unexpected functionality in the implementation that cannot be revealed by blackbox techniques
+Whitebox testing: unexpected functioanlity in the specification that cannot be revealed in whitebox techniques
+
+When performing unit test, consider the following:
+* A unit test must only test only specific unit of functionality (class or method)
+* It does not access a database
+* Does not communicate via network
+* Focus on development components
+* Leave system before and after the same
+
+* One sample from each equivalent class of input data
+* Invalid data
+* Boundaries
+
+JUnit is a Java testing framework used to write and run tests.
+* Assists with test execution automation
+    * good for large scale testing
+    * repeatable/automated test procedure
+    * widely used in industry
+
+Anatomy of JUnit testing:
+1. Get the SUT
+2. Create test case classes
+3. Create test suite class
+4. Create test runner class
+5. Compile and run
+
+A basic test case:
+```Java
+@Test
+public void testAdd() {
+    assertTrue("calc sum incorrect", 5==Calc.add(2,3));
+}
+```
+
+Example of setup and tear down:
+```Java
+
+public class TournamentTest {
+    Tournament tournament;
+
+    @Before
+    public void init() throws Exception {
+        tournament = new Tournament(100,60);
+    }
+
+    @After
+    public void destroy() throws Exception {
+        tournament = null;
+    }
+
+    @Test
+    public void testGetBestTeam() {
+        Assert.assertNotNull(tournament);
+
+        Team team = tournament.getBestTeam();
+        Assert.assertNotNull(team);
+        Assert.assertEquals(team.getName(), "Test1");
+    }
+}
+
+```
+To catch an exception, use the following:
+
+```Java
+@Test (expected = Exception.class)
+```
+
+A test fixture is the state of the test
+* Objects and variables that are used by more than one test
+* Initializations
+* Reset values
+* Different tests can use the objects without sharing the state
+* objects used in test fixtures should be declared as instance variables
+
+The following are `assert()` methods:
+
+```Java
+assertTrue("message", condition)
+assertFalse("message", condition)
+assertEquals(expected, actual)
+assertSame(expectedm actual) // uses the == operator instead
+assertNull("message", value)
+```
+
+It is important to note that a test case should not have a large number of assert statements. As soon as one fails, it stops.
+
+Try to avoid logic like if, else, or try catch.
+
+Sometimes you want to test a function multiple times with similar values. To avoid test code bloat, you can use parameterized tests. Use the following syntax:
+```Java
+@RunWith(Parameterized.class)
+public class DataDrivenCalcTest {
+    // insert test code here
+}
+```
+
+1. Annotate test class with `@RunWith(Parameterized.class)` 
+2. Create a public static method with `@Parameters` that returns a collection of objects as a test data set
+3. Create a public constructor that takes in one row of data
+4. Create an instance variable for each column of test data
+5. Create your test cases using the instance variables
+
+Stubs and mock objects are used to avoid dependencies.
+
+1. A stub is a fake class that comes with a preprogrammed return value. It's injected into the class under test to give control over what's being tested as input. 
+2. A mock is a fake class that replaces the depended class and can be examined after the test is finished.
+
+Setting a mock object:
+```Java
+Mockery mockingContext = new Mockery();
+values = mockingContext.mock(Valeus2D.class);
+mockingContext.checking(new Expectations() {
+    {
+        one(values).getRowCount();
+        will(returnValue(2));
+        one(values).getValue(0,0);
+        will(returnValue(7.5));
+    }
+})
+```
+
+For stubs:
+```Java
+Gradebook gradebook = mock(Gradebook.class);
+when(gradebook.gradesFor(student)).thenReturn(grades(8,6,10));
+```
+
+In black box testing, we can do something called equivalence class partitioning.
+
+Equivalence classes: partitions of the input space in such a way that input data have the same effect on the SUT
+Completeness: Entire input set is covered
+Disjoint: to avoid redundancy
+
+Next, let's work with some decision tables.
+
+Decision tables can help us deal with combination of inputs which produce different results. Basically, we can organize all the cases in the columns, the conditions on the rows, and decide if we need all the cases depending on the outputs they produce. The significance of this technique becomes clear as the number of conditions/inputs increases. The number of possible conditions is given by 2^n, where n is the number of inputs.
+
+Next, let's look at combinatorial testing. The rationale behind combinatorial testing is that it may become impractical to test all possible combinations of values for all variables. The goal is to generate a subset of combinations and use them as test cases to achieve the same coverage of the system behaviour.
+
+Profile-based testing is writing test for operations based on their frequency of usage.
+
+Control flow structure: Sequence of execution of instructions of the program (execution of code lines). In a CFG, there are three types of nodes:
+* Statement nodes: represent signle entry signle exit sequence of statements
+* Predicate nodes: represent conditions for branching
+* auxiliary nodes: for completing the graph
+
+Here are some coverage metric examples:
+
+* statement coverage = (number of statements exercised) / (total number of statements) * 100
+* decision coverage = (number of decision outcomes exercised) / (total number of decision outcomes) * 100
 
 # Inclass Midterm Review
 
