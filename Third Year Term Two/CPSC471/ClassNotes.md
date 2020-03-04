@@ -325,3 +325,46 @@ When mapping Generalization/Specialization:
 
 In multiple inheritance:
 * Create a new key attribute, called a surrogate key. 
+
+# Relational Algebra
+
+Relational algebra is a basic set of operations for the relational model. Enable the user to specify basic retrieval requests (or queries).
+
+The result is a new relation, which may have been formed from one or more input relations. This makes the algebra closed (all objects in relational algebra are relations).
+
+A sequence of relational algebra operations forms a relational algebra expression.
+
+Here are some categories:
+Unary relational operations:
+* SELECT (sigma)
+* PROJECT (pi)
+* RENAME (rho)
+
+Relational algebra operations from set theory:
+* UNION
+* INTERSECTION
+* DIFFERENCE
+* CARTESIAN PRODUCT
+
+Binary relational operations:
+* JOIN (several variations of JOIN exist)
+* DIVISION
+
+Additional relational operations:
+* SUM, COUNT, etc.
+
+1. The SELECT Operation is used to select a subset of the tuples from a relation based on a selection condition.
+
+When performing cascading SELECT operations, you can use the AND notation.
+
+2. The PROJECT Operation keeps certain columns from a relation and discards other columns. It creates a vertical partitioning. Basically filters columns.
+
+It also removes any duplicate tuples in the set. Mathematical sets do not allow duplicate elements. 
+
+RA expressions comes from applying several relational algebra operations one after another. A single relational algebra expression by nesting the operations or applying one operation at a time and create intermediate result relations.
+
+3. The RENAME operation renames attributes of a relation. 
+
+When performing CARTESIAN PRODUCT, this operation is used to combine tuples from two relations in a combinatorial fashion.
+
+The JOIN operation combines the sequence of CARTESIAN PRODUCT followed by SELECT. This operation is important for any relational database with more than a single relation, because it allows us to combine related tuples from various relations.
