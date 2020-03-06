@@ -538,3 +538,23 @@ public void testLoginPage() {
 2. No
 3. Yes
 4. 8
+
+## More Review
+
+* Line Coverage is the number of lines that have been reached. 
+* Decision/Branch coverage considers all the paths (if/else)
+* Conditional coverage looks at each individual predicate and ensures that each variable reaches true/false
+
+You can calculate cyclomatic complexity by doing 1 + d, where d is the number of predicate nodes.
+
+Full path coverage means all edges going from the initial node to final node have been covered. 100% path coverage means 100% branch coverage.
+
+MC/DC subsumes condition/decision coverage. COndition/decision coverage subsumes condition coverage and decision coverage. Decision coverage subsumes statement coverage.
+
+* Du-pair - from the def to the use
+* Du-path - paths starting from the initial def
+
+Coverage:
+* ADC - All-Defs coverage (Use every def)
+* AUC - All-Uses coverage (get to every use)
+* ADUPC - Follow all DU-Paths

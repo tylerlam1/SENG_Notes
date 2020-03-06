@@ -426,3 +426,25 @@ Model is an abstraction. It does not cover everything. It may not cover every as
 Example 1:
 * The customer receives the card, and then activates the card.
 * The arrow is really important
+
+## Notes on March 6th
+
+Feasibility study is a good way to evaluate the information you have, and figure out which information you don't have. You can find out - which stakeholders may have the information I want?
+
+Elicitation of information is automatically important - and is a objective of requirements engineering. Requirements Engineering is to elicit necessary information (was on the exam, and this was the answer - most students wrote all of the above).
+
+Assume that after feasibility study, your clients are very happy. Next they come back, they choose an option. Your next plan of action is to:
+* Model - functional and non-functional requirements. Enterprise Modelling - we have used BPMN so far (Business Process Modelling Notation). Inside each box of a BPMN is a verb. BPMN is a flow of activities to conduct a business. Each box represents an activity. 
+    * An arrow indicates the flow.
+    * You can separate them by pools.
+    * You can also use UML Activity Diagram. For modelling business processes, UML *could* be used. This depends on how you use it. Most UML activity diagram is oriented to assist with coding - therefore, many details. However, the goal with enterprise modelling is to model the application model (thus extrapolate information in a way that everyone has same understanding). It's important not to have many details in the UML. 
+    * BPMN dashed-line represents communication
+
+Entity Relationship Diagrams are similar to UML, but not equivalent.
+* Entity - nouns (any elicitated information becomes nouns). This makes your life easier.
+* Relationship - connect something together (a verb to connect). i.e. Read, Write, observe. You have to have a verb to make a connecting thing. 
+* Relationship in diamond, the box is entity (doesn't care if plural or singular)
+* There is NO arrows in ERD. By default, we are already starting from left to right.
+* Three entities connected to a relationship is known as a ternary relationship.
+* Generalizations and specializations (partial and total)
+* Top-down to confirm if generalization is correct. Bottom-up to ....

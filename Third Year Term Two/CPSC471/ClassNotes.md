@@ -368,3 +368,20 @@ RA expressions comes from applying several relational algebra operations one aft
 When performing CARTESIAN PRODUCT, this operation is used to combine tuples from two relations in a combinatorial fashion.
 
 The JOIN operation combines the sequence of CARTESIAN PRODUCT followed by SELECT. This operation is important for any relational database with more than a single relation, because it allows us to combine related tuples from various relations.
+
+An EQUIJOIN operation uses the comparison operator =. The result of this operation is one or more pairs of attributes that have identical values in every tuple.
+
+An NATURAL JOIN operation is denoted by  * - was created to get rid of the second attribute in a EQUIJOIN attribute. The standard definition of EQUIJOIN requires that two JOIN attributes, have the same name in both operations. If not, the rename operation is performed instead. 
+
+The complete set of algebra expressions is SELECT, PROJECT, UNION, DIFFERENCE, RENAME, CARTESIAN PRODUCT. All other algebra expressions can be expressed as a function of these expressions. 
+
+Division operation can be applied to two relations. For a tuple t to appear in the result T of the DIVISION, the values of t must appear in R in combination with every tuple in S, where R / S. The Division operator A / B can only be applied if:
+* Attributes of B is a proper subset of Attributes of A. 
+* The relation returned by division operator will have attributes (All attributes of A - All Attributse of B)
+* The relation returned by division operator will return those tuples from relation A which are associated to every B's tuple.
+
+A type of request that cannot be expressed in the basic relational algebra is to specify mathematical aggregate functions on collection of values from the database. Examples of such functions include retrieving the average or total salary of all employees or the total number of employee tuples. Common functions include SUM, AVERAGE, MAXIMUM, MINIMUM.
+
+OUTER JOIN involves keeping every tuple in the first or left relation R, if no matching tuple is found. The extra attributes are padded with null values. Right Outer Join keeps every tuple in the second or right relation S in the result of join. Full outer join keeps all tuples in both the left and right relations when no matching tuples are found, padding them with null values as needed.
+
+Outer Union was developed to take the union of tuples from two relations if the relations are not type compatible. This operation will take the union of tuples in two relations that are partially compatible, meaning that only some of their attributes are type compatible.
