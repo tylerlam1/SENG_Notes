@@ -189,3 +189,93 @@ A software product line is a set of software-intensive systems that share a comm
 A framework is a large complex body of code that embodies knowledge on how to write successful applications within a well-defined problem domain.
 
 A library is a body of code you call and use when you feel appropriate
+
+# Cloud Computing
+
+The following is the application stack:
+
+1. Application
+2. Data
+4. Runtime
+5. Middleware
+6. O/S
+7. Virtualization
+8. Servers
+9. Storage
+10. Networking
+
+IaaS, SaaS, and PaaS are different levels of service.
+
+1. On premises - means to have the computing resources contained in your own physical space.
+2. Private Cloud - when you separate the application layers from the computing layers - both managed internally.
+3. IaaS - provides third party services for network hardware, storage space, virtualization, and servers. AWS and Azure are examples of this.
+4. PaaS - provides a platform to develop applications. Manages the operating system, middleware, and runtime. Example is Heroku.
+5. SaaS - provides the application hosted on the cloud. Example is Office 365 Suite.
+
+In on-prem and private cloud, all layers of the application stack are managed by you.
+
+* Hybrid Cloud - combination of on-prem and private cloud with some public cloud services.
+* Virtual private cloud - a subset of a public cloud that is private.
+* DCaaS (Data Center as a service) - colocation of computing infrastructure in a data center managed by a third party.
+
+# Model View Controller
+
+* Model View Controller is an architecture pattern that separates the application into three components
+    * Model, which represents the data and business logic
+    * View, for presenting the data to the user
+    * Controller, for handling user requests
+* Separation of Concern is the biggest takeaway here
+* MVC can be used in a thin-client
+* MVC can be split onto the client
+
+The benefits of MVC are the following:
+* Separation of concern
+* Simultaneous development of components
+* Loose coupling
+* Testability
+    * Test components separately
+    * Smaller focused tests
+    * Especially userful for the Model and Controller
+    * Can test business logic without mixing presentation style
+    * Can test controller with mocked model
+
+The pitfalls:
+* Potential code inconsistency across components
+* Complexity in tracing code
+* Overhead/boilerplate
+* Scattered code for each feature
+
+MVC does not scale components separately. It's used within an application, rather than a large scale architecture.
+
+# Event Sourcing
+
+Event Sourcing is an architectural pattern in which the state of the system is stored as a sequence of modifications. 
+
+When appending data you could add some metadata like a timestamp. As event sourcing will most often be used in distribute dsystems, it is important that IDs are unique across all systems. UUID is a common way to generate unique IDs in distributed systems as it is guaranteed unique without needing to coordinate between machines.
+
+Event sourcing is:
+* Sequence of mutations to the state
+* Immutable and irremoable events
+* Event stream is source of truth
+
+Benefits:
+* Audit trail
+* Full replay
+* Debuggability
+* Bring up new data stores
+
+Problems:
+* Data inconsistency
+* Requires careful attention
+* Breaks ACID (atomicity, consistency, isolation, durability)
+* Queries are difficult
+* Hard to understand
+
+Guidelines when defining events:
+* Too fine-grained vs too coarse
+* de-serialization costs
+* generally define events to match user intent
+* events should be self-contained and complete
+* follow CRUD (it can be faster due to cache and prevents SQL injection)
+
+In general, choose wisely where to apply event sourcing. 
