@@ -385,3 +385,28 @@ A type of request that cannot be expressed in the basic relational algebra is to
 OUTER JOIN involves keeping every tuple in the first or left relation R, if no matching tuple is found. The extra attributes are padded with null values. Right Outer Join keeps every tuple in the second or right relation S in the result of join. Full outer join keeps all tuples in both the left and right relations when no matching tuples are found, padding them with null values as needed.
 
 Outer Union was developed to take the union of tuples from two relations if the relations are not type compatible. This operation will take the union of tuples in two relations that are partially compatible, meaning that only some of their attributes are type compatible.
+
+## Relational Calculus
+
+A tuple relational calculus expression creates a new relationm which is specified in terms of variables that range over rows of the stored database relations.
+
+In a calculus expression, there is no order of operations to specify how to retrieve the query result - a calculus expression specifies only what information the result should contain.
+
+Relational calculus is a nonprocedural or declarative language. This differs from relational algebra, where we must write a sequence of operations to specify a retrieval request; hence relational algebra can be considered as a *procedural* way of stating a query.
+
+A proposition is a statement that is either true or false:
+* AND, OR, NOT
+
+Tuple relational calculus is based on specifying a number of tuple variables. Each tuple variable usually ranges over a particular database relation, meaning that the variable may take as its value any individual tuple fro that relation.
+
+A simple tuple relational calculus query is of the form {t|COND(t)}.
+
+t is a tuple variable ranges over a database relation.
+EMPLOYEE(t): we require t to be an employee.
+COND(t) is a condiitonal expression involving t.
+
+The result of such a query is the set of all tuples that satisfy formula COND(t).
+
+In a formula, a logical expression is made up of atoms. Each atom is a formula that returns either true or false.
+
+Predicates are used to describe relationships between objects. A predicate is a parametric statement involving variables. These are not propositions, but can be converted to propositions. 

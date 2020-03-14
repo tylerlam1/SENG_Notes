@@ -183,3 +183,38 @@ Hints:
 * Decision tables help us visualize test suites.
 * Ideal for describing situations in which the number of combinations of actions are taken under varying conditions.
 
+## Mutation Testing
+
+A way of fault-based testing is Mutation Testing.
+
+* One advantage of coverage criteria is that they can be measured automatically.
+* To control testing progress towards completeness.
+* High coverage is not a guarantee of fault-free software, just an element of information to increase confidence.
+
+The obvious metric is to count the cumulative number of failures found so far.
+
+* Coverage-based (BB, WB testing)
+    * Rationale: the better test suite covers more from specification/code/data
+* Fault-based (mutation testing)
+    * Rationale: the better test suite detects more faults
+
+* Mutation: bug injection
+* Mutation testing: finding injected bugs
+
+Fault-based testing directs more typical faults that could occur in a program. Syntactic variations are applied in a systematic way to the program to create faulty versions that exhibit different behavior. Mutation testing helps create effective test data in an interactive manner. In fault-based testing, we intentionally inject a fault (change + to -) and run our test suite to see if it can detect the injected faults.
+
+Terms:
+
+* Surviving means changing the source code did not change the test result
+    * Thats bad.
+* Killed means changing the source code changed the test results.
+
+Different types of mutants:
+* Stillborn mutations: syntactically incorrect, killed by compiler
+* trivial mutants: killed by almost any test case
+* equivalent mutant: always acts in the same behavior as the original program
+
+The above cases are not interesting from a mutation testing perspective. Only those mutants are interesting which behave differently than the original program, and we do not have test cases to identify them.
+
+To automate the generation of mutants, we use *mutation operators* that is predefined program modification rules.
+1. Change operator
