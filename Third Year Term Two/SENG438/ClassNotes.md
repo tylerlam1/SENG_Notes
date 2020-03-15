@@ -218,3 +218,48 @@ The above cases are not interesting from a mutation testing perspective. Only th
 
 To automate the generation of mutants, we use *mutation operators* that is predefined program modification rules.
 1. Change operator
+
+## GUI Testing
+
+* GUI testing is the process of testing a product that uses a graphical user interface
+
+The problem with manual testing is that:
+* Not very repeatable
+    * Either cannot remember exactly how it eas last tested
+    * Or too expensive to document detailed procedures
+* Very effort intensive
+
+The benefit of automated testing:
+* It gives us rapid feedback
+* It is repeatable and reusable
+* Much faster than human testers, but needs up-front investment
+* Automated tests and TDD can potentially drive design
+* It is better documented
+
+Event if we conduct API-based black box and coverage-based white box testing, the SUT can have defects in the GUI logic (code) and the glue code.
+* The GUI is a type of user interface item that allows people to interact with programs in more ways than typing
+* GUI software is an event-driven software
+* User events (like clicks) trigger event handlers
+
+* Event driven nature of GUIs leads to many challenges in testing them
+* The user has extremely wide choice of actions compared to BB/WB testing
+* Because users many click on any pixel on the screen, there are many more possible user inputs that can occur
+
+There are different approaches to GUI testing:
+* Completely manual (lab 1)
+* Semi-automated generation (lab 4)
+* Automated generation (based on execution of user sessions using a GUI model)
+
+The manual approach is done by manually stepping through pages of test procedures or by exploratory testing. The capture/playback approach captures user sessions (user inputs and events) and stores them in scripts (one per session) suitable to be used to replay the user session.
+In order to do this, we need:
+* A tool that can capture
+* SUT
+* A tool that can replay
+
+Process:
+1. A tester interacts with the system GUI to run the system, thus generating sessions of sequence of mouse clicks, UI and keyboard events, voice commands, etc.
+2. the tool captures and stores the user events and the GUI screenshots
+3. the tesrer can replay the execution by running the script
+4. in case of GUI changes, the script must be updated
+
+The challenge with capture/playback tools is that when the GUI changes, input sequences previously recorded may no longer be valid.
