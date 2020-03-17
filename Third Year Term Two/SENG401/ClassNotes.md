@@ -340,9 +340,45 @@ A URI (Uniform Resource Identifier) represents a single resource. It is possible
 
 The URI structure easily allows for adding new resource type. URIs are easily parsed and handled by different servers. 
 
+## Concurrency
 
+Concurrency is when multiple independent computations are occurring at the same time. A process is an instnce of a program being executed on one machine. A thread is the smallest unit of execution within a process. A process comprises one or more threads running concurrently. This is what the operating system understands and runs. 
 
+We will be investigating architectures inside a process. Once you have an idea how architectures work inside a process, you can easily apply it to multiple architectures.
 
+The default architecture, shared memory, is error prone. Within a process, most code are not designed for concurrency. 
 
+If you have inter-process communication, it forces you to split up the data. It forces you to be conscious about the interaction between programs. Memory passing is the sensible option here.
 
+### Process & Threads
 
+* O/S starts a process
+* A process starts as one thread
+* One thread can spawn others
+* O/S schedules threads
+
+* A process has one copy of the code (compiled code)
+* Each process has one copy of static, global, and literal data
+* Each process has one shared block of memory for the heap
+* Each thread has separate memoryfor its stack
+
+### CPU Scheduling
+
+* CPUs run thread
+* Common CPUs 2-4 cores (up to 8 hyper-thread)
+* A CPU run threads from one or more processes
+* Scheduling is done by the O/S; process is mostly unaware
+
+When you have badly parallelized code, results are the segmentation fault. Other things that happen are:
+* random order of values in output vector
+* Crash
+* Undefined behaviour leaving data structures unknown
+
+An example is incrementing pointer, another thread is re-allocating data.
+
+Thread-safe is code that can be run concurrently in more tha one thread while producing the correct results.
+
+Strategies for thread-safe:
+* Mutex
+* Preallocate memory
+* Better code design
