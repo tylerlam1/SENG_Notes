@@ -24,3 +24,11 @@ The act of doing this is called dimensionality reduction. We're reducing the fea
 But why are they ordered in terms of variability? Well, the highly variable ones are the ones that would affect our results the most. The more variable, the better they predict our dependent variable. Each of Principle Components are independent of each other.
 
 This goes back to the idea that Principle Components are basically linearly uncorrelated. You can't really interpret them.
+
+## Terminology
+
+When you initially have data, you generally have a matrix containing rows and columns. The rows, in this case, are the subjects, and the columns are the samples. When graphing this initially, the subjects are on the axes. If you have 4 subjects, then you'll have a 4D graph.
+
+To get the PCA, you typically draw a line of best fit through all the data points. The first line of best fit would be Principle Component 1 (which represents the data best). PC2 will be perpendicular to it, PC3 will be perpendicular to 1 and 2, and so on. The eigenvector is the unit vector for the line of best fit.
+
+Loading scores mean the proportions of each subject in regards to the variance they have. The line of best fit is done using projection, which is the sum of the squares of all the distances from the line of best fit to the data points. The eigenvalue is the square of the sum of squares. Rotation is another word for loading scores.
