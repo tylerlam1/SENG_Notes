@@ -382,3 +382,48 @@ Strategies for thread-safe:
 * Mutex
 * Preallocate memory
 * Better code design
+
+### Idempotency
+
+When one can be repeated without changing without the result. If you perform an operation once, or ten times, you still get the same result. It's usually spoken in terms of internet requests. 
+
+The basic premise is that if you don't modify shared state, you can't get into concurrency trouble.
+
+Better code design is to:
+* Write idempotent functions
+    * All inputs are immutable
+    * The return value hold all results
+* Follow this pattern throughout your code
+* Except... in the one function that coordinates the concurrency
+* Clearly document the concurrency
+* Write code that is easy to read and understand
+
+When you're preallocating, you're isolating output data from each thread. 
+
+Something important to consider is non-determinism. This is acceptable in some cases, but make sure you're using a data structure that encourages this (set) as opposed to something like a vector.
+
+## Message Passing
+
+Communcation is done by sending messages to other threads over a unidirectional channel. Typically you should use available libraries for this and not write out own.
+
+```C
+template <typename T>
+class Channel {
+    public:
+        void send(T value);
+        void close();
+        void std::optional<T> read();
+}
+```
+
+Worker thread - get a function, and then run it.
+
+Message passing is different from shared memory (the channel itself is shared memory). The message passing isolate the concurrency and shared messages inside the channel. 
+
+Shared memory:
+* Low overhead
+* Keeps a single copy of the data
+* Synchronization of memory access
+    * Blunt tools
+    * Clever approach
+    * Lock free algorithms
