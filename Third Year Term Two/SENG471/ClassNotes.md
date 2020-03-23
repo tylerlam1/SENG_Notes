@@ -469,3 +469,15 @@ Entity Relationship Diagrams are similar to UML, but not equivalent.
 * SADT and ET - usually about specifications
 * BPMN, ER, SCR, are usually about requirements
 
+* Different approaches
+    * BP Diagram (UML activity diagram)
+        * A business process for a target S/W system
+    * ER Diagrams (UML class diagram)
+        * Structural aspects of the target systems
+    * SCR (UML statechart diagrams) 
+        * Behavioural aspects of the target systems
+    * SADT (DFD, UML use case)
+        * Operational asepcts of the target system
+    * ET diagrams (UML sequence diagrams)
+        * Interactions among the structures of the target systems
+
