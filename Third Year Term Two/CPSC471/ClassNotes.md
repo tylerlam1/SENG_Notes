@@ -326,7 +326,7 @@ When mapping Generalization/Specialization:
 In multiple inheritance:
 * Create a new key attribute, called a surrogate key. 
 
-# Relational Algebra
+## Relational Algebra
 
 Relational algebra is a basic set of operations for the relational model. Enable the user to specify basic retrieval requests (or queries).
 
@@ -410,3 +410,71 @@ The result of such a query is the set of all tuples that satisfy formula COND(t)
 In a formula, a logical expression is made up of atoms. Each atom is a formula that returns either true or false.
 
 Predicates are used to describe relationships between objects. A predicate is a parametric statement involving variables. These are not propositions, but can be converted to propositions. 
+
+## Structured Query Language (SQL)
+
+* SQL is one of the major reasons for the commercial success of relational databases
+* Based on the tuple relational calculus, but implements elements of relational algebra
+* SQL is an informal or practical rendering of the relational data model with syntax 
+* Has features for: Data definition, Data Manipulation, Transaction COntrol, Indexing, Security specification, Multi-media, Distributed databases, and more
+
+* CREATE TABLE - Specifying a new relation
+    * Provide name of table
+    * Specify attributes, their types, and initial constraints
+* Table vs. View
+    * Base table - relation and its tuples are actually created and stored as a file by the DBMS
+    * Virtual relations - created through the create view statement. Does not correspond to any physical file
+* You specify your PRIMARY KEY and other FOREIGN KEYS during trhis statement, as well as REFERENCES
+* Foreign keys may cause errors as they are specified via:
+    * Circular references
+    * Or because they refer to a table that has not yet been created
+
+Here are some basic data types:
+* INTEGER, INT, SMALLINT
+* FLOAT, REAL, DOUBLE PRECISION
+* CHAR(n), CHARACTER(n), VARCHAR(n), CHAR VARYING(n), CHARACTER VARING(n)
+* BIT(n)
+* BIT VARYING(n)
+* BOOLEAN - TRUE, FALSE, or NULL
+* DATE
+
+Domain is a name used with the attribute specification:
+* CREATE DOMAIN SSN_TYPE AS CHAR(9)
+
+A relational model has three basic constraint types that are supported in SQL:
+* Key constraint: A primary key value cannot be duplicated
+* Entity integrity constraint: A primary key value cannot be null
+* Referential Integrity constraints: The foreign key must have a value that is already present as a primary key, or may be null
+
+You can also use the CHECK clause:
+* Dnumber INT NOT NULL CHECK (Dnumber > 0 AND Dnumber < 21)
+
+Key constraints:
+* PRIMARY KEY - specifies one or more attributes that make up the primary key of a relation
+* UNIQUE - specifies CANDIDATE keys
+
+A DML allows you to handle data stored in the RDBS. Basic form the SQL query:
+
+SELECT from list of attributes
+FROM list of tables
+WHERE condition
+
+* Language is not case sensitive
+* Data (table contents) is case sensitive
+
+SELECT - is a list of attributes where its a projection of attributes whose values are to be retrieved
+WHERE - Selection boolean condition, include join conditions when multiple relations are involved
+
+When you have ambiguous attribute names, you must qualify the attribute name with the relation name to prevent ambiguity. You can also give aliases to tables, using the AS operator.
+
+Using the * attribute means you select all attributes.
+
+DISTINCT ensures that only distinct tuples should remain in the result.
+
+LIKE and BETWEEN operators can also be used.
+
+Use ORDER BY clause (ASC and DESC) for ascending and descending of values.
+
+INSERT typically inserts a tuple into a relation. UPDATE may update a number of tuples in a relation that satisfy the condition. DELETE may delete a number of tuples in a relation that satisfy a condition.
+
+Bulk Loading is when combined with the SELECT statement, INSERT can load multiple rows. 

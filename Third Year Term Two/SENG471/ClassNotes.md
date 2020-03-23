@@ -448,3 +448,24 @@ Entity Relationship Diagrams are similar to UML, but not equivalent.
 * Three entities connected to a relationship is known as a ternary relationship.
 * Generalizations and specializations (partial and total)
 * Top-down to confirm if generalization is correct. Bottom-up to ....
+
+## Modelling
+
+* Event is some kinds of actions (where something occurs)
+* You should express requirements as constraints over states and requirements
+* We can convert a BPMN diagram activity into a ER Diagram
+    * i.e. a BPMN 'fly airplane' can be converted into a ER diagram with 'Pilot - flies - airplane'.
+    * 'Pilot - engages - thrust'
+* You can convert the ER to a requirements statement (specification)
+    * When the airplane is in the air, the pilot should be prevented from accidentally engaging the reverse thrust
+
+* SADT - Structured Analysis and Design Technique
+* DFD - DataFlow Diagram
+* ET - Event Trace (UML Sequence Diagram)
+
+* In a SADT, for every data, you need to find every activity
+* Data-activity duality - each data and activity will be together
+
+* SADT and ET - usually about specifications
+* BPMN, ER, SCR, are usually about requirements
+
