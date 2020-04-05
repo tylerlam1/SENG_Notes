@@ -478,3 +478,24 @@ Use ORDER BY clause (ASC and DESC) for ascending and descending of values.
 INSERT typically inserts a tuple into a relation. UPDATE may update a number of tuples in a relation that satisfy the condition. DELETE may delete a number of tuples in a relation that satisfy a condition.
 
 Bulk Loading is when combined with the SELECT statement, INSERT can load multiple rows. 
+
+# Functional Dependencies
+
+Functional dependencies are used to specify formal measures of the "goodness" of relational designs. A set of attributes X functionally determines a set of attributes Y if the value of X determines a unique value for Y.
+
+Basically - when given some attributes, you can define some other attributes. Need to make sure its unique. 
+
+X -> Y holds true if you have the same value for X, you have the same value for Y. In other words, X is unique. 
+
+For example, given a RELATION, we can determine FD: X -> Y (so for each value in X, we can get a Y). Basically a one-to-one relationship?
+
+You can infer functional dependencies from other dependencies. For example, given x -> y, you can infer other FD's. 
+
+Closure is a set of FD's all combined together. Denoted with a F+ (+ sign).
+
+Armstring Inference Rules
+* If Y is a subset of X, then X -> Y
+* If x -> Y, then XZ -> YX
+* If X -> Y, then Y -> Z, and X -> Z
+
+The IR above form the complete set of inference rules. 
