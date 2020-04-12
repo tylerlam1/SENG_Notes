@@ -263,3 +263,33 @@ Process:
 4. in case of GUI changes, the script must be updated
 
 The challenge with capture/playback tools is that when the GUI changes, input sequences previously recorded may no longer be valid.
+
+## Software Reliability Engineering
+Now we have learned techniques of blackbox, whitebox, GUI, etc types of testing. All these types of testing have a main goal of testing a particular unit (unit testing). We now will focus more on integration, system, and acceptance testing. This is a focus on quality.
+
+Here are things to consider:
+* How to build quality into a software project?
+* How to manage quality as we go forward with software development?
+* How to measure quality of software in the end?
+* Decision making process and plan for release and post-release activities.
+
+Validation: Checking whether the system meets customer's actual needs
+Verification: Whether the system is well-engineered, bug free.
+
+So what exactly is software quality?
+* Conformance to requirement
+    * The requirements are clearly stated and the product must conform to it
+    * Any deviation from the requirements is regarded as a defect
+    * A good quality product contains fewer defects
+* Fitness for use
+    * Fit to user expectations: Meet user's needs
+    * A good quality product provides better user satisfaction
+
+When building software, maintenance is responsible for about 60% of total cost for a typical software product. Therefore, to build quality into a system, it means:
+* Establishing *Software Quality Assurance (SQA)* programs
+* Establishing *Reliability Engineering (SRE)* process
+
+### Reliability Theory
+* Reliability Theory developed apart from the mainstream of probability and statistics, and was used primarily as a tool to help nineteenth century maritime and life insurance companies compute profitable rates to charge their customers. Even today, the terms "failure rate" and "hazard rate" are often used interchangeably.
+* Probability of survival of merchandise after one MTTF is R = e^-1 = 0.37.
+
