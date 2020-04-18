@@ -293,3 +293,40 @@ When building software, maintenance is responsible for about 60% of total cost f
 * Reliability Theory developed apart from the mainstream of probability and statistics, and was used primarily as a tool to help nineteenth century maritime and life insurance companies compute profitable rates to charge their customers. Even today, the terms "failure rate" and "hazard rate" are often used interchangeably.
 * Probability of survival of merchandise after one MTTF is R = e^-1 = 0.37.
 
+You can think of the 'Bathub curve' we learned in ENCM 511 as the typical lifecycle of a piece of hardware. The failure rate for a 'burn in' is high because you're trying to still figure out how to get it working, and in the useful life is becomes stable, and the 'wear out' period is where the device begins to start failing again. 
+
+Unlike hardware, software reliability doesn't decrease with time. Hardware faults are mostly physical faults, and software faults are mostly design faults. 
+
+Software Reliability Engineering is a multi-faceted discipline covering the software product lifecycle. It involves both technical and management activities in three basic areas. 
+* Software Development and Maintenance
+* Measurement and Analysis of reliability data
+* Feedback of reliability information
+
+SRE is a practice for quantitatively planning and guiding software development and test, with emphasis on reliability and availability. It simultaneously does three things:
+* It ensures that product reliability and availability meet user needs
+* It delivers the product to the market faster
+* It increases productivity, lowering product life-cycle cost
+
+In applying SRE, one can vary relative emphasis placed on these three factors.
+
+There are five steps in the SRE process:
+* Define necessary reliability
+* Develop operational profiles
+* Prepare for test
+* Execute test
+* Apply failure data to guide decisions
+
+## System Reliability
+
+The *reliability block diagram* is a graphical representation of how the components of a system are connected from a reliability point of view. Reliability of the system is derived in terms of the reliabilities of its individual components. The most common configurations of an RBD are the serial and parallel configurations. A system is usually composed of combinations of serial and parallel configuration. RBD analysis is essential for determining reliability, availability, and down time of the system.
+
+In a serial system configuration, the elements must all work the system to work and the system fails if one of the components fail. THe overall reliability of the serial system is lower than the reliability of its individual components.
+
+In a parallel system configuration, the components are considered to be redundant and the system will cease to work if all the parallel components fail. The overall reliability of the system is higher than its individual components.
+
+In RBD:
+1. Define boundary of the system for analysis
+2. Break system down into functional units
+3. Determine serial-parallel configurations
+4. Represent each component as a separate block in the diagram
+5. Draw lines connecting the blocks in a logical order for mission success
