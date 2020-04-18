@@ -330,3 +330,19 @@ In RBD:
 3. Determine serial-parallel configurations
 4. Represent each component as a separate block in the diagram
 5. Draw lines connecting the blocks in a logical order for mission success
+
+In serial system reliability:
+* No redundancy
+* All component of the system are needed to make the ssytem function properly
+* If any sone of the component fails, the system fails
+
+The serial system reliability can be calculated from component reliabilities, if the components fail independently from each other. To find the system reliability, you multiple them together.
+
+In parallel system reliability:
+* System with redundancy
+* Only ONE out of n (identical) components is needed to make the system function properly
+* If ALL of the components fail, the system fails.
+
+You can calculate the reliability from 1- sum(1-reliability_per_component). 
+
+In sequential systems, when one component fails, the next one is assigned to fulfill the job. This is done in sequence until no components left. If ALL components fail, the system fails. You can also combine parallel-series configurations.
