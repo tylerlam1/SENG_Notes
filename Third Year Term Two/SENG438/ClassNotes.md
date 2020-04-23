@@ -346,3 +346,32 @@ In parallel system reliability:
 You can calculate the reliability from 1- sum(1-reliability_per_component). 
 
 In sequential systems, when one component fails, the next one is assigned to fulfill the job. This is done in sequence until no components left. If ALL components fail, the system fails. You can also combine parallel-series configurations.
+
+Active redundancy employs parallel systems. All components are active at the same time, and each component is able to meet the functional requirements of the system. Only one component is required to meet the functional requirements of the system. Each component satisfies the minimum reliability condition for the system. System only fails if all component fail.
+
+To avoid a single point of failure:
+* Adopt redundancy
+* Adopt a fundamental design change
+* Use equipment which is extremely reliable/robust
+* Perform frequent preventive maintenance/replacement
+* Reduce or eliminate service and/or environmental stresses
+
+Here's a couple things to know:
+* RBD should be used when the reliability of a complex system must be calculated and the reliability-wise weaknesses of the system must be identified
+* To use RBD -> Draw the RBD Diagram -> Calculate the system reliability using the RBD diagram -> Perform calculation such as availability and downtime
+* There are a number of automated tools, integrated with other methods
+* RBD is the simplest way of visualizing the reliability of the complex systems
+* The benefits of RBD are:
+    * Establishes reliability goals
+    * Evaluates component failure impact on overall system safety
+    * Provides a basis for "what if" analysis
+    * Allocates component reliability by calculating system MTBF
+    * Provides cost savings in large system trouble-shooting
+    * Estimates system reliability
+    * Analyzes various system configurations in trade-off studies
+    * Identifies potential design problems
+    * Determines system sensitivity to component failures
+* Diasvantages are that some complex constructs, like standby, branching and load sharing, cannot be clearly represented using the traditional RBD constructs
+
+Fault-tree analysis is a graphical representation of the major faults or critical failures associated with a product, the causes for the failures, and potential countermeasures. FTA helps identify areas of concern for new system design or for improvement of existing systems. It also helps identify corrective actions to correct or mitigate problems.
+
