@@ -375,3 +375,61 @@ Here's a couple things to know:
 
 Fault-tree analysis is a graphical representation of the major faults or critical failures associated with a product, the causes for the failures, and potential countermeasures. FTA helps identify areas of concern for new system design or for improvement of existing systems. It also helps identify corrective actions to correct or mitigate problems.
 
+## Reliability Assessment Tools and Techniques
+You can input failure data into a Reliability Assessment Tool to output info like failure intensity plot, time-to-failure plot, and reliability plots. The SRE tools can handle the following tasks:
+* Collecting failure and test time information 
+    * Calculate MTTF, reliability, etc.
+* Or
+    * Select a reliability model
+    * Calculate estimates of model parameters
+    * Test to fit a model against the failure data
+* Using the results for decision making
+
+All the SRE tools use one of two basic types of failure data:
+* Time-domain data
+* Interval-domain data
+
+The following are a list of some SRE Tools:
+* CASRE
+* SoftRel
+* SMERFS
+* SoRel
+* SRMP
+* ProConf
+* Relex
+* MEADEP
+
+* ACARA II - No charge per license
+* ARAM  - $400 source code license
+* ETARA - $200 source code license
+* GO - $150 source code license
+* HARP - $500 source code license
+* HARPO - $150 source code license
+* SPRM - no charge per license, requires Excel
+
+### Statistical Modeling and Estimation of Reliability Functions for Software
+Is a public domain software package designed and implemented at the Naval Surface Warfare Center. SMERFS is a program for estimating and predicting the reliability of software during the testing phase. The body of code is in Fortran.
+
+### Computer-Aided Software Reliability Estimation Tool
+Copyrighted by NASA. CASRE is a PC-based tool that was developed in 1993 by the Jet Propulsion Laboratories to address the ease-of-use issues of other tools. It requires the Windows OS, and has a pull-down, menu-driven user interface and uses the same model library as the SMERFS tool with the additional feature of allowing linear combinations of models to create new ones at the user's discretion. 
+
+### Software Reliability and Testing Analysis Tool
+Developed by Dr.Far's lab (OMG!).
+
+## System Reliability Assessment
+There are different types of Assessments.
+1. Decisions related to certification test
+* Accept/reject an acquired component
+* Accept/reject a system, OS, hardware
+* Quality assessment of a system, software, etc.
+2. Decisions related to reliability growth test
+* Tracking bugs in pre-release
+* Guiding software testing process
+* Releasing the product
+3. Decision related to adequacy of tests
+
+There are different types that can be performed.
+1. Reliability Demonstration Chart - based on inter failure times only and target failure rate.
+2. Reliability growth analysis - based on inter failure times and/or failure count and target failure rate
+3. Zero failure testing - based on failure density
+
