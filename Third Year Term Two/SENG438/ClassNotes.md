@@ -433,3 +433,33 @@ There are different types that can be performed.
 2. Reliability growth analysis - based on inter failure times and/or failure count and target failure rate
 3. Zero failure testing - based on failure density
 
+There are different assessment criteria that can be followed. First, let's analyze Using No Risk.
+* If a system passes its target MTTF without failure, it is acceptable.
+* For a multi-failure system:
+    * If all failures experiences are in the accept region the system is good to go
+    * Usually difficult to satisfy this condition beacuse failures happen randomly
+What about Product Risk?
+* Risk related to the measured entity. 
+Transaction Risks?
+* Risk related to the measured entity.
+* In a multiple stakeholder transaction involving supplier and purchaser.
+    * Risk in assessing the entity which is actually wrong to be right
+    * Risk in assessing the entity which is right to be actually wrong
+* RDC uses these 3 risks together
+
+The following are risk parameters involved:
+* Discrimination ratio: Acceptable error in estimating failure intensity
+* Customer risk: Probability that the developer is willing to accept of falsely saying the target failure rate is met when it is not
+* Developer risk: Probability that the developer is willing to accept of falsely saying the target failure rate is not met when it is
+
+The reliability demo chart is an efficient way of checking whether the tarhet failure rate is met or not. Based on collecting failure data at time points. The vertical axis would be the failure number (n) and horizontal axis would be normalized failure data. When risk levels decrease, the system will require more test before reaching the accept or reject regions. When discrimination ratio decreases, the system will require more test before reaching the accept or reject regions, where the continue region becomes wider and slope of the boundary line tends towards vertical.
+
+RDC analysis is very versatile, time, and cost efficient way to analyzing the reliability of a system. A disadvantage of the RDC is that it cannot be used to calculate the exact quantitative value for the reliability of the system under study. Experimenting with different values of confidence levels and MTTF is doable. 
+
+## Reliability Growth
+Indicators from at least the following dimensions should be considered together to get an adequate picture of the quality of the product.
+* System stability, reliability, and availability
+* failure volume
+* Outstanding critical problems reported
+* Feedback from early customer programs
+* Other quality attributes that are specific importance to a particular product and its customer requirements and market acceptance
