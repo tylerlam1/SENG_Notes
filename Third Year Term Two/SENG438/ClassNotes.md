@@ -463,3 +463,43 @@ Indicators from at least the following dimensions should be considered together 
 * Outstanding critical problems reported
 * Feedback from early customer programs
 * Other quality attributes that are specific importance to a particular product and its customer requirements and market acceptance
+
+The estimation of normalized failure intensity has a range of uncertainty. This is defined as "confidence limit". For instance, if the confidence limit is 90%, one would expect the system meet its failure intensity objective with only 90% confidence.
+
+Input Data Specification is a ASCII based text file with a .dat extension. There are two file formats:
+* Time Between Failure (Time since last failure)
+* Failure counts (number of errors in interval)
+The format of the file must be strictly adhered to. No direct manipulation is allowed but CASRE has menu links to common text editors. For acurracy of results, the expected number of failures should be greater than 40-50.
+
+When using CASRE with the .dat file, here are the following steps:
+1. Prepare input data. Input data can be either failure count or failure per interval data.
+2. Read input file.
+3. Check if data shows reliability growth.
+4. Select data range.
+5. Select parameter estimation method.
+6. Select and run models.
+7. View and interpret model results.
+
+Reliability models should only be used ond data where the overall reliability is increasing as testing continues. Reliability is increasing if the mean time between failures increases as the total number of failures increases during testing. CASRE version 3 has an automatic trend test option, that will inform the user if the data is applicable to the reliability models.
+
+## Integration Testing
+Different types of testing needs to be done at different stages.
+* Unit Testing - Testing of individual components
+* Integration Testing - Testing to expose problems due to combination of components
+* System Testing - Testing the complete system prior to delivery
+* Acceptance Testing - System level testing from users' perspective
+
+The goal of integration testing is to test all interfaces between subsystems and the interaction of subsystems. The integration testing strategy determines the order in which the subsystems are selected for testing and integration.
+
+Many failures result from results stemming from interactions between components. Integration tests the communication between components. Often many off-the-shelf components and/or libraries are used that cannot be unit tested. Failures that are not discovered in integration testing will be discovered after deployment and can be very expensive.
+
+The integration testing strategy determines the order in which the subsystems are selected for testing and integration. 
+
+There is decomposition-based testing:
+* Top-down
+* Bottom-up
+* Sandwich
+* Big bang
+Also there is Graph-based integration.
+
+Big-bang integration is where units completed and tested independently. Integrated all at once, so quick and cheap. Faults are discovered later, and more expensive to repair. It's the most commonly used approach.
