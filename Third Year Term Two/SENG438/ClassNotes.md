@@ -502,4 +502,33 @@ There is decomposition-based testing:
 * Big bang
 Also there is Graph-based integration.
 
-Big-bang integration is where units completed and tested independently. Integrated all at once, so quick and cheap. Faults are discovered later, and more expensive to repair. It's the most commonly used approach.
+Big-bang integration is where units completed and tested independently. Integrated all at once, so quick and cheap. Faults are discovered later, and more expensive to repair. It's the most commonly used approach. In practice, big-bang integration takes longer to locate and fix faults. Re-testing after fixes (regression testing) is more extensive.
+
+Another option is Incremental Integration.
+* Baseline 0: Tested component
+* Baseline 1: Two components
+* Baseline 2: Three components, etc.
+
+In this type of integration testing, there is easier fault location and fix. There is also easier recovery from disaster/problems.
+
+Apart from that, bottom-up integration is also another option. Modules are integrated into clusters as desired. This shows feasibility of modules early on. There's an emphasis on functionality and performance. Usually test stubs are not needed. Errors in critical modules are found early. Many modules must be integrated before a working program is available, but interface errors are discovered late.
+* Baseline 0: Component n
+* baseline 1: n+i
+* baseline 2: n+i+o
+* baseline 3: n+i+o+d
+
+The advantage of bottom-up integration is that there is a visibility of detail, and fault localization is more apparent. The cons are that it tests the most important subsystem last, and drivers are needed.
+
+As you may imagine, top-down integration is the opposite. The control program is tested first. Modules are integrated one at a time, and there is a major emphasis on interface testing. Interface errors are discovered early, and forms a basic early prototype. But test tubs are needed and errors in low levels are found late.
+
+The sandwich testing strategy combines the top-down and bottom-up strategy. Basically a 'big-bang' of a subtree. Advantages are that there is better fault localization, less stubs, and can be done in parallel.
+
+## System Testing
+Is the last integration step. This is often done by an independent test group.
+
+As opposed to integration testing, system testing is checking the system as a whole. It's performing after integration testing. Carried out for performing both functional and non-functional testing. Includes only black-box testing. 
+
+## Acceptance Testing
+Custome should be closely involved in this final stage of validation. The customer can perform any test they wish. Final user sign off. 
+
+End users that black-box test are alpha testers. The next stage is beta testing. Alpha is simulated operational testing at an in-house site. Beta testing is conducted at client's testing.
