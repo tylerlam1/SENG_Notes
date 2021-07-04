@@ -28,3 +28,23 @@ There are three key economic ideas:
 - People are rational. We have the ability to reason, and gather all relevant information. They should be able to determine if the marginal benefit outweighs the marginal cost.
 - People Respond to Incentives. This could include money, food, finding a mate, or protecting their young.
 - People make decisions on the margin.
+
+Here are examples of irrational behavior:
+- Measuring costs and benefits as proportions rather than absolute value (i.e. Thinking that $25 off on a $1000 item is worth less than $25 off a $100 item)
+- Failure to ignore sunk costs (You should ignore money you've already lost) 
+- Paying too much tax in order to get a big tax return. i.e. Thinking that winnings in a Casino are worth less than "normal" money
+- People are prone to mental accounting (spending your money recklessly after winning a lottery)
+- Jumping into a stock market because a neighbour recommended a stock
+
+Key Economic Question a society faces:
+1. What goods and services will be produced by society? Think about what people want.
+2. How will the goods and services be produced?
+3. Who will receive the goods and services produced?
+
+Market Failure - when the society fail to provide these services (like health care, firefighters) so the government provides them.
+
+The solution to the three economic problems described above depends on the economic system. For example, a right wing economy would have more privatized businesses. The left wing economies have more government-centralized services.
+
+Karl Marx is the founder of communism (command economy). He felt that capitalism cause unemployments (from the depressions). There were no "social nets" that creates huge amounts of unemployments.
+
+Adam Smith wrote *The Wealth of Nations* in 1776 that talked about capitalism and the free market. The idea is that the government would not interfere in the market. He said an "Invisible Hand" would guide the demand and production in the market. He said that for a free market system to work, you need to have a property rights system and a court system to enforce it (ie. Someone to ensure that you own something).
