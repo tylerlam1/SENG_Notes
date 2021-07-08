@@ -74,3 +74,26 @@ Specific Steps:
 This is the end of Chapter 1.
 
 Microeconomics looks at specific industries (What we purchase), etc. Macroeconomics looks at broader issues like employment, economic growth, etc. As the name suggests, micro looks like smaller markets and macro looks at bigger issues.
+
+- Gross Domestic Product - The final market value of all goods and values produced within a economy over a certain period. All nations in the UN have to report a GDP. In Canada 2018 was 2.242 trillion (CAD) dollars. The US reported in 2017 was 19.5 trillion USD. The expenditure is equal to the income. The final market value means the final price of the product.
+
+When GDP is measured, four main sectors are analyzed.
+
+1. Consumption by Household - When you go buy appliances, food, services (haircut).
+2. Gross Investment by Business/Firms - When companies goes out and buys machinery, construction, and changes in inventories.
+3. Government Spending - Gov't spending on final goods, investment goods, and all purchases of resources. Does not include transfer payments, because no production took place.
+4. International Spending - We do exports minus imports. This is because imports do not have production happening in the nation.
+
+GDP doesn't measure the distribution of wealth, happiness, pollution, general wisdom. The point that is being put across is that while it measures the general standard of living, it does not measure everything. It does not measure the value of used goods.
+
+In nominal GDP, it doesn't keep track of inflation. In real GDP, we want to take into account inflation to get the "real" GDP. Real GDP uses 2007 prices.
+
+- A deflator is an index that measures the change of prices over time. An example is the consumer price index (CRI). Another GDP deflator is another.
+
+The relationship between real GDP and nominal GDP is:
+
+Real GDP = Nominal GDP / Deflator \* 100
+
+Potential GDP - A trend line which GDP converges to
+
+Inflationary Gap - The actual GDP is greater than the potential GDP
