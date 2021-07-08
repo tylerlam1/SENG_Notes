@@ -62,3 +62,15 @@ In terms of the textbook, we're skipping a couple lectures. We skipped chapters 
 
 - Economic Model - Tries to predict human behavior. We try to develop a model to predict when something changes. The most important model in microeconomics is supply/demand. Supply and demand is a human behaviour model because it tries to predict human behavior.
 - Scientific Method - Includes testable hypothesis. This is a casuable observation of the real world. For example, we can hypothesize that the demand for video games increases when the price goes down. Gather the data to prove it, and analyze the data. Once the data has been analyzed, we can either reject or prove our hypothesis. In economics, its a bit more difficult to get data. We have to observe human behaviour, which is a bit harder.
+
+Specific Steps:
+
+1. Step 1 - Testable Hypothesis
+2. Step 2 - Decide on the variables and assumptions on the model
+3. Step 3 - Gather the data (Questionaire and surveys)
+4. Step 4 - Analyze the data
+5. Step 5 - Either reject or accept the hypothesis
+
+This is the end of Chapter 1.
+
+Microeconomics looks at specific industries (What we purchase), etc. Macroeconomics looks at broader issues like employment, economic growth, etc. As the name suggests, micro looks like smaller markets and macro looks at bigger issues.
