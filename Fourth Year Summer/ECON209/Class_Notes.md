@@ -91,9 +91,21 @@ In nominal GDP, it doesn't keep track of inflation. In real GDP, we want to take
 - A deflator is an index that measures the change of prices over time. An example is the consumer price index (CRI). Another GDP deflator is another.
 
 The relationship between real GDP and nominal GDP is:
+- Real GDP = Nominal GDP / Deflator \* 100
 
-Real GDP = Nominal GDP / Deflator \* 100
+### Definitions
+- Potential GDP - A trend line which GDP converges to
+- Inflationary Gap - The actual GDP is greater than the potential GDP
+- Expansionary Phase - Where real GDP is rising. It gets to the peak. We knows that economics never continue to peak only. It goes down too, which leads to the up and down cycles. Strikes are signs of recessionary phases (the downward slope). The trough is where unemployment is high, and firms just want to increase their sales.
+- Recessionary Gap - The real GDP is less than potential GDP
+- A recession is when real GDP is falls for two consecutive quarters. This is the official decision for recession.
+- A depression is when real GDP falls for two years or more.
 
-Potential GDP - A trend line which GDP converges to
+If the economy is at the potential GDP, there is no expansionary phase or recessionary phase.
 
-Inflationary Gap - The actual GDP is greater than the potential GDP
+- Inflation - Over these past couple years, Canada has little inflation (around 2% each year). A inflation is a rise in the general price level. The general price level is measured by the consumer price index (CPI). Inflation is influenced by the general price costs, rather than the price of a specific item.
+1. Inflation diminished the purchasing power of the dollar over time. Idea - the dollar can't buy as much as it did before, so it is worth less.
+2. Distribution of income effect. Some people who make money on a fixed income (contractors) are disadvantaged. On the contrary, landlords can adjust their prices based on inflation.
+3. Can hurt foreign trade.
+4. Menu costs - Cost of changing prices. It costs companies money to change their prices (book conferences to deliberate these prices).
+5. Bracket Creep - If our salaries are increased due to inflation, we are taxed more so we actually lose money. Taxes tiers always are behind in terms of inflation.
