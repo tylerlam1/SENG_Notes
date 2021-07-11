@@ -142,3 +142,80 @@ Quiz Information:
 CPI = Market Basket Expenditure in Specific Year / Market Basket Expenditure in Base Year * 100
 
 Real GDP = Nominal / Index * 100
+
+2007 was chosen as the base year because that year the economy was relatively stable.
+
+- Inflation Rate: (Current Year CPI - Base Year CPI) / Base Year CPI * 100
+
+- Real Growth Rate: (Current Year Real GDP - Base Year Real GDP) / Base Year Real GDP * 100. Base Year GDP doesn't necessarily need to be 2007, could just be the first year you want to compare with.
+
+### Unemployment
+To get the unemployment rate here in Canada, Labour Stats Canada contacts around 100,000 people in Canada with the survey.
+
+In order for someone to be classified as unemployed, they have to 1. Be not working 2. Actively looking for a job 3. Ready to go back to work immediately.
+
+UNEMPLOYMENT RATE = (# of people unemployed) / (labour force) * 100
+
+LABOUR FORCE = unemployed + employed
+
+- Working Age Population - People 15 years of age and older who are legally entitled to work in Canada
+- Not in labour force - Retired people who are not working, people in prison/nursing homes/hospital, full time students, Stay at home parents, discouraged workers. If a retired person is working, they would be classified as employed.
+
+PARTICIPATION RATE = (Labour Force / Working Age Population) * 100
+
+- Natural Rate of Unemployment - The unemployment rate of a economy in the long run (in Canada, about 6-7%). There will always be able to quit to look for better positions, new graduates who are unemployed for a period of time, etc. 
+
+Three Types of Unemployment:
+- Frictional Unemployment - Where people are quitting a job to find a better job.
+- Seasonal Unemployment - Related to jobs that are only available in certain seasons (ski hill, etc)
+- Cyclical Unemployment - Unemployment due to downturn in economy
+- Structural Unemployment - Unemployment due to technological change, so they are displaced. Or there is a demise of that industry. Another example is if a gov't enforces a minimum wage that increases unemployment. This is a very problematic type of unemployment.
+
+If we didn't have money, we would need a barter system. A barter system is a trade of goods for goods. Barter system is difficult because you need to find system who needs your exact goods.
+
+Number of possible Prices = n(n-1)/2, where n is the number of goods you have. Especially when you have a large number of goods, there's so many different types of trades that can happen.
+
+Money eliminates the issue described above.
+
+### Functions of Money
+1. Medium of Exchange
+
+The medium of exchange must be accepted by all parties.
+
+2. Unit of Account
+
+It must have unit, as Canadian dollars has quarters, wages, etc. It must be divisible without the loss of value. If you are charged $20, if you pay two $10 bills then there is no loss of value.
+
+3. Store of Value
+
+It must have some sort of value. Same if you have a computer, it has a store of value. Stocks have a store of value. Money is definitely the most liquid of these assets, where it can be transferred really easy.
+
+All money is subject to Gresham's Law. The idea is that bad money drives out good money. In other words, counterfeit money drives out the usability of good/real money.
+
+- Token Coin - The metal content less more than the face value of the coin. If it was worth more, people will melt the coin.
+- Fiat Money - Money with no intrinsic value. For example bills are Fiat Money because its literally just a piece of plastic with no real use other than money.
+
+### Fractional Banks
+This is a system where banks only hold a portion of the money deposited with them as reserves (around 4% in Canada). The rest of the money is used for loans.
+
+- The money that is held is in a vault or deposit in the Bank of Canada.
+- Gov't makes most of their money from loans.
+- Banks are highly profitable.
+- They hold deposits and assets.
+- They honour cheques.
+- They contribute clearing acitivites from the databank. The computerized clearing system is measured by the Canadian Payments Association (CPA). This is important when you transfer your money from one bank to another.
+
+### Money Creation
+
+Assumptions:
+- Bank desired reserve ratio is 10%
+- The bank lends out all its excess reserves
+- A $1000 is deposited into bank A
+- Total Reserve = Desired Reserves + Excess Services
+
+Change in Total Deposits = 1 / dr * Change in Ro
+
+dr = desired reserve ratio
+Ro = Initial Reserve
+
+Note: If the person depositing decides to keep some money to spend, thats a cash drain. That decreases the money multiplier. THe money multiplier becomes 1 / (dr + cr), which is the percentage they keep.
