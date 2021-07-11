@@ -122,3 +122,23 @@ Quiz Information:
 - Non-stress quiz :) 
 - Can use calculators
 
+- Cost Push - Inflation as a result as input prices rising (like oil)
+- Demand Pull - Upward pressure on prices that follows a shortage in supply.
+- Printing of money - Affects cost push and command pull
+
+- Consumer Price Index (CPI) - Measures the price of a typical basket of typical household items. Measured per month (around 600 goods). The value is the rate of change that measures inflation in the company. People who come up with this value visit department stores and checks the prices of these goods. Also includes imports.
+    - Typical household items include food, transportation, health, shelter, education, household operations, clothing.
+- GDP Deflator - Measures much more household items but does not measure imports.
+
+### Limitations of CPI
+- Substitution Bias - Assumes that consumers will not change the things they buy based on the price of the item
+- May not represent all consumers. For example, baby diapers is apart of their basket. iPhones and new products are not usually considered.
+- Weights of different consumer items in the basket are only changed periodically
+- Quality Bias - Does not take into account the improved quality of a product that may cause a increase in price
+- Outlet Bias - Many people buy from large discount stores (Costco, Walmart) and the CPI doesn't take this into account. CPI doesn't go to major outlets. They go to like Safeway, etc.
+
+- Core CPI - Take things out of the CPI basket (take out taxes, food, and energy).
+
+CPI = Market Basket Expenditure in Specific Year / Market Basket Expenditure in Base Year * 100
+
+Real GDP = Nominal / Index * 100
