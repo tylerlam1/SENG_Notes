@@ -109,3 +109,16 @@ If the economy is at the potential GDP, there is no expansionary phase or recess
 3. Can hurt foreign trade.
 4. Menu costs - Cost of changing prices. It costs companies money to change their prices (book conferences to deliberate these prices).
 5. Bracket Creep - If our salaries are increased due to inflation, we are taxed more so we actually lose money. Taxes tiers always are behind in terms of inflation.
+
+## Lecture 3
+
+Quiz Information:
+- Starts 9PM Monday
+- Closes 9PM Tuesday
+- 20 MC in 30 minutes
+- Includes all material up until today
+- Open book
+- Cannot revisit previously answered question
+- Non-stress quiz :) 
+- Can use calculators
+
