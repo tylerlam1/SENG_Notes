@@ -91,9 +91,11 @@ In nominal GDP, it doesn't keep track of inflation. In real GDP, we want to take
 - A deflator is an index that measures the change of prices over time. An example is the consumer price index (CRI). Another GDP deflator is another.
 
 The relationship between real GDP and nominal GDP is:
+
 - Real GDP = Nominal GDP / Deflator \* 100
 
 ### Definitions
+
 - Potential GDP - A trend line which GDP converges to
 - Inflationary Gap - The actual GDP is greater than the potential GDP
 - Expansionary Phase - Where real GDP is rising. It gets to the peak. We knows that economics never continue to peak only. It goes down too, which leads to the up and down cycles. Strikes are signs of recessionary phases (the downward slope). The trough is where unemployment is high, and firms just want to increase their sales.
@@ -104,6 +106,7 @@ The relationship between real GDP and nominal GDP is:
 If the economy is at the potential GDP, there is no expansionary phase or recessionary phase.
 
 - Inflation - Over these past couple years, Canada has little inflation (around 2% each year). A inflation is a rise in the general price level. The general price level is measured by the consumer price index (CPI). Inflation is influenced by the general price costs, rather than the price of a specific item.
+
 1. Inflation diminished the purchasing power of the dollar over time. Idea - the dollar can't buy as much as it did before, so it is worth less.
 2. Distribution of income effect. Some people who make money on a fixed income (contractors) are disadvantaged. On the contrary, landlords can adjust their prices based on inflation.
 3. Can hurt foreign trade.
@@ -113,13 +116,14 @@ If the economy is at the potential GDP, there is no expansionary phase or recess
 ## Lecture 3
 
 Quiz Information:
+
 - Starts 9PM Monday
 - Closes 9PM Tuesday
 - 20 MC in 30 minutes
 - Includes all material up until today
 - Open book
 - Cannot revisit previously answered question
-- Non-stress quiz :) 
+- Non-stress quiz :)
 - Can use calculators
 
 - Cost Push - Inflation as a result as input prices rising (like oil)
@@ -127,10 +131,11 @@ Quiz Information:
 - Printing of money - Affects cost push and command pull
 
 - Consumer Price Index (CPI) - Measures the price of a typical basket of typical household items. Measured per month (around 600 goods). The value is the rate of change that measures inflation in the company. People who come up with this value visit department stores and checks the prices of these goods. Also includes imports.
-    - Typical household items include food, transportation, health, shelter, education, household operations, clothing.
+  - Typical household items include food, transportation, health, shelter, education, household operations, clothing.
 - GDP Deflator - Measures much more household items but does not measure imports.
 
 ### Limitations of CPI
+
 - Substitution Bias - Assumes that consumers will not change the things they buy based on the price of the item
 - May not represent all consumers. For example, baby diapers is apart of their basket. iPhones and new products are not usually considered.
 - Weights of different consumer items in the basket are only changed periodically
@@ -139,33 +144,35 @@ Quiz Information:
 
 - Core CPI - Take things out of the CPI basket (take out taxes, food, and energy).
 
-CPI = Market Basket Expenditure in Specific Year / Market Basket Expenditure in Base Year * 100
+CPI = Market Basket Expenditure in Specific Year / Market Basket Expenditure in Base Year \* 100
 
-Real GDP = Nominal / Index * 100
+Real GDP = Nominal / Index \* 100
 
 2007 was chosen as the base year because that year the economy was relatively stable.
 
-- Inflation Rate: (Current Year CPI - Base Year CPI) / Base Year CPI * 100
+- Inflation Rate: (Current Year CPI - Base Year CPI) / Base Year CPI \* 100
 
-- Real Growth Rate: (Current Year Real GDP - Base Year Real GDP) / Base Year Real GDP * 100. Base Year GDP doesn't necessarily need to be 2007, could just be the first year you want to compare with.
+- Real Growth Rate: (Current Year Real GDP - Base Year Real GDP) / Base Year Real GDP \* 100. Base Year GDP doesn't necessarily need to be 2007, could just be the first year you want to compare with.
 
 ### Unemployment
+
 To get the unemployment rate here in Canada, Labour Stats Canada contacts around 100,000 people in Canada with the survey.
 
 In order for someone to be classified as unemployed, they have to 1. Be not working 2. Actively looking for a job 3. Ready to go back to work immediately.
 
-UNEMPLOYMENT RATE = (# of people unemployed) / (labour force) * 100
+UNEMPLOYMENT RATE = (# of people unemployed) / (labour force) \* 100
 
 LABOUR FORCE = unemployed + employed
 
 - Working Age Population - People 15 years of age and older who are legally entitled to work in Canada
 - Not in labour force - Retired people who are not working, people in prison/nursing homes/hospital, full time students, Stay at home parents, discouraged workers. If a retired person is working, they would be classified as employed.
 
-PARTICIPATION RATE = (Labour Force / Working Age Population) * 100
+PARTICIPATION RATE = (Labour Force / Working Age Population) \* 100
 
-- Natural Rate of Unemployment - The unemployment rate of a economy in the long run (in Canada, about 6-7%). There will always be able to quit to look for better positions, new graduates who are unemployed for a period of time, etc. 
+- Natural Rate of Unemployment - The unemployment rate of a economy in the long run (in Canada, about 6-7%). There will always be able to quit to look for better positions, new graduates who are unemployed for a period of time, etc.
 
 Three Types of Unemployment:
+
 - Frictional Unemployment - Where people are quitting a job to find a better job.
 - Seasonal Unemployment - Related to jobs that are only available in certain seasons (ski hill, etc)
 - Cyclical Unemployment - Unemployment due to downturn in economy
@@ -178,6 +185,7 @@ Number of possible Prices = n(n-1)/2, where n is the number of goods you have. E
 Money eliminates the issue described above.
 
 ### Functions of Money
+
 1. Medium of Exchange
 
 The medium of exchange must be accepted by all parties.
@@ -196,6 +204,7 @@ All money is subject to Gresham's Law. The idea is that bad money drives out goo
 - Fiat Money - Money with no intrinsic value. For example bills are Fiat Money because its literally just a piece of plastic with no real use other than money.
 
 ### Fractional Banks
+
 This is a system where banks only hold a portion of the money deposited with them as reserves (around 4% in Canada). The rest of the money is used for loans.
 
 - The money that is held is in a vault or deposit in the Bank of Canada.
@@ -208,12 +217,13 @@ This is a system where banks only hold a portion of the money deposited with the
 ### Money Creation
 
 Assumptions:
+
 - Bank desired reserve ratio is 10%
 - The bank lends out all its excess reserves
 - A $1000 is deposited into bank A
 - Total Reserve = Desired Reserves + Excess Services
 
-Change in Total Deposits = 1 / dr * Change in Ro
+Change in Total Deposits = 1 / dr \* Change in Ro
 
 dr = desired reserve ratio
 Ro = Initial Reserve
@@ -223,10 +233,12 @@ Note: If the person depositing decides to keep some money to spend, thats a cash
 ## Lecture 4
 
 Reasons for early central banks:
+
 - Didn't want to go to landlords for money, because the landlords always charged too much for borrowing money.
 - Seniorage -> Different the price it costs to make a coin versus how much its worth. Government wanted to monopolize this profit.
 
 Bank of Canada was instituted because:
+
 - end of great depression - Basically during the Great Depression, banks started calling in their loans (requesting loans to come back) since they were concerned farmers couldn't pay it back. The farmers indeed couldn't, and gave up their land in the process. This caused a whole bunch of problems.
 - end of gold standard - We needed a institution to manage foreign currencies (trading was rising with other countries)
 - prevent bank run (bank declaring bankruptcy)
@@ -235,16 +247,18 @@ In the beginning, TD bank, BMO, Molsons Bank, each all issue their own currency.
 
 ### Bank of Canada
 
-BoC is not a profit oriented organization. Its created to manage economy in efficient way. 
+BoC is not a profit oriented organization. Its created to manage economy in efficient way.
 
 The following are goals of the BoC:
+
 - Keep inflation at a stable rate at 1-3%.
 - Promote economic growth and employment.
-- Protect the value of the Canadian dollar in respect to the other currencies. 
+- Protect the value of the Canadian dollar in respect to the other currencies.
 
 Government Bonds - Government issues a bond of X$ and promise to pay interest when it matures. The government uses this way to generate money.
 
 Main Responsibilities:
+
 - Funds Management - BoC manages the government money and all their bonds.
 - Monetary Policy - Contracts or expands money supply in Canada
 - Financial System - Oversees the settlement system between the major charter banks.
@@ -252,9 +266,10 @@ Main Responsibilities:
 - Research - Look at inflation in various parts of Canada, look at regional disparities, etc.
 
 Settlement between major charter banks:
+
 - If a charter bank (TD bank) doesn't have enough money at the end of a day to send money to a different bank for its customer transactions, it has two options:
-    - Borrow money from the Bank of Canada while paying a interest rate
-    - Borrow money from a different bank that has a surplus at the end of day. This usually has lower interest rates.
+  - Borrow money from the Bank of Canada while paying a interest rate
+  - Borrow money from a different bank that has a surplus at the end of day. This usually has lower interest rates.
 
 OPERATING BAND - Range of interest rates. Top is the bank rate. Lower end is the interest rate paid on deposits. The bank rate is the highest, which is what you pay for Bank of Canada. The lower end is for when you're paying a separate bank. These are set each year.
 
@@ -264,3 +279,39 @@ EXPANSIONARY MONETARY POLICY - Increase money supply. To organize this, BoC cont
 CONTRACTION MONETARY POLICY - The BoC will sell securities to the banks at a discount. The discount is what motivates the banks to give away their money.
 
 - Standing Liquity Facility - BoC made one-day loans to the banks initially. After the financial crisis, the BoC agreed to do it for longer. This was about for 6 months (grace period for loans).
+
+### Park Text Chapter 3 (Project Evaluation)
+
+A dollar received today is worth more than a dollar received in the future. This is because you can put that dollar into investment.
+
+Power of compounding - On money you earn interest, you earn interest on that interest. So it compounds.
+
+Simple Interest - Interest is earned on the principle amount.
+
+Fv = P(1 + years \* interest rate)
+
+Fv = Future Value
+P = Principle amount
+
+Compond Interest - You earn interest on interest.
+
+Fv = P(1 + interest rate)^years
+
+Factor Notation = F = P(F/P, i, N)
+i = interest rate
+N = years
+F/P = Future depending on present
+
+ECONOMIC EQUIVALENCE - The Present Value compared to the Future Value (based on the interest rate). For example, the $1000 you get today or the $1100 you get a year from now, assuming a constant 10% interest rate.
+
+FUTURE VALUE OF ANNUITY - If you put in money every year or at certain intervals.
+
+Fv = A[((1 + i)^n - 1) / i]
+Fv = A(F/A, i, N)
+
+A = Value you put in annually
+
+Example:
+F = 1000((1.1)^5 - 1 / 0.1)
+
+If we put in $1000 each year, with 10% each year, and we need the value after 5 years.
