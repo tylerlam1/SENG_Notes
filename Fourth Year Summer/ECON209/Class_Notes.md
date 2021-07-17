@@ -315,3 +315,8 @@ Example:
 F = 1000((1.1)^5 - 1 / 0.1)
 
 If we put in $1000 each year, with 10% each year, and we need the value after 5 years.
+## Lecture 5
+
+The midterm will cover up until mortgages. Normally the midterm is 60 minutes, but with the extra time allocation, we'll have 90 minutes. The MC section will likely cover the Bank of Canada, money multiplier, monetary policy, etc. We have a 24-hour window for the quiz.
+
+The midterm can be downloaded and will be uploaded. There will be no lecture on Wednesday. We will have formula sheets in our exams.
