@@ -219,3 +219,48 @@ dr = desired reserve ratio
 Ro = Initial Reserve
 
 Note: If the person depositing decides to keep some money to spend, thats a cash drain. That decreases the money multiplier. THe money multiplier becomes 1 / (dr + cr), which is the percentage they keep.
+
+## Lecture 4
+
+Reasons for early central banks:
+- Didn't want to go to landlords for money, because the landlords always charged too much for borrowing money.
+- Seniorage -> Different the price it costs to make a coin versus how much its worth. Government wanted to monopolize this profit.
+
+Bank of Canada was instituted because:
+- end of great depression - Basically during the Great Depression, banks started calling in their loans (requesting loans to come back) since they were concerned farmers couldn't pay it back. The farmers indeed couldn't, and gave up their land in the process. This caused a whole bunch of problems.
+- end of gold standard - We needed a institution to manage foreign currencies (trading was rising with other countries)
+- prevent bank run (bank declaring bankruptcy)
+
+In the beginning, TD bank, BMO, Molsons Bank, each all issue their own currency.
+
+### Bank of Canada
+
+BoC is not a profit oriented organization. Its created to manage economy in efficient way. 
+
+The following are goals of the BoC:
+- Keep inflation at a stable rate at 1-3%.
+- Promote economic growth and employment.
+- Protect the value of the Canadian dollar in respect to the other currencies. 
+
+Government Bonds - Government issues a bond of X$ and promise to pay interest when it matures. The government uses this way to generate money.
+
+Main Responsibilities:
+- Funds Management - BoC manages the government money and all their bonds.
+- Monetary Policy - Contracts or expands money supply in Canada
+- Financial System - Oversees the settlement system between the major charter banks.
+- Currency - Designing currency. Creating new ones and destroying old ones.
+- Research - Look at inflation in various parts of Canada, look at regional disparities, etc.
+
+Settlement between major charter banks:
+- If a charter bank (TD bank) doesn't have enough money at the end of a day to send money to a different bank for its customer transactions, it has two options:
+    - Borrow money from the Bank of Canada while paying a interest rate
+    - Borrow money from a different bank that has a surplus at the end of day. This usually has lower interest rates.
+
+OPERATING BAND - Range of interest rates. Top is the bank rate. Lower end is the interest rate paid on deposits. The bank rate is the highest, which is what you pay for Bank of Canada. The lower end is for when you're paying a separate bank. These are set each year.
+
+The Bank of Canada also manages gold and silver.
+
+EXPANSIONARY MONETARY POLICY - Increase money supply. To organize this, BoC contacts all the major charter banks and tell them that that BoC buy securities from the major charter banks.
+CONTRACTION MONETARY POLICY - The BoC will sell securities to the banks at a discount. The discount is what motivates the banks to give away their money.
+
+- Standing Liquity Facility - BoC made one-day loans to the banks initially. After the financial crisis, the BoC agreed to do it for longer. This was about for 6 months (grace period for loans).
