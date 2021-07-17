@@ -315,8 +315,42 @@ Example:
 F = 1000((1.1)^5 - 1 / 0.1)
 
 If we put in $1000 each year, with 10% each year, and we need the value after 5 years.
+
 ## Lecture 5
 
 The midterm will cover up until mortgages. Normally the midterm is 60 minutes, but with the extra time allocation, we'll have 90 minutes. The MC section will likely cover the Bank of Canada, money multiplier, monetary policy, etc. We have a 24-hour window for the quiz.
 
 The midterm can be downloaded and will be uploaded. There will be no lecture on Wednesday. We will have formula sheets in our exams.
+
+Sinking Fund Formula = A = Fv(i/(1+i)^n - 1) - Looks like we're just rearranging the equation? The idea here is that we have the future value, and we want to know how much we want to put in.
+
+Present Value of Annuity - The money you essentially have today if you were to withdraw at a interest rate every year. Formula is down here:
+
+PV = A((1 - (1+i)^-N) / i)
+
+Capital Recovery Formula - If we were to rearrange the Present Value of Annuity. Rearrange for A:
+
+A = PV((i(i+i)^N)/((1+i)^(N)-1))
+
+### Linear Gradient
+
+Imagine we invest in a way where we linearly increase the amount of invest each year. Imagine we invest $1000 in year 1, $1100 in year 2, $1200 in year 3, etc.
+
+Fv = G/i (((1+i)^N - 1 / i) - N)
+
+G = gradient
+i = interest
+N = years
+
+F = G(F/G, i, N)
+
+The gradient is essentially the $ value you add on each year.
+
+PRESENT VALUE OF A LINEAR GRADIENT:
+
+Pv = G(((1+i)^n - iN - 1) / (i^2 (1+i)^N))
+P = G(P/G, i, N)
+
+Another example where we would have a geometric gradient. Instead of going up by a linear gradient, a geometric gradient would go up by the percentage each year.
+
+
