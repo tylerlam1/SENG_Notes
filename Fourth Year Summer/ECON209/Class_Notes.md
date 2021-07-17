@@ -353,4 +353,20 @@ P = G(P/G, i, N)
 
 Another example where we would have a geometric gradient. Instead of going up by a linear gradient, a geometric gradient would go up by the percentage each year.
 
+### If the interest is compounded more than once per year
 
+Effective Annual Interest Rate
+
+Effective Annual Rate = (1 + r/m)^m - 1
+
+r = Nominal Interest Rate / YR
+m = Number of compounding periods per year
+
+Hence we can compute the effective interest rate per year to perform other types of computations.
+
+### Types of Problems in the Real World
+
+1. Interest componding periods + payment periods occur at the same time
+2. Interest componding periods + payment periods do not occur at the same time
+
+When approaching these problems, i per the interval is the yearly / N per year. N is the total intervals over time.
