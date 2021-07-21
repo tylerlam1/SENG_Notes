@@ -370,3 +370,46 @@ Hence we can compute the effective interest rate per year to perform other types
 2. Interest componding periods + payment periods do not occur at the same time
 
 When approaching these problems, i per the interval is the yearly / N per year. N is the total intervals over time.
+
+## Lecture 6
+
+Midterm is Wednesday. On the day, we go on the D2L dropbox. Open the Academic Integrity form and sign and upload it. Then we can start the test, its a two part procedure.
+
+Part A is 15 questions. Part B is problem solving questions.
+
+Content:
+
+- Chapters 5 (Unemployment)
+- Chapters 10 (Banking Bank of Canada)
+- Chapter 3 (Time Value of money)
+- Chapter 4 (up to mortgages)
+
+Open Book means only using class content. No communicating with other classmates and using the internet.
+
+If we have technical problems and cannot upload it, we can go ahead and email it to them.
+
+### General or Complex Annuities
+
+Interset compounding periods and payment periods do not occur at the same time.
+
+Therefore the equation for the effective rate per payment period is:
+
+i = (1 + r/m)^c - 1
+
+r = Nominal or stated annual rate
+m = # of compounding periods per year
+c = # of compounding periods per payment period
+
+Terminology:
+
+1. Term - The amount of time a mortgage rate is guaranteed
+2. Amortization - The time in which you have to pay the mortgage
+
+Conventional Mortgage - 80% of selling price or appraised value - whichever is lower
+Non-Conventional Mortgage - If you want to mortgage more than 80%, you need mortgage insurance. This can be very expensive. This doesn't protect the buyer, but the seller.
+
+Closed Mortgage - There is a penalty if you pay off mortgage earlier than term.
+Open Mortgage - No penalty if you pay off mortgage earlier than term.
+Portability - Allows you to transfer existing mortgaged house to another house (i.e. if you want to upgrade the house).
+
+_End of Midterm Content_
