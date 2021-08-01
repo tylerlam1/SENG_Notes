@@ -370,3 +370,44 @@ Hence we can compute the effective interest rate per year to perform other types
 2. Interest componding periods + payment periods do not occur at the same time
 
 When approaching these problems, i per the interval is the yearly / N per year. N is the total intervals over time.
+
+### Bonds
+
+If a government or company issues a bond, they say that "we'll pay you interest every interval, and at the end we'll pay you your original amount of money back".
+
+There's no guarantee that a bond original amount will be paid back (the company can go bankrupt). But that's why you should research about the reliability of the company. The government has never bailed on a bond.
+
+For example:
+
+The government issues a $100,000 bond at 5%. We buy it. The bond length/maturity is 20 years from when its issued. 
+
+This means that I get $5000 every year I keep the bond, and $100,000 at the end of the length. Usually 5% is a bit high.
+
+However, let's suppose that we expect the interests to go down in a couple years. i.e. the interest rate goes from 5% to 3%. We can choose to sell our owned bond in five years for greater than $100,000, because 5% interest rate is higher than normal now.
+
+There's a inverse relationship between interest rate and bonds.
+
+Definitions for Bonds:
+- Coupon Rate: Interest Rate on the bond. Almost always paid semi-annually.
+- Redemption Date: Maturity Date, the date that the principal is paid
+- Redemption Value - i) Redeemable at par ii) Redeemable at premium (i.e. $100,000 at 104). Basically if you held it till the end, you get the 4% extra
+- Yield to Maturity - The rate of return that takes into account the difference between the par value and the market value if they are different
+- Current Yield - Annual interest rate earned as a % of the current price.
+
+- Net Present Value - When you buy a equipment, you will have net cash flows (incoming cash flow - annual maintenance costs). The net present value is the infront cost + cash flows - maintenance cost. This is used to determine whether this investment is worth it.
+
+How do we compute Net Present Value (NPV)?
+- NPV = A + PV of net cash flows
+
+A = Original cost
+
+Thus,
+NPV = A + sum of (net cash flow / (1+i)^n)
+
+n = years
+i = Marr (Minimum acceptable rate of return). Usually determined by the client.
+
+### Decision Rule
+If the NPV for a project is greater than 0, accept the project.
+If the NPV for a project is less than 0, reject the project.
+If the NPV for a project is equal to 0, we may accept or reject the project.
