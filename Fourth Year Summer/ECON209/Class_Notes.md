@@ -371,46 +371,6 @@ Hence we can compute the effective interest rate per year to perform other types
 
 When approaching these problems, i per the interval is the yearly / N per year. N is the total intervals over time.
 
-### Bonds
-
-If a government or company issues a bond, they say that "we'll pay you interest every interval, and at the end we'll pay you your original amount of money back".
-
-There's no guarantee that a bond original amount will be paid back (the company can go bankrupt). But that's why you should research about the reliability of the company. The government has never bailed on a bond.
-
-For example:
-
-The government issues a $100,000 bond at 5%. We buy it. The bond length/maturity is 20 years from when its issued. 
-
-This means that I get $5000 every year I keep the bond, and $100,000 at the end of the length. Usually 5% is a bit high.
-
-However, let's suppose that we expect the interests to go down in a couple years. i.e. the interest rate goes from 5% to 3%. We can choose to sell our owned bond in five years for greater than $100,000, because 5% interest rate is higher than normal now.
-
-There's a inverse relationship between interest rate and bonds.
-
-Definitions for Bonds:
-- Coupon Rate: Interest Rate on the bond. Almost always paid semi-annually.
-- Redemption Date: Maturity Date, the date that the principal is paid
-- Redemption Value - i) Redeemable at par ii) Redeemable at premium (i.e. $100,000 at 104). Basically if you held it till the end, you get the 4% extra
-- Yield to Maturity - The rate of return that takes into account the difference between the par value and the market value if they are different
-- Current Yield - Annual interest rate earned as a % of the current price.
-
-- Net Present Value - When you buy a equipment, you will have net cash flows (incoming cash flow - annual maintenance costs). The net present value is the infront cost + cash flows - maintenance cost. This is used to determine whether this investment is worth it.
-
-How do we compute Net Present Value (NPV)?
-- NPV = A + PV of net cash flows
-
-A = Original cost
-
-Thus,
-NPV = A + sum of (net cash flow / (1+i)^n)
-
-n = years
-i = Marr (Minimum acceptable rate of return). Usually determined by the client.
-
-### Decision Rule
-If the NPV for a project is greater than 0, accept the project.
-If the NPV for a project is less than 0, reject the project.
-If the NPV for a project is equal to 0, we may accept or reject the project.
 ## Lecture 6
 
 Midterm is Wednesday. On the day, we go on the D2L dropbox. Open the Academic Integrity form and sign and upload it. Then we can start the test, its a two part procedure.
@@ -453,3 +413,96 @@ Open Mortgage - No penalty if you pay off mortgage earlier than term.
 Portability - Allows you to transfer existing mortgaged house to another house (i.e. if you want to upgrade the house).
 
 _End of Midterm Content_
+
+### Bonds
+
+If a government or company issues a bond, they say that "we'll pay you interest every interval, and at the end we'll pay you your original amount of money back".
+
+There's no guarantee that a bond original amount will be paid back (the company can go bankrupt). But that's why you should research about the reliability of the company. The government has never bailed on a bond.
+
+For example:
+
+The government issues a $100,000 bond at 5%. We buy it. The bond length/maturity is 20 years from when its issued. 
+
+This means that I get $5000 every year I keep the bond, and $100,000 at the end of the length. Usually 5% is a bit high.
+
+However, let's suppose that we expect the interests to go down in a couple years. i.e. the interest rate goes from 5% to 3%. We can choose to sell our owned bond in five years for greater than $100,000, because 5% interest rate is higher than normal now.
+
+There's a inverse relationship between interest rate and bonds.
+
+Definitions for Bonds:
+- Coupon Rate: Interest Rate on the bond. Almost always paid semi-annually.
+- Redemption Date: Maturity Date, the date that the principal is paid
+- Redemption Value - i) Redeemable at par ii) Redeemable at premium (i.e. $100,000 at 104). Basically if you held it till the end, you get the 4% extra
+- Yield to Maturity - The rate of return that takes into account the difference between the par value and the market value if they are different
+- Current Yield - Annual interest rate earned as a % of the current price.
+
+- Net Present Value - When you buy a equipment, you will have net cash flows (incoming cash flow - annual maintenance costs). The net present value is the infront cost + cash flows - maintenance cost. This is used to determine whether this investment is worth it.
+
+How do we compute Net Present Value (NPV)?
+- NPV = A + PV of net cash flows
+
+A = Original cost
+
+Thus,
+NPV = A + sum of (net cash flow / (1+i)^n)
+
+n = years
+i = Marr (Minimum acceptable rate of return). Usually determined by the client.
+
+### Decision Rule
+If the NPV for a project is greater than 0, accept the project.
+If the NPV for a project is less than 0, reject the project.
+If the NPV for a project is equal to 0, we may accept or reject the project.
+
+## Lecture 7
+
+Net Present Value:
+- NPV = A + PV of net cash flows
+
+A is the initial investment
+PV is the cash flow (money you're technically earning yearly)
+
+MARR = Minimum Rate of return required by client
+
+The NPV is the amount that our net worth of our firm that will be increased. Basically if the NPV is 30k, that means that the net worth of the company will be increased by 30k.
+
+What if we want to evaluate the project in the future instead of the current time? There is a different equation for that.
+
+NFV = A + FV of net cash flows
+
+The NFV and the NPV are economically equivalent.
+
+Payback Period - PBP is the amount of time (yrs) for an initial investment to be recovered (neglecting the time value of money).
+
+If you have even cash flows:
+PBP = Initial cash flow / Yearly cash flow
+
+If you have uneven cash flows:
+Calculations are a bit different.
+To compute this, we can calculate the cumulative cash flows each year and see which year in which we will recover our initial cash flow. We use a slope equation to figure out how long it takes to get to a certain value using the two upper and lower bound values.
+
+Problems with PBP:
+1. It does not take into any future cash flows beyond payback period.
+2. Cost of financial capital.
+3. No allowance for salvage values or reclamation cost at end of project.
+4. If the signs of cash flows change frequently, it does not make sense to use PBP as the main decision tool.
+
+Discounted Pay-Back Period:
+Take into consideration of the time value of money. Basically just take the cash flow each year, and find the current day value of the dollar value with the interest rate.
+
+The third decision tool to make decisions is the Internal Rate of Return (IRR).
+
+The IRR is the interest rate that makes the net present value equal to 0.
+
+The fourth decision tool is known as the annual equivalent analysis.
+
+Benefit:
+1. Many reports summarize or use yearly revenues + costs.
+2. Need for unit costs.
+3. Useful when evaluating projects with different service lives.
+
+Difference between capital vs operating costs.
+1. Capital costs are "one time" costs, such as equipment, factories, furnace, buildings.
+2. Operating Cost: Annual operating costs (labour, fuel, maintenance)
+
