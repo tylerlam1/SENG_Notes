@@ -510,4 +510,150 @@ Comparing mutually exclusive alternatives:
 1. Service Project - These are projects in which the revenue do not depend on the choice of the project. In the situation, we want to select the alternative with the least cost. That would include, a new machine, delivery trucky, or computerized system that would reduce utility usage.
 2. Revenue Projects - These are where revenues change as a result of the project. Our decision then is to select the project with the largest net gain to the firm. For example, a new manufacturing facility, a new system, or a new product line.
 
+## Lecture 8
 
+Replacement Analysis (Opportunity Cost Approach):
+- No taxes, no depreciation
+
+Example:
+Current machine (defender)
+- 5 years ago - Firm paid $75,000
+- Today salvage value - $15,000
+- Operating Costs: $15,000 this year and increase by $2,500 every year thereafter.
+- In 5 years, there is 0 salvage value
+
+New Machine (Challenger)
+- Today's purchase price $100,000
+- Annual operating costs - $8,000
+- Salvage value in 5 years - $20,000
+- MARR = 15%
+
+PV of defender:
+PV(15%) = -15,000 - 15,000(P/A, 15%, 5) - 2500(P/G, 15%, 5)
+PV(15%) = -79,718
+AE = -23,778
+
+Challenger:
+PV(15%) = -100,000 - 8000(P/A, 15%, 5) + 20,000(P/F, 15%, 5)
+PV(15%) = -116,873
+AE = -34,865
+
+### Chapters 8 + 9 - Depreciation and Taxes
+Depreciation is an expense allowance that recognizes that assets wear out or become obsolete over time.
+
+The cash flow is the amount of cash that is received by the team. To compute the net income:
+
+Revenues - depreciation - salaries - cogs - operating costs. 
+
+When we compute net cash flow, we should add back depreciation if they were deducted earlier.
+
+Random aside - For the quiz, expect to have NPV, payback, IRR, annual equivalence replacement analysis, bonds
+
+In order for something to be a depreciable asset, it must be used for business use, and a definite service life. 
+
+Cost Base for Depreciation:
+- Invoice including tax
+- Freight
+- Installation
+- Site Prep
+
+Types of Depreciation methods:
+1. Straight line depreciation
+2. Declining balance depreciation
+3. Sum of years digit
+
+Straight Line:
+Depreciation = (Cost of asset - salvage) / useful life
+
+Declining Balance:
+The deduction rate is higher but decreases over time
+
+### Canada Revenue Agency (CRA)
+- Asset is a property (Book term to tax term)
+- Depreciation is a capital cost allowance
+- Cost base is capital cost
+- Book Value is undepreciated capital cost
+- Salvage value is the proceeds from disposition
+
+CCA = Capital Cost Allowance
+CRA allocates assets to different classes, which have different depreciation rates.
+- These rates are the maximum that a firm can dedcuct for tax purposes.
+
+Half Year or 50% Rule
+- CRA only allows a firm to deduct 50% of the allowable CCA rate for the _first_ rate.
+
+The CCA and UCC equations are available in the notes.
+
+In Alberta, the corporate tax rate in Alberta is the sum of the federal tax rate and the Alberta rate. The federal rate is 15% and the Alberta one is 8%. So the total corporate tax rate is 23%.
+
+To distinguish the corporate tax rate and the tax rate associated with a capital gain. Capital gain is when you buy something (building) and sell it for higher. But right now in Canada you only pay tax on half that gain in Canada. This is called the inclusion rate. 
+
+Disposal Tax Effect (G)
+- When a asset is sold, we must take into consideration the tax implications of the sale
+- The total tax effect (G) represents the tax implications over and above the tax savings realized from the CCA deduction when asset is sold
+- "G" is merely a tax savings or tax payment
+
+No capital gain: G = t(ucc - S)
+
+t = corporate tax rate
+s = salvage value
+
+With capital gain: G = t(ucc - p) - t2(s-p)
+ucc = undepreciated capital cost
+p = recaptured depreciation cost
+t2 = the government halfed corporate tax rate on gains
+
+There are four scenarios:
+- Sell something for less than UCC
+- Sell for UCC
+- Sell for more than the UCC
+- Sell for something more than the UCC but less than original cost
+
+One scenario:
+Original Price for 250,000
+Ucc = 104,125
+Sold for $150,000
+
+Since they sold it for more than the depreciated cost:
+
+G = t(ucc - S)
+G = 40%(104, 125 - 150,000)
+G = -18350
+
+NSV = 150,000 - 18,350
+= $131,650
+
+Next scenario:
+Sold for $104,125
+Ucc = 104,125
+
+G = t(ucc -S)
+G = 0.4(0)
+G = 0
+
+NSV (Net Salvage Value) = 104125 - 0 = 104125
+
+Third scenario:
+Sold for 90k
+G = t(ucc - S)
+G = 0.4(104125 - 90000)
+G = +5650
+
+NSV = 90k + 5650 = 95,650
+
+Final Scenario:
+Sold for 270k (monster price!!!)
+Original price 250k
+Ucc = 104,125
+
+G = t(ucc disp - original price) - t(s-p)
+
+Second half = 
+ /- 0.4 * 0.5 (270k - 250k) = - 4k
+
+First half = 
+0.4(104125 - 250000) = -58,250
+
+Total tax effect = -62,250
+
+NSV = $207,650
