@@ -506,3 +506,8 @@ Difference between capital vs operating costs.
 1. Capital costs are "one time" costs, such as equipment, factories, furnace, buildings.
 2. Operating Cost: Annual operating costs (labour, fuel, maintenance)
 
+Comparing mutually exclusive alternatives:
+1. Service Project - These are projects in which the revenue do not depend on the choice of the project. In the situation, we want to select the alternative with the least cost. That would include, a new machine, delivery trucky, or computerized system that would reduce utility usage.
+2. Revenue Projects - These are where revenues change as a result of the project. Our decision then is to select the project with the largest net gain to the firm. For example, a new manufacturing facility, a new system, or a new product line.
+
+
