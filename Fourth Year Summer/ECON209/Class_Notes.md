@@ -422,7 +422,7 @@ There's no guarantee that a bond original amount will be paid back (the company 
 
 For example:
 
-The government issues a $100,000 bond at 5%. We buy it. The bond length/maturity is 20 years from when its issued. 
+The government issues a $100,000 bond at 5%. We buy it. The bond length/maturity is 20 years from when its issued.
 
 This means that I get $5000 every year I keep the bond, and $100,000 at the end of the length. Usually 5% is a bit high.
 
@@ -431,6 +431,7 @@ However, let's suppose that we expect the interests to go down in a couple years
 There's a inverse relationship between interest rate and bonds.
 
 Definitions for Bonds:
+
 - Coupon Rate: Interest Rate on the bond. Almost always paid semi-annually.
 - Redemption Date: Maturity Date, the date that the principal is paid
 - Redemption Value - i) Redeemable at par ii) Redeemable at premium (i.e. $100,000 at 104). Basically if you held it till the end, you get the 4% extra
@@ -440,6 +441,7 @@ Definitions for Bonds:
 - Net Present Value - When you buy a equipment, you will have net cash flows (incoming cash flow - annual maintenance costs). The net present value is the infront cost + cash flows - maintenance cost. This is used to determine whether this investment is worth it.
 
 How do we compute Net Present Value (NPV)?
+
 - NPV = A + PV of net cash flows
 
 A = Original cost
@@ -451,6 +453,7 @@ n = years
 i = Marr (Minimum acceptable rate of return). Usually determined by the client.
 
 ### Decision Rule
+
 If the NPV for a project is greater than 0, accept the project.
 If the NPV for a project is less than 0, reject the project.
 If the NPV for a project is equal to 0, we may accept or reject the project.
@@ -458,6 +461,7 @@ If the NPV for a project is equal to 0, we may accept or reject the project.
 ## Lecture 7
 
 Net Present Value:
+
 - NPV = A + PV of net cash flows
 
 A is the initial investment
@@ -483,6 +487,7 @@ Calculations are a bit different.
 To compute this, we can calculate the cumulative cash flows each year and see which year in which we will recover our initial cash flow. We use a slope equation to figure out how long it takes to get to a certain value using the two upper and lower bound values.
 
 Problems with PBP:
+
 1. It does not take into any future cash flows beyond payback period.
 2. Cost of financial capital.
 3. No allowance for salvage values or reclamation cost at end of project.
@@ -498,31 +503,37 @@ The IRR is the interest rate that makes the net present value equal to 0.
 The fourth decision tool is known as the annual equivalent analysis.
 
 Benefit:
+
 1. Many reports summarize or use yearly revenues + costs.
 2. Need for unit costs.
 3. Useful when evaluating projects with different service lives.
 
 Difference between capital vs operating costs.
+
 1. Capital costs are "one time" costs, such as equipment, factories, furnace, buildings.
 2. Operating Cost: Annual operating costs (labour, fuel, maintenance)
 
 Comparing mutually exclusive alternatives:
+
 1. Service Project - These are projects in which the revenue do not depend on the choice of the project. In the situation, we want to select the alternative with the least cost. That would include, a new machine, delivery trucky, or computerized system that would reduce utility usage.
 2. Revenue Projects - These are where revenues change as a result of the project. Our decision then is to select the project with the largest net gain to the firm. For example, a new manufacturing facility, a new system, or a new product line.
 
 ## Lecture 8
 
 Replacement Analysis (Opportunity Cost Approach):
+
 - No taxes, no depreciation
 
 Example:
 Current machine (defender)
+
 - 5 years ago - Firm paid $75,000
 - Today salvage value - $15,000
 - Operating Costs: $15,000 this year and increase by $2,500 every year thereafter.
 - In 5 years, there is 0 salvage value
 
 New Machine (Challenger)
+
 - Today's purchase price $100,000
 - Annual operating costs - $8,000
 - Salvage value in 5 years - $20,000
@@ -539,25 +550,28 @@ PV(15%) = -116,873
 AE = -34,865
 
 ### Chapters 8 + 9 - Depreciation and Taxes
+
 Depreciation is an expense allowance that recognizes that assets wear out or become obsolete over time.
 
 The cash flow is the amount of cash that is received by the team. To compute the net income:
 
-Revenues - depreciation - salaries - cogs - operating costs. 
+Revenues - depreciation - salaries - cogs - operating costs.
 
 When we compute net cash flow, we should add back depreciation if they were deducted earlier.
 
 Random aside - For the quiz, expect to have NPV, payback, IRR, annual equivalence replacement analysis, bonds
 
-In order for something to be a depreciable asset, it must be used for business use, and a definite service life. 
+In order for something to be a depreciable asset, it must be used for business use, and a definite service life.
 
 Cost Base for Depreciation:
+
 - Invoice including tax
 - Freight
 - Installation
 - Site Prep
 
 Types of Depreciation methods:
+
 1. Straight line depreciation
 2. Declining balance depreciation
 3. Sum of years digit
@@ -569,6 +583,7 @@ Declining Balance:
 The deduction rate is higher but decreases over time
 
 ### Canada Revenue Agency (CRA)
+
 - Asset is a property (Book term to tax term)
 - Depreciation is a capital cost allowance
 - Cost base is capital cost
@@ -577,18 +592,21 @@ The deduction rate is higher but decreases over time
 
 CCA = Capital Cost Allowance
 CRA allocates assets to different classes, which have different depreciation rates.
+
 - These rates are the maximum that a firm can dedcuct for tax purposes.
 
 Half Year or 50% Rule
+
 - CRA only allows a firm to deduct 50% of the allowable CCA rate for the _first_ rate.
 
 The CCA and UCC equations are available in the notes.
 
 In Alberta, the corporate tax rate in Alberta is the sum of the federal tax rate and the Alberta rate. The federal rate is 15% and the Alberta one is 8%. So the total corporate tax rate is 23%.
 
-To distinguish the corporate tax rate and the tax rate associated with a capital gain. Capital gain is when you buy something (building) and sell it for higher. But right now in Canada you only pay tax on half that gain in Canada. This is called the inclusion rate. 
+To distinguish the corporate tax rate and the tax rate associated with a capital gain. Capital gain is when you buy something (building) and sell it for higher. But right now in Canada you only pay tax on half that gain in Canada. This is called the inclusion rate.
 
 Disposal Tax Effect (G)
+
 - When a asset is sold, we must take into consideration the tax implications of the sale
 - The total tax effect (G) represents the tax implications over and above the tax savings realized from the CCA deduction when asset is sold
 - "G" is merely a tax savings or tax payment
@@ -604,6 +622,7 @@ p = recaptured depreciation cost
 t2 = the government halfed corporate tax rate on gains
 
 There are four scenarios:
+
 - Sell something for less than UCC
 - Sell for UCC
 - Sell for more than the UCC
@@ -648,12 +667,32 @@ Ucc = 104,125
 
 G = t(ucc disp - original price) - t(s-p)
 
-Second half = 
- /- 0.4 * 0.5 (270k - 250k) = - 4k
+Second half =
+/- 0.4 \* 0.5 (270k - 250k) = - 4k
 
-First half = 
+First half =
 0.4(104125 - 250000) = -58,250
 
 Total tax effect = -62,250
 
 NSV = $207,650
+
+## Lecture 9
+
+The final exam is on Saturday from 6-8pm. The test will be released at 8pm on Friday. The exam is 2 hours + 1 hour extra.
+
+He went through a NSV problem today.
+
+Example: Computerized Machine Center
+
+- Capital costs: $125,000
+- Expected annual revenue: 100,000 for 5 years
+- lifespan is 5 years, owners want to sell in 5 years
+- CCA rate = 30%
+- salvage = 50,000
+- MARR = 15%
+- tax rate = 40%
+
+What is the NPV of this incremental project?
+
+= $-9796
