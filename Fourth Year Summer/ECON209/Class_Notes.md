@@ -732,3 +732,24 @@ A company wants to lease a bulldozer. They don't want to buy it.
 The other option is to lease the bulldozer. Lease covers all maintenance expenses in the leasing.
 
 To compute the after-tax cost of the lease, we need to compute the present value.
+
+## Lecture 11
+
+There are three variations on the final exam. There's version A, version B, and there's version C.
+
+There are 5-6 questions with the Park text.
+
+- Chapters 3,4,5,6,8,9,10,11+14
+- Final exam: 2 hours + 1 hour. For very 10 minute late, we get a 10% reduction.
+- Open book (only resources he gives you - text and his notes)
+- Time starts when the academic integrity is uploaded (3 hour starts from there)
+
+### What to study
+
+- Chapter 3 - Time value of money, pv/fv/annuities/linear gradients
+- Chapter 4 - Annuities, outstanding balance, mortgages/bonds
+- Chapter 5 + 6 - NPV / Internal Rate of Return (don't need to calculate) / AE, replacement analysis, equal service lives, unequal service lives
+- Chapter 8 + 9 - Depreciation/CCA/UCC/Capital gains/Disposal Tax Effect
+- Chapter 10 - Incremental/Cash Flow- NPV/Buy vs lease
+- Chapter 11 - Replacement -> Economic Service Life
+- Chapter 14 - Dealing with inflation & constant cash flows
