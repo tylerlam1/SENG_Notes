@@ -704,3 +704,31 @@ Reduces the amount of tax - you get money from the money. This is a incentive fo
 For example, if a project is eligible for a investment tax credit of 20%, that means that the the company is eligible for $25,000. You subtract 25,000 from the deducted tax value. You can't earn more tax credit from your investment tax credit.
 
 - Constant Dollars - Converting future cash flows to today's dollars assuming inflation is present in dollars
+
+## Lecture 10
+
+The final exam is meant for 2 hours, but we get 3 hours with a whole online format. It is open book, so we can go through the notes but we cannot use the internet.
+
+We have 24 hours to start your test, but only 3 hours to finish it. All the content will be from the Park text for the exam. The best way to study is the tutorials, worksheets, and the notes.
+
+### Replacement Analysis
+
+He went over two problems, look over the notes.
+
+### Buy vs Lease
+
+- Lessee: Party leasing a property
+- Lesseor - Owner of property being leased
+
+A company wants to lease a bulldozer. They don't want to buy it.
+
+- To buy: 400k
+- CCA Rate = 30%
+- Salvage = $50,000 (after 3 year contract)
+- Corporate tax rate = 20%
+- MARR = 10%
+- No maintenance cost
+
+The other option is to lease the bulldozer. Lease covers all maintenance expenses in the leasing.
+
+To compute the after-tax cost of the lease, we need to compute the present value.
