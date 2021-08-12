@@ -696,3 +696,11 @@ Example: Computerized Machine Center
 What is the NPV of this incremental project?
 
 = $-9796
+
+### Investment Tax Credit
+
+Reduces the amount of tax - you get money from the money. This is a incentive for companies to start projects.
+
+For example, if a project is eligible for a investment tax credit of 20%, that means that the the company is eligible for $25,000. You subtract 25,000 from the deducted tax value. You can't earn more tax credit from your investment tax credit.
+
+- Constant Dollars - Converting future cash flows to today's dollars assuming inflation is present in dollars
