@@ -25,3 +25,66 @@ For this class, there are 6 assignments (42%), final exam (33%), ten quizzes (20
 There is no coding in this class!
 
 1. First lab prep to read a book chapter. It's called "Rethinking of software project success", the paper is uploaded to D2L.
+
+## Lecture 2
+
+The 4Ps in software engineering:
+
+- People
+- Project
+- Process (enabling the project execution)
+- Product (result of project)
+
+When we compare a project and product manager, we think of the difference between "developing the right product", and developing the "product right". One is focused on process and the other is focused on the right goal.
+
+The project manager identifies the project schedule, and monitors the project milestone and deliverables. They verify the quality of project deliverables.
+
+THe product manager ensures that the customer requirements are met, and the vision of the product is fulfilled.
+
+### Fundamentals of Project Management
+
+- Project management is a set of tools, templates, and processes designed to answer the six questions:
+- What business situation is being addressed?
+- What do you need to do?
+- What will you do?
+- How will you do it?
+- How will you know how to do it?
+- How well did you do?
+
+Projects fail due to the following reasons:
+
+- Unrealistic goals
+- Inaccurate estimates
+- Bad system requirements
+- Bad reporting of project status
+- Unmanaged risks
+- Poor communication between stakeholders
+- Use of immature technology
+- Inability to handle project complexity
+- Sloppy development practices
+- Stakeholder politics
+
+54% of IT project failures can be attributed to project management.
+
+### 4 Core Entities of Software Projects
+
+- _Intent_: What is the project trying to achieve?
+- _Product_: What is the outcome of the project?
+- _Work_: How to build the target product?
+- _People_: Who will be the available to perform the work?
+
+Attributes:
+
+- Time Quality and Risk
+- Value
+- Cost
+
+### Organizational Factors of Software Projects
+
+- Business domain
+- Number of instances
+- Maturity of organization
+- Level of innovation
+- Culture
+
+Labs start next week. Two of them are Monday and two are Tuesday. You are assigned to one of the sections. The instructor will circulate the Zoom links for the labs.
