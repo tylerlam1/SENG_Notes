@@ -88,3 +88,62 @@ Attributes:
 - Culture
 
 Labs start next week. Two of them are Monday and two are Tuesday. You are assigned to one of the sections. The instructor will circulate the Zoom links for the labs.
+
+## Lecture 2
+
+The software development lifecycle is the following:
+
+- Requirements analysis
+- System Design
+- Program Design
+- Program Implementation
+- Unit Testing
+- Integration Testing
+- System Testing
+- Acceptance Testing
+- Maintenance
+
+### Code and Fix model
+
+- Starts with informal product idea
+- Develops code until a product is ready
+- No order (plan) in place
+
+There's no design, no specifications, the easiest way to develop software, but is also the most expensive way. The large scale industry software doesn't really work with this.
+
+The V-model is what you follow to keep a project aligned to the original project description.
+
+### Participation Grading
+
+- Self-assessment
+- Per student, we highly recommend a spreadsheet with three columns
+  - Lab date, performance, and comment
+- The sheet will be shared with the instructors at the end of the month
+
+### Definition of software project management life cycle
+
+- Scoping - Where you want to understand what your clients and what they want. We learn how to find how to describe this to our developers later on. This isn't necessarily easy, because the client might have trouble articulating their thoughts into a technical aspect, and maybe we're unable to properly understand the client. When scoping out the project, we need to adjust our requirements to satisfy all the constraints.
+  - Almost two thirds of all features are never used. This implies wasted development effort, increased maintenance effort, customers overwhelmed from user features. This relates to overscoping as this wastes a lot of time and effort.
+  - A requirement is a desired end state whose successful integration into a solution meets one or more needs and delivers a specific, measurable, and incremental business value to the org.
+  - Functional requirements is something that is directly functional to the user, and non-functional requirements are pertaining to the quality of the software.
+- Launching
+- Monitoring & controlling
+- Closing
+
+### MVP (minimum value product)
+
+Oftentimes its hard to outline the core part of the software. The MVP idea came out in 2008 with the intention with a kernel of functionality to describe to the user what the product is all about.
+
+It is minimal in the sense that without the MVP, the product doesn't make sense.
+
+The main purposes of the MVP:
+
+- To allow the product to be deployed
+- To target market opportunities
+- To create viable product for the customer
+- To test the fundamental business hypothesis
+- To test the product in the market
+- To get customer feedback
+- To identify the most viable features by iteratively testing the product
+
+The first quiz is happening the _next Wednesday_. It happens at the later.
