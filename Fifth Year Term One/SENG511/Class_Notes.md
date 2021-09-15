@@ -89,7 +89,7 @@ Attributes:
 
 Labs start next week. Two of them are Monday and two are Tuesday. You are assigned to one of the sections. The instructor will circulate the Zoom links for the labs.
 
-## Lecture 2
+## Lecture 3
 
 The software development lifecycle is the following:
 
@@ -148,7 +148,7 @@ The main purposes of the MVP:
 
 The first quiz is happening the _next Wednesday_. It happens at the later time in the lecture.
 
-## Lecture 3
+## Lecture 4
 
 There are five functions for Software Project Management (SPM).
 - Planning
