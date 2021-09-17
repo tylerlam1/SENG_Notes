@@ -147,3 +147,63 @@ The main purposes of the MVP:
 - To identify the most viable features by iteratively testing the product
 
 The first quiz is happening the _next Wednesday_. It happens at the later.
+
+## Lecture 3
+
+Work Breakdown Structure - WBS
+
+### WBS Completion Criteria
+
+- Status and completion is measurable
+- The activity is bounded
+- The activity has a deliverable
+- Time and cost can be estimated
+- Activity duration is within acceptable limits
+- Work assignments are independent
+
+Course projects were discussed next. We start on that on Monday.
+
+### Prioritization
+
+There are different ways to do prioritization. This is essentially a way of classifying things based on their priority. Specifically, it is the activity of arranging items or activities in order of importance relative to each other.
+
+Prioritization of features, tasks, processes, defects, resources, modules, and requirements.
+
+This is a multi-criteria decision. Sample criteria:
+
+- Value
+- Risk
+- Cost
+- Benefit
+- Difficult
+- Volatile
+- Satisfaction
+- Dissatisfaction
+
+Prioritization results will be different for each criteria. Also, depending on the defect level, some defects should be prioritized on top of others.
+
+Another prioritization would be if the user thinks a certain bug is really important even though it is not necessarily important in other contexts.
+
+Stakeholders:
+
+- Customers
+- Quality Assurance
+- Competitors
+- Board of Directors
+- Management
+
+Classify items by priority. The more severe ones are completed first. You create a scale to categorize the importance of each category.
+
+#### Functional Approach
+
+If we have several alternatives, we need to normalize all of the alternatives to make them comparable.
+
+To reflect importance, each criterion is associated with a weight w.
+
+An aggregation is used to obtain the global evaluation of the alternative. This is basically called weighted average computations.
+
+Disadvantages: Weightings are pretty arbitrary.
+
+#### Analytical Hierarchy Process (AHP)
+
+#### Kano Method
