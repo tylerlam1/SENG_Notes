@@ -89,7 +89,7 @@ Attributes:
 
 Labs start next week. Two of them are Monday and two are Tuesday. You are assigned to one of the sections. The instructor will circulate the Zoom links for the labs.
 
-## Lecture 2
+## Lecture 3
 
 The software development lifecycle is the following:
 
@@ -148,7 +148,7 @@ The main purposes of the MVP:
 
 The first quiz is happening the _next Wednesday_. It happens at the later.
 
-## Lecture 3
+## Lecture 5
 
 Work Breakdown Structure - WBS
 
@@ -207,3 +207,50 @@ Disadvantages: Weightings are pretty arbitrary.
 #### Analytical Hierarchy Process (AHP)
 
 #### Kano Method
+
+The first quiz is happening the _next Wednesday_. It happens at the later time in the lecture.
+
+## Lecture 4
+
+There are five functions for Software Project Management (SPM).
+
+- Planning
+- Organizing
+- Staffing
+- Directing
+- Controlling
+
+Planning reduces uncertainty. It also increases understanding and efficiency (prevent mistakes when the project is actually running). Planning is more important than the plan. In this case, the plan is the result of the planning. The planning is more important because it is the same process and guides us in the whole process.
+
+Here are the following things to plan in a project:
+
+1. Effort -> Effort Estimation (pricing reflection is accurate, and how much effort is required)
+2. Time/Duration -> Time Management (Effort is measured in person months, person years)
+3. Scheduling -> Time Management (Determine which activities are done in what sequence)
+4. Resource -> Human resource management (Effort required to allocate resources to perform activities)
+5. Functionality/scope -> Product (release) planning (Plan the functionality of our product and the slices of the software offered in releases)
+6. Quality -> Quality management (planning for quality)
+7. Risks -> Risks management
+8. Stakholders involved -> Stakeholder management (Stakeholders include contractors, managers, clients. The stakeholder management is planning is because their early involvement to help build the _right_ product)
+9. Integration -> Integration management (We need to figure out how services from different teams are integrated)
+10. Procurement -> Procurement management (We need to learn things on how to manage procurement. Procurement in this context is buying 3rd party goods)
+
+Nine Deadly Sins of Project Planning:
+
+1. Not planning at all
+2. Failing to account for all project activities
+3. Failure to plan for risk
+4. Using the same plan for every project
+5. Applying pre-packaged plans indiscriminately
+6. Allowing a plan to diverge from project reality
+7. Planning in too much detail too soon (There's point plan for activities way down the road, we're wasting resources on something that could change)
+8. Planning to catch up later
+9. Not learning from past planning sins
+
+"SMART" Rule of Planning
+
+- Specific - Plan is detailed and gives stakeholders a good idea of how things will proceed
+- Measurable - We can quantify results
+- Acceptable - The stakeholders agree with the plan
+- Realistic - Realistic with achivements
+- Time based - Deadlines are set

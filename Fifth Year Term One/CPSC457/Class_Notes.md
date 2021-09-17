@@ -163,3 +163,77 @@ To increase write performance:
 - Replaces multiple small writes with fewer big writes
 
 Caching is fast but expensive, so its usually pretty small in general.
+
+## Lecture 3
+
+The first assignment will be released this week.
+
+### Memoization
+Memoization is similar to caching. This is a optimization technique used to speed up programs by remembering results of expensive computations.
+
+### Controller
+A device controller is a chip or set of chips that physically control the device. Controlling the device is complicated, and the CPU can do other things, so the controller abstracts the device.
+
+### Device
+The device connects to the computer via the controller. It follows a standard when communicating with the computer.
+
+### Device Driver
+The device driver is a software which the OS needs to install to talk to the hardware. It's typically written by the controller manufacturer, following some abstraction defined by the OS. Drivers are often implemented as kernel modules, loaded on demand, running in kernel mode.
+
+### Booting
+1. When the computer is booted, the BIOS is started (Basic Input Ourpur Program) is a program on the motherboard
+2. It checks the RAM, keyboard, and other devices (checks basically vitality of computer)
+3. Record interrupt levels and I/O addresses of devices
+4. Determine the boot device
+5. Read/run primary boot loader program from first sector of boot device
+6. Read/run secondary boot loader from potentially another device
+7. Read the OS kernel from the active partition and start it
+8. OS queries the BIOS to get the configuration information and initialize all device drivers in the kernel
+9. OS creates a device table, and necessary background processes, and waits for I/O events
+
+###  Kernel
+The central part or the "heart" of the OS.
+- Located and started by the bootstrap program (boot loader)
+- The only software that can talk  to hardware
+- Provides services to applications to system calls
+- Much of the kernel is a set of rules
+
+### Kernel Modes
+- The modern CPUs support at least two privilege levels: kernel mode and user mode
+- The mode can be switched by special instruictions
+- When the CPU is in kernel mode
+  - All instructions are allowed, all I/O allowed
+- When CPU is in user mode
+  - Only some operations are allowed, the rest are disallowed
+  - Switching to kernel mode is disallowed
+  - Illegal instructions returns traps (exceptions)
+  - All applications run in user mode (including ones a part of OS)
+
+### User Mode
+Applications talk to the kernel to perform I/O via system calls
+- system call = mechanism to call a kernel routine
+- System call needs to include transition from user mode to kernel mode
+- System calls are usually implemented using a special instruction
+  - The instruction allows the switch from user to kernel mode to be safe
+  - Common mechanism is invoking a trap (software interrupt)
+  - When the kernel routine is done, application resumes in user mode
+
+### I/O
+Most system calls are blocking system calls. If you invoke the system call, the operating system will perform that operation and your application will only continue to run once the system call completes. Non-blocking system is a system call that doesn't block program continuation.
+
+I/O can use busy waiting/spinning/busy looping for I/O. The CPU repeatedly checks to see if the device is ready. The issue with busy waiting is that the CPU is tied up while the slow I/O completes the operation, and you're wasting power/generating heat.
+
+Busy waiting can be improved by taking a short sleep whenever we wait. Sleep could be detected by the OS, and the CPU could be then given to another program.
+
+Some issue:
+- Hard to estimate the right amount of sleep
+- Program might end up running longer than necessary
+
+### Interrupts
+Interrupts are the best way of handling the I/O issue.
+
+We basically ask the system/OS to send interrupt when the program is done. This approach assumes the I/O device supports interrupt. Most devices support interrupts, and if they don't, they can be connected through controllers that do.
+
+Your application first runs. The interrupt happens, and the CPU switches to kernel code. The interrupt handler saves the CPU states, handles the interrupr, and restores the CPU state and switches back to user mode. The CPU the continues executing the original program in user mode.
+
+Software interrupts are similar to hardware interrupts, but the source of the interrupt is the CPU itself. Some unintentional software interrupts include exceptions. Intentional software interrupts are traps. The trap occurs as a result of executing a special instruction. The purpose is to execute a predefined routine in kernel mode. 
