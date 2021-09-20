@@ -148,6 +148,51 @@ The main purposes of the MVP:
 
 The first quiz is happening the _next Wednesday_. It happens at the later.
 
+## Lecture 4
+
+There are five functions for Software Project Management (SPM).
+
+- Planning
+- Organizing
+- Staffing
+- Directing
+- Controlling
+
+Planning reduces uncertainty. It also increases understanding and efficiency (prevent mistakes when the project is actually running). Planning is more important than the plan. In this case, the plan is the result of the planning. The planning is more important because it is the same process and guides us in the whole process.
+
+Here are the following things to plan in a project:
+
+1. Effort -> Effort Estimation (pricing reflection is accurate, and how much effort is required)
+2. Time/Duration -> Time Management (Effort is measured in person months, person years)
+3. Scheduling -> Time Management (Determine which activities are done in what sequence)
+4. Resource -> Human resource management (Effort required to allocate resources to perform activities)
+5. Functionality/scope -> Product (release) planning (Plan the functionality of our product and the slices of the software offered in releases)
+6. Quality -> Quality management (planning for quality)
+7. Risks -> Risks management
+8. Stakholders involved -> Stakeholder management (Stakeholders include contractors, managers, clients. The stakeholder management is planning is because their early involvement to help build the _right_ product)
+9. Integration -> Integration management (We need to figure out how services from different teams are integrated)
+10. Procurement -> Procurement management (We need to learn things on how to manage procurement. Procurement in this context is buying 3rd party goods)
+
+Nine Deadly Sins of Project Planning:
+
+1. Not planning at all
+2. Failing to account for all project activities
+3. Failure to plan for risk
+4. Using the same plan for every project
+5. Applying pre-packaged plans indiscriminately
+6. Allowing a plan to diverge from project reality
+7. Planning in too much detail too soon (There's point plan for activities way down the road, we're wasting resources on something that could change)
+8. Planning to catch up later
+9. Not learning from past planning sins
+
+"SMART" Rule of Planning
+
+- Specific - Plan is detailed and gives stakeholders a good idea of how things will proceed
+- Measurable - We can quantify results
+- Acceptable - The stakeholders agree with the plan
+- Realistic - Realistic with achivements
+- Time based - Deadlines are set
+
 ## Lecture 5
 
 Work Breakdown Structure - WBS
@@ -210,47 +255,37 @@ Disadvantages: Weightings are pretty arbitrary.
 
 The first quiz is happening the _next Wednesday_. It happens at the later time in the lecture.
 
-## Lecture 4
+## Lecture 6
 
-There are five functions for Software Project Management (SPM).
+### Prioritization
 
-- Planning
-- Organizing
-- Staffing
-- Directing
-- Controlling
+As a review, in the functional approach, all criteria must be normalized to make them comparable. Each criterion is associated with a weight w, and we computed the weighted average.
 
-Planning reduces uncertainty. It also increases understanding and efficiency (prevent mistakes when the project is actually running). Planning is more important than the plan. In this case, the plan is the result of the planning. The planning is more important because it is the same process and guides us in the whole process.
+When reflecting on the functional approach, the aggregation procedure is simple and the obtained result is very strong.
 
-Here are the following things to plan in a project:
+The problem with this approach is that it strongly assumes that the compensation and compromise among criteria is perfect.
 
-1. Effort -> Effort Estimation (pricing reflection is accurate, and how much effort is required)
-2. Time/Duration -> Time Management (Effort is measured in person months, person years)
-3. Scheduling -> Time Management (Determine which activities are done in what sequence)
-4. Resource -> Human resource management (Effort required to allocate resources to perform activities)
-5. Functionality/scope -> Product (release) planning (Plan the functionality of our product and the slices of the software offered in releases)
-6. Quality -> Quality management (planning for quality)
-7. Risks -> Risks management
-8. Stakholders involved -> Stakeholder management (Stakeholders include contractors, managers, clients. The stakeholder management is planning is because their early involvement to help build the _right_ product)
-9. Integration -> Integration management (We need to figure out how services from different teams are integrated)
-10. Procurement -> Procurement management (We need to learn things on how to manage procurement. Procurement in this context is buying 3rd party goods)
+#### AHP
 
-Nine Deadly Sins of Project Planning:
+Used widely in software projects and beyond. An analytical and hierarchical process.
 
-1. Not planning at all
-2. Failing to account for all project activities
-3. Failure to plan for risk
-4. Using the same plan for every project
-5. Applying pre-packaged plans indiscriminately
-6. Allowing a plan to diverge from project reality
-7. Planning in too much detail too soon (There's point plan for activities way down the road, we're wasting resources on something that could change)
-8. Planning to catch up later
-9. Not learning from past planning sins
+- Decompose the goal into a hierarchy of criteria or sub-criteria.
+- Pair-wise comprsion matrix is used to determine relative weights of criteria, sub-criteria as well as the evaluations of alternatives.
+- Weights are not arbitrarily assigned
+- A linear additive function is used to compute an overall score for each alternative using the evaluations and relative weights in the previous step.
 
-"SMART" Rule of Planning
+The goal is on the top, the criteria is on the next level, sub-criteria on the third level, and alternatives on the last level.
 
-- Specific - Plan is detailed and gives stakeholders a good idea of how things will proceed
-- Measurable - We can quantify results
-- Acceptable - The stakeholders agree with the plan
-- Realistic - Realistic with achivements
-- Time based - Deadlines are set
+Using eigenvalues, weightings are (somehow) calculated.
+
+Weight 0 is the weights on the stakeholder levels.
+Weight 1, 2, 3 represent the importance of alternatives. R1 to R3 is alternatives and S1 and S3 are stakeholders.
+
+Assignment 1 due September 26th.
+Assignment 2 is due October 5th.
+Assignment 3 is due October 17th.
+Assignment 4 is due October 28th.
+Assignment 5 is due November 19th.
+Assignment 6 is due December 1st.
+
+You can expect true/false questions on the quiz, no computations.
