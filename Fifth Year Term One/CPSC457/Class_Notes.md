@@ -169,18 +169,23 @@ Caching is fast but expensive, so its usually pretty small in general.
 The first assignment will be released this week.
 
 ### Memoization
+
 Memoization is similar to caching. This is a optimization technique used to speed up programs by remembering results of expensive computations.
 
 ### Controller
+
 A device controller is a chip or set of chips that physically control the device. Controlling the device is complicated, and the CPU can do other things, so the controller abstracts the device.
 
 ### Device
+
 The device connects to the computer via the controller. It follows a standard when communicating with the computer.
 
 ### Device Driver
+
 The device driver is a software which the OS needs to install to talk to the hardware. It's typically written by the controller manufacturer, following some abstraction defined by the OS. Drivers are often implemented as kernel modules, loaded on demand, running in kernel mode.
 
 ### Booting
+
 1. When the computer is booted, the BIOS is started (Basic Input Ourpur Program) is a program on the motherboard
 2. It checks the RAM, keyboard, and other devices (checks basically vitality of computer)
 3. Record interrupt levels and I/O addresses of devices
@@ -191,14 +196,17 @@ The device driver is a software which the OS needs to install to talk to the har
 8. OS queries the BIOS to get the configuration information and initialize all device drivers in the kernel
 9. OS creates a device table, and necessary background processes, and waits for I/O events
 
-###  Kernel
+### Kernel
+
 The central part or the "heart" of the OS.
+
 - Located and started by the bootstrap program (boot loader)
-- The only software that can talk  to hardware
+- The only software that can talk to hardware
 - Provides services to applications to system calls
 - Much of the kernel is a set of rules
 
 ### Kernel Modes
+
 - The modern CPUs support at least two privilege levels: kernel mode and user mode
 - The mode can be switched by special instruictions
 - When the CPU is in kernel mode
@@ -210,7 +218,9 @@ The central part or the "heart" of the OS.
   - All applications run in user mode (including ones a part of OS)
 
 ### User Mode
+
 Applications talk to the kernel to perform I/O via system calls
+
 - system call = mechanism to call a kernel routine
 - System call needs to include transition from user mode to kernel mode
 - System calls are usually implemented using a special instruction
@@ -219,6 +229,7 @@ Applications talk to the kernel to perform I/O via system calls
   - When the kernel routine is done, application resumes in user mode
 
 ### I/O
+
 Most system calls are blocking system calls. If you invoke the system call, the operating system will perform that operation and your application will only continue to run once the system call completes. Non-blocking system is a system call that doesn't block program continuation.
 
 I/O can use busy waiting/spinning/busy looping for I/O. The CPU repeatedly checks to see if the device is ready. The issue with busy waiting is that the CPU is tied up while the slow I/O completes the operation, and you're wasting power/generating heat.
@@ -226,14 +237,114 @@ I/O can use busy waiting/spinning/busy looping for I/O. The CPU repeatedly check
 Busy waiting can be improved by taking a short sleep whenever we wait. Sleep could be detected by the OS, and the CPU could be then given to another program.
 
 Some issue:
+
 - Hard to estimate the right amount of sleep
 - Program might end up running longer than necessary
 
 ### Interrupts
+
 Interrupts are the best way of handling the I/O issue.
 
 We basically ask the system/OS to send interrupt when the program is done. This approach assumes the I/O device supports interrupt. Most devices support interrupts, and if they don't, they can be connected through controllers that do.
 
 Your application first runs. The interrupt happens, and the CPU switches to kernel code. The interrupt handler saves the CPU states, handles the interrupr, and restores the CPU state and switches back to user mode. The CPU the continues executing the original program in user mode.
 
-Software interrupts are similar to hardware interrupts, but the source of the interrupt is the CPU itself. Some unintentional software interrupts include exceptions. Intentional software interrupts are traps. The trap occurs as a result of executing a special instruction. The purpose is to execute a predefined routine in kernel mode. 
+Software interrupts are similar to hardware interrupts, but the source of the interrupt is the CPU itself. Some unintentional software interrupts include exceptions. Intentional software interrupts are traps. The trap occurs as a result of executing a special instruction. The purpose is to execute a predefined routine in kernel mode.
+
+## Lecture 4
+
+### Monolithic Kernels
+
+Absolutely everything in the kernel runs in kernel mode. So running as fast as possible.
+
+### Microkernels
+
+Parts of kernels run in user mode. This increases communication/mode shifting, so slows things down.
+
+### Dynamically loaded modules
+
+- Modules are loaded on demand, when needed or requested
+- Goal here is to really speed up the kernel bootup and easier to reconfigure on the fly
+
+### Layered Approach to the kernel
+
+- Kernel components organized into a hierarchy of layers
+- Layers above constructed upon the ones below it
+- Problems
+  - Hard to define players, needs careful planning
+  - Communication overhead
+  - Not all problems can be easily adapted to layers
+
+### Virtual Machines
+
+A virtual machine is not a real machine. It is a emulated machine.
+
+Emulation usually happens in software, but new computers usually have some hardware that helps with the emulation process.
+
+- Bare-metal are virtual machines installed directly on a newly built computer
+- Hosted is virtual machines that runs on top of another OS
+- Hybrid is when a Linux kernel can function as a hypervisor through a KVM module
+  - If you want to run Windows + Linux
+
+A hypervisor is a software or hardware that manages VMs.
+
+Benefits:
+
+- Working on CPSC 457 assignments under Windows
+- The host system is protected from the VMs
+- VMs are isolated and safe from each other
+- Multiple different OSes or versions can be running on the same computer concurrently
+- Perfect vehicle for OS research and development
+- System consolidation where you buy one server instead of many smaller ones
+
+### System Calls
+
+- OS provides services to applications, and we can access it through system calls.
+
+Inside a kernel routine:
+
+- OS saves application state
+- OS performs requested operation
+- OS switches back to user mode and restores application state
+- After this the application resumes
+
+The System Call is basically calling a API.
+
+Wrappers are used to invoke system calls from higher level functions.
+
+For example in C, to access system call, you can use the following code block:
+
+```C
+write(fd, buff, len)
+```
+
+The wrappers hide the implementation details.
+
+Common wrappers include:
+
+- POSIX APIs for Unix, Linux, and Mac OS X
+- Win32 APIs for Windows
+- Java APIs for Java Virtual Machine
+
+`write()` is a wrapper for the `sys_write` system call signature.
+
+The standard C library also provides many useful higher-level convenience functions, like `printf()`.
+
+Examples of system calls:
+
+```C
+fd = open()
+s = close(fd)
+n = read()
+n = write()
+s = stat()
+newpos = lseek()
+```
+
+The reason why need to open() a file before reading it is for performance reasons. If we open() first, we can store it in the cache, so the open will be faster.
+
+### Tracing SYstem Calls
+
+Running an application and logging all system calls.
+
+- On Linux: `strace`
