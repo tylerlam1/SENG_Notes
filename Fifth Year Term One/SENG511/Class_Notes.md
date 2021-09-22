@@ -289,3 +289,30 @@ Assignment 5 is due November 19th.
 Assignment 6 is due December 1st.
 
 You can expect true/false questions on the quiz, no computations.
+
+## Lecture 7
+
+In the beginning, we did a quick review on AHP.
+
+The strength of AHP we do pairwise comparison for better results.
+
+M0 is the comparison between the goal and the stakeholders. How important is each stakeholder.
+
+M1 is the comparison between stakeholder 1 and all the requirements.
+
+To compute global priorities, we do matrix multiplication is taking the results of the pairwise comparisons of the stakeholder groups and multiple by a matrix all the values of the requirements. 
+
+### Kano Method
+
+Kano was the inventor of the method. 
+
+A means of analyzing customer desires.  As the customer satisfaction doesn'
+t necessarily mean that the requirements are met. 
+
+Categories of Kano Method:
+- Must be (M): Delivering thes features does not affect the satisfaction but not doing it will cause disatisfaction
+- One dimensional (O): Fulfillment of feature means customer satisfaction
+- Attractive (A): Not explicitly requested by user
+- Indifference (I): Customer is indifferent towards the feature
+- Reverse (R): User does not want this feature
+- Questionable (Q): Features are not considered in analysis
