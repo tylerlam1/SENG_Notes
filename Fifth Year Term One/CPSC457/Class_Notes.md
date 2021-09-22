@@ -348,3 +348,7 @@ The reason why need to open() a file before reading it is for performance reason
 Running an application and logging all system calls.
 
 - On Linux: `strace`
+
+## Lecture 5
+
+Not taking notes today, trying to finish assignment.
