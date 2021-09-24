@@ -300,19 +300,56 @@ M0 is the comparison between the goal and the stakeholders. How important is eac
 
 M1 is the comparison between stakeholder 1 and all the requirements.
 
-To compute global priorities, we do matrix multiplication is taking the results of the pairwise comparisons of the stakeholder groups and multiple by a matrix all the values of the requirements. 
+To compute global priorities, we do matrix multiplication is taking the results of the pairwise comparisons of the stakeholder groups and multiple by a matrix all the values of the requirements.
 
 ### Kano Method
 
-Kano was the inventor of the method. 
+Kano was the inventor of the method.
 
-A means of analyzing customer desires.  As the customer satisfaction doesn'
-t necessarily mean that the requirements are met. 
+A means of analyzing customer desires. As the customer satisfaction doesn'
+t necessarily mean that the requirements are met.
 
 Categories of Kano Method:
+
 - Must be (M): Delivering thes features does not affect the satisfaction but not doing it will cause disatisfaction
 - One dimensional (O): Fulfillment of feature means customer satisfaction
 - Attractive (A): Not explicitly requested by user
 - Indifference (I): Customer is indifferent towards the feature
 - Reverse (R): User does not want this feature
 - Questionable (Q): Features are not considered in analysis
+
+## Lecture 8
+
+He went over the quiz today.
+
+### Kano Method
+
+In this case, we must evaluate both the functional and dysfunctional reactions from the user. If the user gets it, do they like it? If the user doesn't have it, how do they react? That determines the kano method category.
+
+The true focus here is the asymmetry. Just cause someone is satisfied with something doesn't mean they are unsatisfied without it.
+
+This is the end of prioritization.
+
+### Planning Releases for Incremental Development
+
+As people make change requests, we should look at features that are never used. Functionality doesn't need to always grow.
+
+When looking at the feature and change requests, the feature requests is generally always higher than the change requested. As change requests goes up, the feature requests go up.
+
+WHen making design decisions, we need to balance time/cost with quality
+
+### Features
+
+A feature is a set of logically related requirements that provides a capability to the user and enables the satisfaction of business objectives.
+
+There's different ways to define features:
+
+- State
+- ID
+- Submitter
+- Company
+- Domain
+- Description
+- Contract
+- Priorities
+- Motivation
