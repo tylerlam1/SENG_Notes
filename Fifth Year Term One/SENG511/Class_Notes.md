@@ -353,3 +353,26 @@ There's different ways to define features:
 - Contract
 - Priorities
 - Motivation
+
+## Lecture 9
+
+Release planning is important but release planning is complicated.
+
+### Feature Dependencies
+
+Feature dependency create additional complexity. Ignoring them makes the plan you're creating missing the actual needs.
+
+1. Coupling - when two features are really coupled
+2. When you should only have one or the other
+3. You have only at most one of a feature type
+4. You have at least one of a feature type
+5. Weak precedence - When one feature precedes another in terms of priority/prerequisites
+6. Strict precedence - Must be released together
+7. Value dependency - The value of the release is the sum of the value of features
+8. Effort dependency - he value of the release is the sum of the value of the features
+
+### Stakeholder Feature Points
+
+A way to measure total stakeholder satisfaction.
+
+On the quiz, no calculations.
