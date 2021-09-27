@@ -352,3 +352,108 @@ Running an application and logging all system calls.
 ## Lecture 5
 
 Not taking notes today, trying to finish assignment.
+
+## Lecture 6
+
+In the beginning, we were just going through some fork examples.
+
+When forking, the variables will have their own deep copies regardless of the parent-child relationship. When forking, the child process gets its own copy of its memory.
+
+Even when we use pointers pointing to a location address, it would be different between fork processes. It's pointing to the same virtual memory, but not necessarily the same hardware memory location.
+
+A process in memory:
+
+- Each process gets its own address space
+  - Part(s) of memory available to a proces, decided by OS
+  - On modern OSes it is a virtual address space isolated from other processes
+
+How do we start an external program in Unix?
+
+- We use `fork()` to create a clone
+- We use the `exec()` command to replace the current process image with a new process image
+
+With the `exec()`, we will pass the executable, argv, and environmental variables.
+
+Example
+
+```C
+int main() {
+  pid_t pid = fork();
+  if (pid < 0) {
+    fprintf(stderr, "Fork failed);
+    exit(-1);
+  }
+  else if (pid == 0) {
+    execlp("/bin/ls", "ls", "-l", NULL);
+    // The piece of code under this should never run in the else if
+  }
+  else {
+    printf("Waiting for child process")
+    while (wait(NULL) > 0);
+    printf("Child finished");
+  }
+}
+```
+
+C++ has provided us a more friendly wrapper function to create a new process.
+
+```C
+int main() {
+  printf("Before ls.\n);
+  system("/bin/ls -l");
+  printf("After ls.\n");
+}
+```
+
+If you run `pstree`, you can se all processes organized in a tree structure.
+
+Init Process
+
+- `init` is the first process started after booting
+  - Maybe new systems used `systemd` instead of `init`
+- `init` is the ancestor of all user processes
+- Always has a pid = 1
+
+Process Creation:
+
+- There are many reasons for a process to create new processes
+- During system initialization (boot)
+  - Spawning background processes - daemon's, services, database server
+- Application decides to spawn additional processes
+- A user requests to create a new process
+- Starting batch jobs
+
+Address Space
+
+- Each process has its own address space
+- `fork()` duplicates address space, creating nearly identical identical copy of itself
+- Next instruction is the same, usually "if/else"
+
+Common Use Cases:
+
+- Parent waits until child is finished (created via `fork()`), often used when child executes another program
+- Parent continues to execute concurrently and independently on the child
+- Parent continues to execute concurrently with child, but synchronizes with child sequentially. We will cover different synchronization mechanisms when we talk about threads.
+
+Process Termination:
+
+- Typical reasons for terminating a process
+- Voluntary
+  - Normal exit: Application decides to terminate, or user instructs an app to close (`exit()`)
+  - Error exit - Application detects an error
+- Involuntary
+  - Fatal error - aka bugs in software
+  - External - killed by another process (hitting control c)
+
+If the parent processes dies before the child processes, the children needs to be terminated or re-parented. They are usually parented to the `init` processes. The behaviour can be changed.
+
+Creating and deleting processes are expensive. If we can minimize the frequency of this, then that is better.
+
+Process Scheduling:
+
+- Process scheduling is a part of multitasking deciding which process gets the CPU next
+- Typical objective is to maximize CPU utilization
+- OS maintains scheduling queues:
+  - Job queue, like priority queue
+  - Ready queue, all processes that are ready to execute their next instruction
+  - Device queue - Processes waiting for a particular device
