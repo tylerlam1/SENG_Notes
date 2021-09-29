@@ -457,3 +457,61 @@ Process Scheduling:
   - Job queue, like priority queue
   - Ready queue, all processes that are ready to execute their next instruction
   - Device queue - Processes waiting for a particular device
+
+## Lecture 7
+
+Signals are used to notify a process that a particular event has occurred. 
+- A process sends a signal, another process receives
+- Kernels can send signals to any processes
+
+Some signals can be ignored and some signals can be blocked.
+
+Generating signals:
+- `kill(pid, signal)` from one process to another
+- Periodically via timer: `alarm()`
+- Kernel can send signals to raise exceptions
+
+SIGKILL always kill the process. SIGTERM allows the program to first individually kill itself first.
+
+<ctrl-c> delivers SIGNINT(2) to a running process, which can be caught, ignored or blocked
+<ctrl-z> delivers SIGSTOP to a running process, which cannot be caughtm ignored or blocked
+SIGKILL cannot be caught
+
+Signals can act like interrupts. It can corrupt a process resource, so be careful when writing a signal handler.
+
+
+### Reentrant functions
+A function is reentrant if it can be interrupted while executing and be called again. When writing reentrant functions, ensure you don't use global variables. Also do not call non-reentrant functions.
+
+### Threads
+
+Threads are similar to processes but a different. They are a mechanism that allows us to express parallelism in the code.
+
+1. Threads are more efficient than processes.
+2. Threads can be tricky.
+
+Informally, a thread is a "process within a process". A thread cannot exist without a process and a process cannot exist without a thread.
+
+All threads inside a process share the resource of the process. A process acts like a process for all the threads.
+
+A process with one thread is called a single threaded process.
+- A process has a thread of execution, consisting of registers and a stack
+- Thing of a process as a way to group resources together, address space (heap, global variables, etc), open files, sockets
+- Every process starts with a single thread.
+
+A process with many threads:
+- Threads allow multiple executions to take place within a process
+- All threads are executing simultaneously
+- Threads make system calls simultaneously
+- A thread can share resources
+
+Why threads:
+1. Faster with multiple cores
+2. Threads can be used to parallelize I/O
+3. Used for writing reponsive GUI
+4. Multithreaded design can be simpler for some types of problems
+
+Compared to processes:
+1. Threads are light weight
+2. More options for communication via shared memory
+3. Better context switching options
