@@ -376,3 +376,26 @@ Feature dependency create additional complexity. Ignoring them makes the plan yo
 A way to measure total stakeholder satisfaction.
 
 On the quiz, no calculations.
+
+## Lecture 10
+
+A good release plan which provides most prioritized features with the lowest effort.
+
+### Resource Constraints
+
+A resource type r belongs to class 1 if the feature related consumption of the resource is limited to exactly the release in which the feature is offered. Resources of this class are called local based on its spending mode.
+
+The workflow for release planning:
+- Feature elicitation
+- Problem specification
+- Resource estimation
+- Stakeholder voting
+- Release plan generation
+- Evaluation of plan alternatives
+- Plan implementation
+
+### The diversification principle
+
+A single solution to a cognitive complex problem is less likely to reflect the actual problem when compared to a
+
+Need to get back to this, got distracted with some other stuff during the lecture.
