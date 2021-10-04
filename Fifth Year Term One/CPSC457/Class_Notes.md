@@ -460,13 +460,15 @@ Process Scheduling:
 
 ## Lecture 7
 
-Signals are used to notify a process that a particular event has occurred. 
+Signals are used to notify a process that a particular event has occurred.
+
 - A process sends a signal, another process receives
 - Kernels can send signals to any processes
 
 Some signals can be ignored and some signals can be blocked.
 
 Generating signals:
+
 - `kill(pid, signal)` from one process to another
 - Periodically via timer: `alarm()`
 - Kernel can send signals to raise exceptions
@@ -479,8 +481,8 @@ SIGKILL cannot be caught
 
 Signals can act like interrupts. It can corrupt a process resource, so be careful when writing a signal handler.
 
-
 ### Reentrant functions
+
 A function is reentrant if it can be interrupted while executing and be called again. When writing reentrant functions, ensure you don't use global variables. Also do not call non-reentrant functions.
 
 ### Threads
@@ -495,23 +497,108 @@ Informally, a thread is a "process within a process". A thread cannot exist with
 All threads inside a process share the resource of the process. A process acts like a process for all the threads.
 
 A process with one thread is called a single threaded process.
+
 - A process has a thread of execution, consisting of registers and a stack
 - Thing of a process as a way to group resources together, address space (heap, global variables, etc), open files, sockets
 - Every process starts with a single thread.
 
 A process with many threads:
+
 - Threads allow multiple executions to take place within a process
 - All threads are executing simultaneously
 - Threads make system calls simultaneously
 - A thread can share resources
 
 Why threads:
+
 1. Faster with multiple cores
 2. Threads can be used to parallelize I/O
 3. Used for writing reponsive GUI
 4. Multithreaded design can be simpler for some types of problems
 
 Compared to processes:
+
 1. Threads are light weight
 2. More options for communication via shared memory
 3. Better context switching options
+
+## Lecture 8
+
+- Threads are similar to processes
+- If you configure threads incorrectly, they can be worse than processes
+- In general they're better than threads
+
+A thread has its own register/stack but shares the same code, data, and open files.
+
+### Thread Pool
+
+A thread pool is a design pattern. The main thread creates and maintains a pool of worker threads. Pool size can be tuned.
+
+When a program needs a thread, it is borrowed. When a worker thread is done, it returns back to the pool.
+
+Benefits:
+
+- Thread creation and destruction costs are reduced
+- Number of possible concurrent threads is limited
+
+Problems:
+
+- What if the program needs more threads than the size of the pool?
+
+Thread pools are usually combined with task queues. Instead of asking for a thread, a task is inserted into a task queue.
+
+Next available thread, the thread pool takes tasks from the queue, and finishes it.
+
+Task queues can be augmented to support priorities, but be sure to support possible dependencies between tasks.
+
+A thread library provides the programer with an API for creating and managing threads. A thread library typically contains higher level wrappers around low level system calls.
+
+Examples:
+
+- POSIX threads
+- Win32
+- Java
+
+### POSIX Threads (pthreads)
+
+- To use POSIX threads
+  - compile code with `-lpthread`.
+- `pthread_create(thread, attr, start_routine, arg);`
+  - Starts a thread and calls `start_routine(arg)` in a new thread, similar to `fork()`.
+- `pthread_exit(status)`
+  - Terminates the current thread, similar to `exit()`.
+- `pthread_join( tid, NULL)`
+  - Wait for thread to finish
+
+### Thread Implementations
+
+- Kernel-Level threads
+  - Managed by the kernel/OS
+  - Mot common
+- User-level threads
+  - Entirely implemented in user space
+
+### Thread Cancellation
+
+- Multiple threads searching, each a different set of files
+- One thread finds the result
+- How do we notify the other threads to stop searching?
+
+- Two general approaches
+  - Asychronous cancellation
+  - Deferred cancellation
+
+To do asynchronous cancellation:
+
+- `pthread_kill(thread_id, SIGUSR1)`
+- Target thread is killed nearly instantly
+- Might prevent proper clean up
+
+Deferred synchronous thread:
+
+- The controlling thread somehow indicates it wishes to cancel a thread
+- Target thread periodically checks whether it should terminate
+  - Checks using cancellation points
+- Issues
+  - Less performance
+  - Target thread may not react immediately
