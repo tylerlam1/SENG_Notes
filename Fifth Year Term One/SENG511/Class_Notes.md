@@ -386,6 +386,7 @@ A good release plan which provides most prioritized features with the lowest eff
 A resource type r belongs to class 1 if the feature related consumption of the resource is limited to exactly the release in which the feature is offered. Resources of this class are called local based on its spending mode.
 
 The workflow for release planning:
+
 - Feature elicitation
 - Problem specification
 - Resource estimation
@@ -399,3 +400,19 @@ The workflow for release planning:
 A single solution to a cognitive complex problem is less likely to reflect the actual problem when compared to a
 
 Need to get back to this, got distracted with some other stuff during the lecture.
+
+## Lecture 11
+
+Capacities is the in-person hours. Releases have a duration and the option to assign resources to it.
+
+Release resource capacity should be the total person hours for the duration of the release.
+
+For defining the capacities: The resource utilization factor should be above 100% for all resources.
+
+### Comphrensiveness of Release Decisions
+
+- Which features should be offered in the next release(s) and why?
+- Which feature shouldn't be offered in the next release?
+- What's the best time for product release and why?
+- New features versus fixing bugs/improvements?
+- How to adjust to change for a given release?
