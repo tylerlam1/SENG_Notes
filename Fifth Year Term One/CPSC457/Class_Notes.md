@@ -602,3 +602,51 @@ Deferred synchronous thread:
 - Issues
   - Less performance
   - Target thread may not react immediately
+
+## Lecture 9
+
+### Deferred Cancellation
+
+This is related to cancelling a thread safely.
+
+A atomic boolean is a variable thats created in one thread and can be seen in the other threads.
+
+It's created like the following:
+
+```C
+std::atomic_bool flag;
+
+if (flag.load()) // Check if a variable is in-use?
+
+flag.store(true);
+```
+
+### Race Conditions
+
+Race Conditions is a behaviour where the output is dependent on the sequence or timing of other uncontrollable events (context switching).
+
+This is a bug. An example of a race condition is modifying shared memory.
+
+### Critical Section
+
+A block of code that accesses the shared resource in a way that could lead to races or any other undefined behaviour.
+
+To protect critical sections, we need mutual exclusion (mutexes). We also need:
+
+1. Bounded waiting - nobody is waiting forever
+2. Progress - No process/thread running should have to wait forever to enter its CS.
+3. No assumptions may be made about the CPU
+
+### Dining Philosphers Section
+
+- Five philosphers sitting around a table ...
+- Five bowls of food, one for each philosphers
+- 5 forks
+- Philosophers need grab two forks (left and right) to eat
+- Philosphers can eat and then think
+
+This looks like a deadlock problem. Livelocks happen if all philosphers try to access forks in synchronized way.
+
+How do we allocate resources so that all process/threads get to execute?
+
+We need to build a algorithm that can efficiently delegate forks to the philosphers. The best solution was the **resource hierarchy** solution. Basically number each fork.
