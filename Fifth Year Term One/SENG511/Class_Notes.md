@@ -416,3 +416,7 @@ For defining the capacities: The resource utilization factor should be above 100
 - What's the best time for product release and why?
 - New features versus fixing bugs/improvements?
 - How to adjust to change for a given release?
+
+## Lecture 12
+
+Didn't have time to concentrate as I had some other logistical things to handle. He was talking about critical paths.
