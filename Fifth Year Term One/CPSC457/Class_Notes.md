@@ -650,3 +650,74 @@ This looks like a deadlock problem. Livelocks happen if all philosphers try to a
 How do we allocate resources so that all process/threads get to execute?
 
 We need to build a algorithm that can efficiently delegate forks to the philosphers. The best solution was the **resource hierarchy** solution. Basically number each fork.
+
+## Lecture 10
+
+In the philosphers problem, the shared resource is the `forks[]`.
+
+### Mutex (also called a lock)
+
+- A mutex is a synchronization primitive, usually used for ensuring exclusive access to a resource in concurrent programs
+- Mutex is a special boolean variable, states of `locked` and `unlocked`, being `lock()` and `unlocked()`.
+- If multiple threads call `lock()` simultaneously, only one will proceed, the others are blocked.
+- A waiting queue is used to keep track of the waiting threads.
+
+Here's some mutex pseudocode:
+
+```C
+// Initialize mutex and share across all threads
+mutex m;
+
+// In each thread
+// Before entering critical section, lock the mutex
+lock(m);
+
+// To exit CS, we unlock the mutex
+unlock(m);
+```
+
+Mutexes in pthreads:
+
+- `pthread_mutex_init()` Initialize a new mutex
+- `pthread_mutex_destroy()` Destroy a mutex
+- `pthread_mutex_lock()` Try to lock a mutex, blocked of already locked
+- `pthread_mutex_trylock()` Try to lock a mutex, or fail (non-blocking version)
+- `pthread_mutex_unlock()` Unlock a mutex
+
+It's important to note that mutexes are expensive. Be careful about how you use mutexes.
+
+### Producer Consumer problem
+
+Producer and consumers are in this problem.
+
+Whenever a producer populates a buffer, they add to a FIFO queue. The consumers will take things out of the queue/buffer.
+
+If the producers produce faster than the consumer consumes, the buffer might become full. If the consumer consumes too fast, the buffer becomes empty.
+
+UNIX piples are an example of following this OS buffer.
+
+```bash
+find . - type f -printf "..." | sort -nr | head -n 10
+```
+
+If one operation runs faster than another, (find starts piping things too fast for sort), then sort will sleep and wait for find to finish.
+
+### Condition Variables
+
+Condition variables are another type of synchronization primitive, used with mutexes.
+
+They're perfect for implementing critical sections contain loops waiting for some condition to happen.
+
+Example:
+
+```C
+lock(m)
+
+...
+while (!some_condition()) {wait(cv);}
+...
+
+unlock(m)
+```
+
+This `wait(cv)` command **puts itself to sleep and simultaneously releases the mutex**.
