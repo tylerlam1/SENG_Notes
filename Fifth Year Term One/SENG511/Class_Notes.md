@@ -420,3 +420,26 @@ For defining the capacities: The resource utilization factor should be above 100
 ## Lecture 12
 
 Didn't have time to concentrate as I had some other logistical things to handle. He was talking about critical paths.
+
+Critical path is the shortest amount of time it takes to complete a project.
+
+## Lecture 13
+
+Using past experience or knowledge of an experienced team member, estimate different projects.
+
+What are the causes of variation in duration:
+
+- Varying skill levels
+- Unexpected events
+- Efficiency of work time
+- Mistakes and misunderstandings
+- Variation of capability of the system
+- Common cause variation
+
+Methods for estimating task duration:
+
+- Extrapolating based on similarity to other activities
+- Studying historical data
+- Seeking expert advice
+- Applying the Delphi technique
+- Applying the three point technique
