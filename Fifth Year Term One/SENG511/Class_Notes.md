@@ -443,3 +443,29 @@ Methods for estimating task duration:
 - Seeking expert advice
 - Applying the Delphi technique
 - Applying the three point technique
+
+## Lecture 14
+
+- Who does what and when and why?
+- Not everyone is able to do everything
+- Productivity of developers might vary up to 1:20 [1]
+- Ad hoc assignment likely is ineffective and inefficient
+- Better: Analytical methods to assign tasks based on
+
+  - Technical skill factors
+  - Social skills factors
+  - Personality factors
+
+- Soft skills refers to active listening, negotiating, conflict resolution, problem solving
+- Hard skills is harder skills, like technical skills, etc.
+
+### Affiliation Network
+
+THe mapping between the social network and the small world network of the software.
+
+Only a part of the entire assignment of tasks is shown with an indication of graph isomorphism and one to one mapping.
+
+### Conway's Law
+
+- Organizations which design systems are constrained to produced designs which are copies of the communication structures of these organizations
+- System development is more communicable than technical development
