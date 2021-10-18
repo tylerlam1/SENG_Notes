@@ -721,3 +721,34 @@ unlock(m)
 ```
 
 This `wait(cv)` command **puts itself to sleep and simultaneously releases the mutex**.
+
+## Lecture 11
+
+Condition variables can be used to solve deadlocks.
+
+### Semaphore
+
+- Supports three operations
+- Initialization
+  - Can be initialized with any value
+- Decrement
+  - Reduce semaphore by 1
+  - Blocks the calling thread if value goes below 0
+- Increment
+  - Increase value by 1
+  - Possibly unblock another blocked process
+
+The semaphore organization can be anything (FIFO, random). Don't assume anything.
+
+A binary semaphore is the closest thing to a mutex. However, it can be unlocked by any thread. A mutex cannot be unlocked by any thread. The binary semaphore can have value 0 or 1.
+
+A binary semaphore body is atomic.
+
+### Requirements for good race-free solution
+
+1. Mutual exclusion - No two threads may be inside a single CS
+2. Progress - No threads running outside of CS may block other processes
+3. Bounded waiting
+4. Speed
+
+Also talked about compare and swap (CAS).
