@@ -469,3 +469,21 @@ Only a part of the entire assignment of tasks is shown with an indication of gra
 
 - Organizations which design systems are constrained to produced designs which are copies of the communication structures of these organizations
 - System development is more communicable than technical development
+
+## Lecture 15
+
+### Staffing
+
+- Who does what and when and why?
+- Not everyone is able to do everything
+
+It's important to pair your features and developers properly to minimize the project time and critical path.
+
+Given:
+
+- Task task(q) with workload(q)
+- Developer d with productivity (for task type q) prod(d, q)
+
+Answer:
+
+- A developer having (average) productivity level 1 would need workload (q) days to perform the task q

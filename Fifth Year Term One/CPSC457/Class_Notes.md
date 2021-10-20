@@ -752,3 +752,48 @@ A binary semaphore body is atomic.
 4. Speed
 
 Also talked about compare and swap (CAS).
+
+Compare and swap is an atomic operation supported by most CPUs today. In general, this is the algorithm:
+
+- Compare contents of memory to val1
+- If they are the same, change the memory to val2
+- Return the original content of memory
+
+In C++, the following function is a compare and swap function `type _sync_val_compare_and_swap(type *ptr, type oldval, type newval)`.
+
+We can implement an atomic counter with just compare-and-swap.
+
+```C
+void atomic_add(int *counter, int val) {
+  int done = 0;
+  while (!done) {
+    int curr = *counter;
+    done = casB(counter, curr, curr+val);
+  }
+}
+```
+
+Notice that this program is considered lock free as at least one thread is guaranteed to progress.
+
+## Lecture 12
+
+### Other synchronizing operations
+
+- Swap is a atomic operation uses for synchronization
+- The general algorithm involves atomically swapping contents of two memory locations
+
+- Spinocks
+- Lightweight alternative to mutex
+- Implemented using busy waiting loops, but only makes sense on multi-core systems
+- Usually implemented using atomic instructions
+- Efficient if wait time is short
+
+### Fork-join model
+
+Imagine you have program parts you can run in parallel, and other parts can only be run serially.
+
+To do this, we can create threads whenever we want to run something in parallel. Then destroy threads when we need to run something in a single thread.
+
+We can create this model using `pthread_create` and `pthread_join`.
+
+We can use barriers to prevent threads from moving beyond this line of code until all threads have reached that point in code.
