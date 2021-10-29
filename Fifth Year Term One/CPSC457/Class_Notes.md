@@ -797,3 +797,56 @@ To do this, we can create threads whenever we want to run something in parallel.
 We can create this model using `pthread_create` and `pthread_join`.
 
 We can use barriers to prevent threads from moving beyond this line of code until all threads have reached that point in code.
+
+## Catch up notes
+
+### Barriers
+
+- Imagine you have a program with multiple threads. Occasionally you may need to have all threads reach the same point.
+- This is easy to do using barriers.
+- When a thread executes barrier, the thread waits until the last thread reaches the same barrier, which then all threads are unblocked.
+
+This is particularly useful when you want to leverage a fork join model to switch between serial and parallel work.
+
+### Monitors
+
+- A monitor is a higher-level construct compared to mutexes and semaphores
+- A monitor is a _programming language construct_ that controls access to data shared between threads
+  - Synchronization code automatically added to a compiler and enforced at runtime
+
+To give more information:
+
+- A monitor is a module that encapsulates
+
+  - Private data structures that can be shared among threads
+  - Public methods that operate on these shared data structures
+  - All public methods are automatically mutually exclusive
+
+- Another way to look at a monitor
+  - A thread safe class/object
+  - Automatic mutual exclusion on every method (via built-in mutex)
+  - Can include conditional variables on signalling conditions
+
+Monitors can also have their own condition variables.
+
+- CV declared as part of the module
+- Only accessible from within the module
+- Similar to `pthread_cond_t`
+
+### Thread-safe classes vs semaphores vs mutexes
+
+- Once a thread safe program is correctly programmed, access to the protected resource is correct for accessing from all threads
+- With semaphores or mutexes, resource access is correctly only if all threads accessing are configured properly
+- Programming with thread-safe classes -> You test/debug the class
+- Programming with mutexes/semaphores -> You test/debug all code using them
+
+### Message Passing
+
+- Processes or threads send each other messages
+- Delivered messages can be queued up in mailboxes
+- Common implementation is a MPI (message passing interface)
+  - Popular in HPC (high performance computing)
+
+### Readers/Writers Lock
+
+- The scenario where this is useful is where a single resource has multiple concurrent readers, but only a single writer
