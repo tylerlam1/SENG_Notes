@@ -850,3 +850,74 @@ Monitors can also have their own condition variables.
 ### Readers/Writers Lock
 
 - The scenario where this is useful is where a single resource has multiple concurrent readers, but only a single writer
+
+## More catch-up notes
+
+### Process behavior
+
+- Most processes alternate bursts of CPI activity with bursts of I/O activity
+- CPU bound - Have long CPI bursts and infrequent I/O bursts
+- I/O bound - Have short CPU burst and frequent I/O waits
+
+### Preemptive vs Non-Preemptive CPU scheduling
+
+- Non-preemptive - Context switching happens only voluntarily. Multitasking is possible, but only through cooperation. Process runs until it does a blocking syscall (eg. I/O), terminates, or voluntarily yields CPU
+- Preemptive - Context switch can happen without threads cooperation. Usually as a direct or indirect result of some event, but not limited to clock interrupt.
+- Preemptive time sharing - Special case of preemptive. Processes are context switched periodically to enforce slice policy. Implemented using clock interrupts.
+
+### CPU Scheduling
+
+The piece of code that decides which process runs next is called the scheduler
+
+- Usually part of a kernel
+- A scheduler implements some scheduling algorithm
+
+### Categories of scheduling algorithms
+
+- Batch systems - No impatient users
+  - Usually on mainframes, eg. processing payroll
+- Interactive systems - Impatient users
+  - General systems - Running many tasks, many of them must remain interactive
+  - Preemption (time-sharing) is to keep users happy
+- Real time systems
+  - Applications must be given guaranteed amount of CPU cycles
+
+### FCFS - First-come-first-served (FCFS) scheduling
+
+- One of the simplest scheduling algorithms
+- FCFS is non-preemptive
+- Common in batch environments
+- CPI assigned in the order the processes requests it, using a FIFO queue
+- A running job keeps the CPU until it is either finished or it blocks
+- When running process blocks, next process starts to execute
+- Requires the minimum amount of context switches
+
+The big disadvantage of FCFS is the Convoy effect. CPU bound processes (long draining processes) remove the overall performance of the system with mostly IO bound processes.
+
+### RR - Round Robin (RR) scheduling
+
+- RR scheduler is a preemptive version of the FCFS scheduler
+- Each process is assigned a time interval, called a time slice (aka quantum)
+- If the process exceeds the quantum, the process is preempted (context switch).
+- Preempted process goes at the back of the ready queue
+
+### Shortest-job-first scheduling (SJF)
+
+- Another non-preemptive scheduling algorithm
+- When the CPU is available is available, it is assigned the shortest job
+- SJF is similar to FCFS, but ready queue is sorted based on submitted estimate of execution time
+
+### Shortest-remaining-time-next scheduling (SRTN)
+
+- Preemptive version of SJF
+- Preemption happens as a result of adding a job
+- Next job is picked based on remaining time
+- SRTN is similar to RR
+
+### Multilevel Queues
+
+- Preemptive time-sharing scheduling algorithm that supports process priorities
+- Ready queue is partitioned into separate queues
+  - Foreground queue, for interactive processes
+  - Background queue, for non-interactive process
+- Each queue can have a different scheduling algorithm
