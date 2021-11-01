@@ -487,3 +487,15 @@ Given:
 Answer:
 
 - A developer having (average) productivity level 1 would need workload (q) days to perform the task q
+
+## Lecture 16
+
+### Sensitivity Analysis
+
+- See how much a dependent variable changes based on a independent variable.
+
+### Case-Based Reasoning
+
+- Form of reuse of know-how
+- If two problems are similar, then they have similar solutions (CBR paradigm)
+- A case is a experience of a solved problem.
