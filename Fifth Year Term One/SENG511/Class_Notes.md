@@ -499,3 +499,64 @@ Answer:
 - Form of reuse of know-how
 - If two problems are similar, then they have similar solutions (CBR paradigm)
 - A case is a experience of a solved problem.
+
+## Lecture 17
+
+### The difficulty of estimation
+
+The first 90 percent of the code accounts for the first 90 percent of development. The remaining 10 percent of code accounts for the other 90 percent of development time. The notion behind this is that it's really hard to estimate how long a project takes.
+
+### Effect of uncertainties over time
+
+- In feasibility, the uncertainty is 0.25x to 4x
+- In operational concept, the uncertainty is 0.5x to 2x
+- In lifecycle objectives, the uncertainty is 0.75x to 1.5x
+- In lifecycle architecture, the uncertainty is 0.9x to 1.1x
+- In initial operating capability, the uncertainty is basically 0
+
+### PMBOK Knowledge Areas
+
+PMBOK basically says there are different knowledge areas in project management.
+
+- Stakeholder management
+- Communications management
+- Project cost management
+- Project time management
+- Human resource management
+- Integration management
+- Project scope management
+- Project quality management
+- Procurement management
+- Project risk management
+
+### Estimation vs Prediction vs Planning
+
+- Estimation - The act of judging approximately the value or significance of something
+- Prediction - The act of declaring or indicating in advance; especially foretelling on the basis of observation of experience or scientific reason (future state related).
+- Planning - The act or process of making or carrying out a plan; specifically: the establishment of goals, policies, and procedures.
+- Effort is predicted! BUt the term is used is effort estimation.
+
+### Software estimation
+
+- Allocating budgets to projects
+- Making cost/benefit decisions at the project/product level
+- Deciding which projects get funded and which do not
+- Allocating staff to specific projects
+- Making commitments to the marketplace
+- Planning when staff will be available to start on the project
+- Prioritizing specific features on a cost/benefit basis
+
+### Estimation by Analogy
+
+- This technique is applicable when other projects in the same application has been completed. The cost of a new project is computed by comparing the project to a similar project.
+- You'll be comparing a project to its similar **cases**.
+
+- A case is a experience of a solved problem. It's related to an object of study and its former solution.
+- Similarity between two cases is defined as the weighted sum of local similarities taken over all attributes.
+
+### Empirical Factor Models for Software Project Estimations
+
+- Models are typically base don
+  - A primary cost factor such as size
+  - A number of secondary adjustment factors of cost drivers
+- Cost drivers are characteristics of the project, process, products, or resources that influence effort
