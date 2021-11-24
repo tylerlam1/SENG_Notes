@@ -560,3 +560,46 @@ PMBOK basically says there are different knowledge areas in project management.
   - A primary cost factor such as size
   - A number of secondary adjustment factors of cost drivers
 - Cost drivers are characteristics of the project, process, products, or resources that influence effort
+
+## Lecture 18 (who knows how many lectures I missed!??)
+
+A KPI stands for key performance indicator (KPI). There are a couple indicators that something is a KPI:
+
+- A major contributor to project success or failure
+- This metric is measurable, quantifiable, adjustable, and controllable
+- It's a reasonable representation of current and future performance
+
+For example, one example of key performance indicators is the time it takes to respond to a user request.
+
+There are different types of project status reports.
+
+- Current period reports
+- Cumulative reports
+- Exception reports
+- Stoplight reports
+- Variance reports
+
+Spotlight reports are "green", "yellow", and "red" indicators which indicate the general trend of how the project is going.
+
+### Statistical Process Control SPC
+
+- Understanding the process
+- Understanding the causes of variation
+- Differentiating between common cause and special cause variation
+- Elimination of the sources of special cause variation
+
+### Control Charts
+
+- Control charts are used to determine out of
+
+### Six Sigma
+
+- An analytical method focusing on continuous improvement
+- Is based on the following key underlying principles of statistical thinking
+- Everything is a process
+- All processes have inherent variability
+- Data is used to understand variation and to drive decisions to improve the process/reduce variation
+
+### Defect per million opportunities
+
+- Defect: Any variation in a process that does not meet customer expectations
