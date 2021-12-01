@@ -603,3 +603,28 @@ Spotlight reports are "green", "yellow", and "red" indicators which indicate the
 ### Defect per million opportunities
 
 - Defect: Any variation in a process that does not meet customer expectations
+
+## Lecture 19
+
+### Process Modelling
+
+Models are simplified views of the real world. A model addresses a selected part of the real world, and many concerns have to be left out of the model to keep it tractable.
+
+There are a couple objectives associated with process modelling:
+
+- Understanding
+- Communicating
+- Analyzing
+- Managing
+- Improving
+- Optimizing
+
+### Core set of BPMN Elements
+
+There are several core sets in a BPMN element.
+
+- Events (circles). These start, alter or complete the process.
+- Activities (Rectangles) - Tasks performed by individuals or technology.
+- Gateways (Diamonds)
+
+The goal of assignment 6 is to familiarize ourselves with process elicitation. Key process elements: Activities, artifacts, resources/roles will be described and put into a descriptive process model.
