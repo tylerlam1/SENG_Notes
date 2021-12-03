@@ -992,3 +992,8 @@ We need a data structure to keep track of free memory and allocated memory.
 
 - For dynamic partitions we used linked lists + trees -> Just show the free space data and process data in a linked list.
 - For fixed partitions we can use bitmaps
+
+### Virtual Memory
+
+- Virtual memory is the memory management technique
+- It allows OS to present a process with contiguous logical address space, which the physical space doesn't need to be
