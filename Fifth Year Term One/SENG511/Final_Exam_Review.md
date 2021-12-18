@@ -271,3 +271,62 @@ Ratio Scale
 ## Lecture 10
 
 All events or conditions that may occur in a project that have negative consequences are known as risks.
+
+Here is some terminology:
+
+- Risk Impact - Loss associated with risk
+- Probability - CHances that an event will occur
+- Risk Mitigation - Set of actions intended to reduce or eliminate the risk
+- Risk Threshold - Maximum degree of risk that an organization is willing to take
+- Risk plan - List of all risks that threaten a project, along with a mitigation plan
+
+Here are some ways to identify risks
+
+- Fishbone chart - A visual way to look at cause and effect.
+- Monte-Carlo Simulation - Uses a representation or model of a system to analyze the expected behavior or performance of a system. Uses statistical analysis to provide guess on the distribution of results.
+- Decision Tree - Is a map of possible outcomes of a series of related choices. A decision tree typically starts with a single node, which branches into possible outcomes. Outcomes lead to and branches out to other outcomes.
+- Sensitivity analysis - The technique used to determine how variable values change when other changes. Basically change the model and observe the behavior.
+
+## Lecture 11
+
+Software estimation is the act of approximating the significance of a piece of software.
+
+There are different ways for us to estimate software.
+
+1. Estimation by analogy - In this scenario, a case is a former experience of a solved problem. A case base is a collection of such cases.
+2. Empirical factor models - I think this is some sort of equation?
+3. Function point analysis
+
+## Lecture 12
+
+Here are some key performance indicators:
+
+- Estimate time to project completion
+- Time to respond to user request
+- Issues found in QA
+- Issues found in code review
+
+Six sigma is the idea of focusing on continuous improvement. It's based on the key underlying principles:
+
+- Everything is a process
+- All processes have inherent variability
+- Data is used to understand variation
+
+## Lecture 15
+
+The basic concept of system dynamics is systems thinking. This is characterized by the following:
+
+- Thinking in cause-effect mechanisms
+- Considering the multi-casual conjunctions
+- Taking feedback into account
+- Considering the dynamic complexity
+
+What-If analysis is the following:
+
+- Investigation of the impact of changing parameters
+- Based on optimization and simulation methods
+- Assumption: Conceptual models are known and fixed
+
+## Lecture 16
+
+The Capability Maturity Model (CMM) - FIrst process assessment methodology. It provides a roadmap for organizational software process improvements.
