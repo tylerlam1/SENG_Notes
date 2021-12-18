@@ -183,3 +183,26 @@ In terms of resource constraints, we can see resource class 1: A resource type r
 Resource class 2: A resource type r belongs in class 2 if the feature related consumption of the resource can be distributed across different release periods. Resources of this class are called global based on its spending mode.
 
 The diversification principle is an idea that a single solution to a cognitive complex problem is less likely to reflect the actual problem when compared to a portfolio of qualified solutions being structurally diversified.
+
+## Lecture 7
+
+A project schedule is a plan that links the tasks to be done with resources that will do them. Oftentimes, they are represented using Gantt charts.
+
+Some terminology:
+
+- Critical path - The sequence of project activities which add up to the longest overall duration. The critical path determines the shortest time possible to complete the project. For each project, we determine the following:
+  - Earliest Start Time (ES)
+  - Earliest Finish Time (EF)
+  - Latest start time (LS)
+  - Latest finish time (LF)
+
+These are the following dependency relationships between tasks:
+
+- FS: B can only start after A has finished
+- FF: B may finish not earlier than A has finished
+- SS: B may not start earlier than A has started
+- SF: B may finish not earlier than A has started
+
+There are different paths through a network. There is a forward pass which is left to right and determines the early start and early finish. This is ES + duration = EF.
+
+There is also the backward pass, which is right to left. This is the latest start and latest finish.
