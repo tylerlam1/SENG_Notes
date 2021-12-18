@@ -125,3 +125,61 @@ There are several prioritization methods.
 - Functional Approach
 - AHP
 - Kano Method
+
+There are different stakeholders who can partake in prioritization processes.
+
+- Management
+- Customers
+- Quality Assurance
+- Competitors
+- Board of Directors
+
+In the functional approach, evaluations of alternative **x** in all criteria must be normalized in order to make them comparable. Then, each criterion is associated with a weight **w**. An aggregation function is used to obtain the global evaluation of alternative **x**. Basically we weigh everything against a certain criteria, give that criteria a weight, and then aggregate all the values.
+
+The other process is called Analytics Hierarchy Process (AHP). In this process, you decompose the goal into a hierarchy of criteria and sub-criteria. Pair-wise comparison is used to determine relative weights of criteria, sub-criteria, as well as the evaluations of alternatives. Weights or priorities are not arbitrarily assigned.
+
+In this scenario of AHP, you need to do matrix multiplication. Each stakeholder/criteria has their own weight - and we match it against scores against each requirement. In the end, we get a score against each requirement while taking into consideration all the criteria.
+
+The Kano method revolves around the fact that satisfaction does not necessarily mean dissatisfaction. There's the functional form of the question (positive) and the dysfunctional form of the question (negative). There are several categories of the Kano method:
+
+- Must be (M): The prerequisite features that the user assumed to be granted
+- One dimensional (O): The fulfillment of these features will increment the degree of customer satisfaction
+- Attractive (A): These features are not explicitly requested
+- Indifferent (I): The customer feels indifferent towards the availability or unavailability of these features
+- Reverse (R): Stated that the customer not only does not want this feature but even expected the feature not to be in the product
+- Questionable (Q): This category is the indicator of a problem in the phrasing of the question or understanding the question
+
+## Lecture 6
+
+The number of planning releases for increment development always goes up the moment we just have a major release coming out.
+
+In a software product, a feature is a set of logically related requirements that provide a capability to the user and enable the satisfaction of business objectives. The way we select criteria for feature selection is through the following:
+
+- Customer satisfaction
+- Customer dissatisfaction
+- Risk of implementation
+- Risk of acceptance
+- Financial value
+- Cost
+- Time to market
+- Volatility
+- Frequency of use
+- Ease of use
+
+There are eight types of feature dependencies:
+
+- Coupling - They both need to be done together
+- Either or - You do either or
+- At most one
+- At least one
+- Weak precedence - I think one can be done before other
+- Strict precedence - One must be done before the other?
+- Value dependency
+- Effort dependency - Group by effort??
+
+Also, there are times where the resource or budget will be constrained.
+
+In terms of resource constraints, we can see resource class 1: A resource type r belongs to class 1 if the feature related consumption of the resource is limited to exactly the release in which the feature is offered. Resources of this class are called local based on its spending mode.
+Resource class 2: A resource type r belongs in class 2 if the feature related consumption of the resource can be distributed across different release periods. Resources of this class are called global based on its spending mode.
+
+The diversification principle is an idea that a single solution to a cognitive complex problem is less likely to reflect the actual problem when compared to a portfolio of qualified solutions being structurally diversified.
