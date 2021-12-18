@@ -235,3 +235,39 @@ Here are some strategic positions in the communication network
 Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations (Conway's Law). System development is more of a communication problem than a technical problem.
 
 ## Lecture 9
+
+Software measurement is the process by which values are assigned to attributes of entities in the real software world. A measure of an attribute associates a value to each entity, in such a way such that our knowledge/intuition about the attribute is not contradicted.
+
+An entity may be an object or an event. Software measurement entities are the following:
+
+- Processes - Any activity related to software development and/or maintenance - these can be at different levels of granularity
+- Products - Any artefact produced or changed during the software development process
+- Resources - People, hardware, or software needed for the processes
+
+Here are examples of software metrics:
+
+- Lines of code
+- Number of linearly independent paths through a function
+- Code churn - The number of lines that were modified, added, or deleted in a specific period of time
+
+Here are examples of the measurement scales.
+
+Ordinal Scale
+
+1. It places the elements in an ordered classification scheme
+2. Consists of classes that are ordered in respect to the attribute
+3. Any mapping that preserves the ordering is acceptable
+
+Interval Scale
+
+1. It preserves orders like the ordinal scale
+2. It preserves the differences but not in ratio
+3. For example, like calendar time
+
+Ratio Scale
+
+1. It is a measurement mapping that preserves ordering, size of intervals, and the ratio between entities
+
+## Lecture 10
+
+All events or conditions that may occur in a project that have negative consequences are known as risks.
