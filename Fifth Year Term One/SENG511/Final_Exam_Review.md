@@ -206,3 +206,32 @@ These are the following dependency relationships between tasks:
 There are different paths through a network. There is a forward pass which is left to right and determines the early start and early finish. This is ES + duration = EF.
 
 There is also the backward pass, which is right to left. This is the latest start and latest finish.
+
+## Lecture 8
+
+This lecture is about staffing.
+
+It's important to assign tasks to human resources based on skill and productivity.
+
+Since software is developed in teams, soft skills are very important. They complement hard skills, and additional soft skills refers to active listening, negotiating, conflict resolution, problem solving, reflection, critical thinking, ethics, and leadership.
+
+Here are some examples of soft skills:
+
+- Communication
+- Self-motivation
+- Leadership
+- Responsibility
+- Teamwork
+- Problem solving
+- Decisiveness
+- Ability to work under pressure and time management
+- Negotiation and conflict resolution
+
+Here are some strategic positions in the communication network
+
+- Between-ness centrality
+- Reveals brokers and privileged actors in the information flow
+
+Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations (Conway's Law). System development is more of a communication problem than a technical problem.
+
+## Lecture 9
